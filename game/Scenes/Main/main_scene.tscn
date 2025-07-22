@@ -4,3 +4,12 @@
 
 [node name="Main Scene" type="Node2D"]
 script = ExtResource("1_1rti3")
+
+[node name="HourTimer" type="Timer" parent="."]
+wait_time = 25.0
+one_shot = true
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[connection signal="timeout" from="HourTimer" to="." method="_on_hour_timer_timeout"]
