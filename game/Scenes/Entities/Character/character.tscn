@@ -1,6 +1,6 @@
 [gd_scene load_steps=24 format=3 uid="uid://ca1mh2m0on8ud"]
 
-[ext_resource type="Script" path="res://Character/character.gd" id="1_okua4"]
+[ext_resource type="Script" path="res://Scenes/Entities/Character/character.gd" id="1_okua4"]
 [ext_resource type="Texture2D" uid="uid://b4i6b5pwbk2vd" path="res://Assets/character/Backward Man 1.png" id="2_c878k"]
 [ext_resource type="Texture2D" uid="uid://b1la7u8j285nf" path="res://Assets/character/Backward Man 2.png" id="3_nnl8e"]
 [ext_resource type="Texture2D" uid="uid://cc10sb0u6wcmm" path="res://Assets/character/Backward Man 3.png" id="4_0agph"]
