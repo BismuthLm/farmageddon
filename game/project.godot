@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Farmageddon"
-run/main_scene="res://Character/character.tscn"
+run/main_scene="res://Scenes/Entities/Character/character.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Globals="*res://Scenes/Globals/Globals.gd"
 
 [dotnet]
 
