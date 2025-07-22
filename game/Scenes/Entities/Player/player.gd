@@ -1,3 +1,3 @@
-extends Node2D
+extends CharacterBody2D
 
 
