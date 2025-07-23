@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://5ngwkqk858lp"]
+
+[ext_resource type="Script" path="res://Scenes/Main/main_scene.gd" id="1_1rti3"]
+
+[node name="Main Scene" type="Node2D"]
+script = ExtResource("1_1rti3")
+
+[node name="HourTimer" type="Timer" parent="."]
+wait_time = 25.0
+one_shot = true
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[connection signal="timeout" from="HourTimer" to="." method="_on_hour_timer_timeout"]
