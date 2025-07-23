@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://bim3t4yj0ke57" path="res://Assets/character/RIght Man 4.png" id="17_dps7q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rb027"]
-size = Vector2(54, 13)
+size = Vector2(66, 18)
 
 [sub_resource type="Animation" id="Animation_hkkmo"]
 resource_name = "Walking Backwards"
@@ -101,11 +101,12 @@ _data = {
 script = ExtResource("1_okua4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_c878k")
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("8_y82gl")
 offset = Vector2(0, 9)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4, 25.5)
+position = Vector2(-2, 28)
 shape = SubResource("RectangleShape2D_rb027")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -113,3 +114,5 @@ libraries = {
 "": SubResource("AnimationLibrary_sw13m")
 }
 speed_scale = 2.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
