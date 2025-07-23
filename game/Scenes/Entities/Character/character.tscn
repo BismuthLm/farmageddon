@@ -18,6 +18,9 @@
 [ext_resource type="Texture2D" uid="uid://jfvjkrg8uiss" path="res://Assets/character/Right Man 3.png" id="16_qxgj7"]
 [ext_resource type="Texture2D" uid="uid://bim3t4yj0ke57" path="res://Assets/character/RIght Man 4.png" id="17_dps7q"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rb027"]
+size = Vector2(54, 13)
+
 [sub_resource type="Animation" id="Animation_hkkmo"]
 resource_name = "Walking Backwards"
 length = 0.85
@@ -94,21 +97,18 @@ _data = {
 "Walking Right": SubResource("Animation_3s261")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rb027"]
-size = Vector2(54, 13)
-
 [node name="Character" type="CharacterBody2D"]
 script = ExtResource("1_okua4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_c878k")
+texture = ExtResource("10_njq2b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 25.5)
+shape = SubResource("RectangleShape2D_rb027")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_sw13m")
 }
 speed_scale = 2.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4, 25.5)
-shape = SubResource("RectangleShape2D_rb027")
