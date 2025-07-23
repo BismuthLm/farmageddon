@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://5ngwkqk858lp"]
+[gd_scene load_steps=11 format=3 uid="uid://5ngwkqk858lp"]
 
 [ext_resource type="Script" path="res://Scenes/Main/main_scene.gd" id="1_1rti3"]
+[ext_resource type="PackedScene" uid="uid://ca1mh2m0on8ud" path="res://Scenes/Entities/Character/character.tscn" id="2_nb0gi"]
 [ext_resource type="Texture2D" uid="uid://df6xjttbv2u5w" path="res://Assets/ground/Ground tileset.png" id="2_p0imi"]
 [ext_resource type="Texture2D" uid="uid://2j1qq3q1vkw6" path="res://Assets/ground/grass-1.png" id="3_iynvb"]
+[ext_resource type="PackedScene" uid="uid://crkscaiiikso0" path="res://Scenes/Objects/Sleep/sleep.tscn" id="3_jhhal"]
 [ext_resource type="Texture2D" uid="uid://dfy6yshlpmgbd" path="res://Assets/ground/farmground-1.png" id="4_n2i4p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dns3x"]
@@ -36,5 +38,9 @@ one_shot = true
 tile_set = SubResource("TileSet_i05l3")
 format = 2
 
+[node name="Character" parent="." instance=ExtResource("2_nb0gi")]
+
+[node name="Sleep" parent="." instance=ExtResource("3_jhhal")]
+position = Vector2(427, 291)
+
 [connection signal="timeout" from="HourTimer" to="." method="_on_hour_timer_timeout"]
-[connection signal="sleep" from="Sleep" to="." method="_on_sleep_sleep"]
