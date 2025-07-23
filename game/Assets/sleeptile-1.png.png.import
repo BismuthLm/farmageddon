@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccjj0mjpmd15"
-path="res://.godot/imported/Carrot sprout.png-7ccd2e904c0a31d87a6b834036b1cc81.ctex"
+uid="uid://dniiqg5lkcvwt"
+path="res://.godot/imported/sleeptile-1.png.png-8dc61278f3575732c933210bd86a096d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/carrot/Carrot sprout.png"
-dest_files=["res://.godot/imported/Carrot sprout.png-7ccd2e904c0a31d87a6b834036b1cc81.ctex"]
+source_file="res://Assets/sleeptile-1.png.png"
+dest_files=["res://.godot/imported/sleeptile-1.png.png-8dc61278f3575732c933210bd86a096d.ctex"]
 
 [params]
 
