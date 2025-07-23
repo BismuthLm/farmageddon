@@ -12,7 +12,7 @@ func _process(_delta):
 	move_and_slide()
 	Globals.player_pos = global_position
 	
-	
+	#walking diagonally needed
 	if Input.is_action_pressed("left"):
 		$AnimationPlayer.play("Walking Left")
 		
@@ -34,7 +34,7 @@ func _process(_delta):
 		$AnimationPlayer.pause()
 		
 		
-	if Input.is_action_pressed("down"):
+	if Input.is_action_pressed("down") and not Input.is_action_pressed("left") and not Input.is_action_pressed("left"):
 		$AnimationPlayer.play("Walking Forward")
 		
 	if Input.is_action_just_released("down"):
