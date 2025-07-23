@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqrqeyxh40muj"
-path="res://.godot/imported/nothing-planted-1.png.png-2510199e1733a7d0906fb9251763c676.ctex"
+uid="uid://dfy6yshlpmgbd"
+path="res://.godot/imported/farmground-1.png-72c76e820c008b2f5660bd4a2a214524.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/carrots/nothing-planted-1.png.png"
-dest_files=["res://.godot/imported/nothing-planted-1.png.png-2510199e1733a7d0906fb9251763c676.ctex"]
+source_file="res://Assets/ground/farmground-1.png"
+dest_files=["res://.godot/imported/farmground-1.png-72c76e820c008b2f5660bd4a2a214524.ctex"]
 
 [params]
 

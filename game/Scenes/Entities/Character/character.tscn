@@ -1,0 +1,114 @@
+[gd_scene load_steps=24 format=3 uid="uid://ca1mh2m0on8ud"]
+
+[ext_resource type="Script" path="res://Scenes/Entities/Character/character.gd" id="1_okua4"]
+[ext_resource type="Texture2D" uid="uid://b4i6b5pwbk2vd" path="res://Assets/character/Backward Man 1.png" id="2_c878k"]
+[ext_resource type="Texture2D" uid="uid://b1la7u8j285nf" path="res://Assets/character/Backward Man 2.png" id="3_nnl8e"]
+[ext_resource type="Texture2D" uid="uid://cc10sb0u6wcmm" path="res://Assets/character/Backward Man 3.png" id="4_0agph"]
+[ext_resource type="Texture2D" uid="uid://m60psdo8ir3b" path="res://Assets/character/Backward Man 4.png" id="5_2vcy7"]
+[ext_resource type="Texture2D" uid="uid://bx58v2as28lhv" path="res://Assets/character/Forward Man 1.png" id="6_xcbyj"]
+[ext_resource type="Texture2D" uid="uid://ctsb1ycb7lrqb" path="res://Assets/character/Forward Man 2.png" id="7_eiuax"]
+[ext_resource type="Texture2D" uid="uid://ep0rsewkae4k" path="res://Assets/character/Forward Man 3.png" id="8_y82gl"]
+[ext_resource type="Texture2D" uid="uid://betxm8ctlvoin" path="res://Assets/character/Forward Man 4.png" id="9_7jhjc"]
+[ext_resource type="Texture2D" uid="uid://c6e5til0velaj" path="res://Assets/character/Left Man 1.png" id="10_njq2b"]
+[ext_resource type="Texture2D" uid="uid://cayfti0o1h5ge" path="res://Assets/character/Left Man 2.png" id="11_ay13s"]
+[ext_resource type="Texture2D" uid="uid://ju504p4g8bsa" path="res://Assets/character/Left Man 3.png" id="12_hxv4o"]
+[ext_resource type="Texture2D" uid="uid://d03s1elg88yjh" path="res://Assets/character/Left Man 4.png" id="13_sd585"]
+[ext_resource type="Texture2D" uid="uid://c1ugfvbka68gw" path="res://Assets/character/Right Man 1.png" id="14_87e7m"]
+[ext_resource type="Texture2D" uid="uid://cjwp2putyeq76" path="res://Assets/character/Right Man 2.png" id="15_rtix0"]
+[ext_resource type="Texture2D" uid="uid://jfvjkrg8uiss" path="res://Assets/character/Right Man 3.png" id="16_qxgj7"]
+[ext_resource type="Texture2D" uid="uid://bim3t4yj0ke57" path="res://Assets/character/RIght Man 4.png" id="17_dps7q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rb027"]
+size = Vector2(54, 13)
+
+[sub_resource type="Animation" id="Animation_hkkmo"]
+resource_name = "Walking Backwards"
+length = 0.85
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_c878k"), ExtResource("3_nnl8e"), ExtResource("4_0agph"), ExtResource("5_2vcy7"), ExtResource("2_c878k")]
+}
+
+[sub_resource type="Animation" id="Animation_wdu2g"]
+resource_name = "Walking Forward"
+length = 0.85
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("6_xcbyj"), ExtResource("7_eiuax"), ExtResource("8_y82gl"), ExtResource("9_7jhjc"), ExtResource("6_xcbyj")]
+}
+
+[sub_resource type="Animation" id="Animation_rv3lr"]
+resource_name = "Walking Left"
+length = 0.85
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("10_njq2b"), ExtResource("11_ay13s"), ExtResource("12_hxv4o"), ExtResource("13_sd585"), ExtResource("10_njq2b")]
+}
+
+[sub_resource type="Animation" id="Animation_3s261"]
+resource_name = "Walking Right"
+length = 0.85
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("14_87e7m"), ExtResource("15_rtix0"), ExtResource("16_qxgj7"), ExtResource("17_dps7q"), ExtResource("14_87e7m")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sw13m"]
+_data = {
+"Walking Backwards": SubResource("Animation_hkkmo"),
+"Walking Forward": SubResource("Animation_wdu2g"),
+"Walking Left": SubResource("Animation_rv3lr"),
+"Walking Right": SubResource("Animation_3s261")
+}
+
+[node name="Character" type="CharacterBody2D"]
+script = ExtResource("1_okua4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("10_njq2b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 25.5)
+shape = SubResource("RectangleShape2D_rb027")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_sw13m")
+}
+speed_scale = 2.0
