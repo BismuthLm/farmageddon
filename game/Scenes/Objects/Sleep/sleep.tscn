@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://crkscaiiikso0"]
+
+[ext_resource type="Script" path="res://Scenes/Objects/Sleep/sleep.gd" id="1_18w7i"]
+[ext_resource type="Texture2D" uid="uid://dniiqg5lkcvwt" path="res://Assets/sleeptile-1.png.png" id="2_kk6j3"]
+
+[node name="Sleep" type="Area2D"]
+script = ExtResource("1_18w7i")
+
+[node name="Sleeptile-1_png" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+texture = ExtResource("2_kk6j3")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-436, -249)
+polygon = PackedVector2Array(426, 137, 328, 126, 269, 149, 286, 327, 520, 323, 564, 364, 608, 340, 604, 213, 492, 206)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

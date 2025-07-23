@@ -101,7 +101,8 @@ _data = {
 script = ExtResource("1_okua4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("10_njq2b")
+texture = ExtResource("2_c878k")
+offset = Vector2(0, 9)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(4, 25.5)

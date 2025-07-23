@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://5ngwkqk858lp"]
+[gd_scene load_steps=4 format=3 uid="uid://5ngwkqk858lp"]
 
 [ext_resource type="Script" path="res://Scenes/Main/main_scene.gd" id="1_1rti3"]
+[ext_resource type="PackedScene" uid="uid://ca1mh2m0on8ud" path="res://Scenes/Entities/Character/character.tscn" id="2_nb0gi"]
+[ext_resource type="PackedScene" uid="uid://crkscaiiikso0" path="res://Scenes/Objects/Sleep/sleep.tscn" id="3_jhhal"]
 
 [node name="Main Scene" type="Node2D"]
 script = ExtResource("1_1rti3")
@@ -12,4 +14,10 @@ one_shot = true
 [node name="TileMap" type="TileMap" parent="."]
 format = 2
 
+[node name="Character" parent="." instance=ExtResource("2_nb0gi")]
+
+[node name="Sleep" parent="." instance=ExtResource("3_jhhal")]
+position = Vector2(434, 277)
+
 [connection signal="timeout" from="HourTimer" to="." method="_on_hour_timer_timeout"]
+[connection signal="sleep" from="Sleep" to="." method="_on_sleep_sleep"]
