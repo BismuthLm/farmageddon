@@ -3,6 +3,5 @@ extends Area2D
 signal sleep
 
 
-
-func _on_area_entered(area):
+func _on_body_entered(_body):
 	sleep.emit()
