@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://casnjgxl1achb"
-path="res://.godot/imported/Beetroot seeds.png-be7136f5004c95c84990affd78ba46bf.ctex"
+uid="uid://2q3lmphfherl"
+path="res://.godot/imported/ground-v2.png-4749e9c0fd5088590ded064efa59f49e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/beetroot/Beetroot seeds.png"
-dest_files=["res://.godot/imported/Beetroot seeds.png-be7136f5004c95c84990affd78ba46bf.ctex"]
+source_file="res://Assets/ground/ground-v2.png"
+dest_files=["res://.godot/imported/ground-v2.png-4749e9c0fd5088590ded064efa59f49e.ctex"]
 
 [params]
 
