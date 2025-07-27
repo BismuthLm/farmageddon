@@ -1,0 +1,125 @@
+[gd_scene load_steps=12 format=3 uid="uid://byneuhr600vtr"]
+
+[ext_resource type="Texture2D" uid="uid://bic2dvq2u420n" path="res://Assets/Carrot/Carrot Seeds.png" id="1_vcorr"]
+[ext_resource type="Texture2D" uid="uid://ccjj0mjpmd15" path="res://Assets/Carrot/Carrot sprout.png" id="2_uok3i"]
+[ext_resource type="Texture2D" uid="uid://dipevwwp4lghv" path="res://Assets/Carrot/growing-carrot.png" id="3_n0vv1"]
+[ext_resource type="Texture2D" uid="uid://gitot22t8u3q" path="res://Assets/Carrot/Carrot grown.png" id="4_bab2n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3r8k3"]
+size = Vector2(100, 100)
+
+[sub_resource type="Animation" id="Animation_38bux"]
+resource_name = "Nothing"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+
+[sub_resource type="Animation" id="Animation_twcro"]
+resource_name = "Carrot Seeds"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_vcorr")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(6, 9)]
+}
+
+[sub_resource type="Animation" id="Animation_mmgsy"]
+resource_name = "Carrot Sprout"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_uok3i")]
+}
+
+[sub_resource type="Animation" id="Animation_3hddk"]
+resource_name = "Carrot Growing"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_n0vv1")]
+}
+
+[sub_resource type="Animation" id="Animation_sdugi"]
+resource_name = "Carrot Grown"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_bab2n")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3svtk"]
+_data = {
+"Carrot Growing": SubResource("Animation_3hddk"),
+"Carrot Grown": SubResource("Animation_sdugi"),
+"Carrot Seeds": SubResource("Animation_twcro"),
+"Carrot Sprout": SubResource("Animation_mmgsy"),
+"Nothing": SubResource("Animation_38bux")
+}
+
+[node name="Plant" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_vcorr")
+offset = Vector2(6, 9)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_3r8k3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3svtk")
+}

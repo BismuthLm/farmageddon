@@ -27,14 +27,14 @@ func _process(_delta):
 		$AnimationPlayer.pause()
 		
 		
-	if Input.is_action_pressed("up"):
+	if Input.is_action_pressed("up") and not Input.is_action_pressed("left") and not Input.is_action_pressed("right"):
 		$AnimationPlayer.play("Walking Backwards")
 		
 	if Input.is_action_just_released("up"):
 		$AnimationPlayer.pause()
 		
 		
-	if Input.is_action_pressed("down") and not Input.is_action_pressed("left") and not Input.is_action_pressed("left"):
+	if Input.is_action_pressed("down") and not Input.is_action_pressed("left") and not Input.is_action_pressed("right"):
 		$AnimationPlayer.play("Walking Forward")
 		
 	if Input.is_action_just_released("down"):
