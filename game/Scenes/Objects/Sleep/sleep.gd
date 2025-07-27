@@ -4,5 +4,5 @@ signal sleep
 
 
 
-func _on_area_entered(area):
+func _on_area_entered(_area):
 	sleep.emit()
