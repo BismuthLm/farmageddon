@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://5ngwkqk858lp"]
+[gd_scene load_steps=16 format=3 uid="uid://5ngwkqk858lp"]
 
 [ext_resource type="Script" path="res://Scenes/Main/main_scene.gd" id="1_1rti3"]
 [ext_resource type="Texture2D" uid="uid://2q3lmphfherl" path="res://Assets/ground/ground-v2.png" id="2_24ww3"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dfy6yshlpmgbd" path="res://Assets/ground/farmground-1.png" id="4_n2i4p"]
 [ext_resource type="Texture2D" uid="uid://gitot22t8u3q" path="res://Assets/Carrot/Carrot grown.png" id="7_80mrc"]
 [ext_resource type="PackedScene" uid="uid://t3kmrcsfdrqj" path="res://Scenes/Objects/Foutain/foutain.tscn" id="8_xetvi"]
+[ext_resource type="PackedScene" uid="uid://budlqw02xjssu" path="res://Scenes/Entities/Monster/monster.tscn" id="9_3t0bb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hovo0"]
 texture = ExtResource("2_24ww3")
@@ -73,6 +74,10 @@ layer_0/tile_data = PackedInt32Array(-1507366, 0, 0, -1441830, 0, 0, -1376294, 0
 
 [node name="Character" parent="." instance=ExtResource("2_nb0gi")]
 
+[node name="Camera2D" type="Camera2D" parent="Character"]
+zoom = Vector2(0.6, 0.6)
+position_smoothing_enabled = true
+
 [node name="Sleep" parent="." instance=ExtResource("3_jhhal")]
 position = Vector2(427, 291)
 
@@ -85,9 +90,13 @@ position = Vector2(142, 4071)
 scale = Vector2(3, 3)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+position = Vector2(10964, -1455)
 color = Color(0.72549, 0.72549, 0.72549, 1)
 blend_mode = 1
 shadow_enabled = true
+
+[node name="Monster" parent="." instance=ExtResource("9_3t0bb")]
+position = Vector2(-435, -598)
 
 [connection signal="timeout" from="HourTimer" to="." method="_on_hour_timer_timeout"]
 [connection signal="sleep" from="Sleep" to="." method="_on_sleep_sleep"]

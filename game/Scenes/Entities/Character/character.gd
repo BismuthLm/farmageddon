@@ -18,21 +18,25 @@ func _process(_delta):
 		
 	if Input.is_action_just_released("left"):
 		$AnimationPlayer.pause()
+		$AnimationPlayer.seek(0.2, true)
 		
 	if Input.is_action_pressed("right"):
 		$AnimationPlayer.play("Walking Right")
 		
 	if Input.is_action_just_released("right"):
 		$AnimationPlayer.pause()
+		$AnimationPlayer.seek(0.2, true)
 		
 	if Input.is_action_pressed("up") and not Input.is_action_pressed("left") and not Input.is_action_pressed("right"):
 		$AnimationPlayer.play("Walking Backwards")
 		
 	if Input.is_action_just_released("up"):
 		$AnimationPlayer.pause()
+		$AnimationPlayer.seek(0.2, true)
 		
 	if Input.is_action_pressed("down") and not Input.is_action_pressed("left") and not Input.is_action_pressed("right"):
 		$AnimationPlayer.play("Walking Forward")
 		
 	if Input.is_action_just_released("down"):
 		$AnimationPlayer.pause()
+		$AnimationPlayer.seek(0.4, true)
