@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bic2dvq2u420n"
-path="res://.godot/imported/Carrot Seeds.png-6fb30d1160fde46afb77406f47545551.ctex"
+uid="uid://dhmep6d8s6ypj"
+path="res://.godot/imported/Monster right 1.png-97c3e6ebe740b2c2391694121655059c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Carrot/Carrot Seeds.png"
-dest_files=["res://.godot/imported/Carrot Seeds.png-6fb30d1160fde46afb77406f47545551.ctex"]
+source_file="res://Assets/Monster/Monster right 1.png"
+dest_files=["res://.godot/imported/Monster right 1.png-97c3e6ebe740b2c2391694121655059c.ctex"]
 
 [params]
 
