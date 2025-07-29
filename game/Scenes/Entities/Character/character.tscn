@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://ca1mh2m0on8ud"]
+[gd_scene load_steps=25 format=3 uid="uid://ca1mh2m0on8ud"]
 
 [ext_resource type="Script" path="res://Scenes/Entities/Character/character.gd" id="1_okua4"]
 [ext_resource type="Texture2D" uid="uid://b4i6b5pwbk2vd" path="res://Assets/character/Backward Man 1.png" id="2_c878k"]
@@ -145,6 +145,9 @@ _data = {
 "Walking Right": SubResource("Animation_3s261")
 }
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_i5ebi"]
+polygon = PackedVector2Array(-30, -6, -42.5, -6, -42.5, 0, -48.75, 0, -48.75, 13, -42.5, 13, -42.5, 30, -36.25, 30, -36.25, 36, -6.25, 36, -6.25, 30, -11.25, 30, -11.25, 24, 0, 24, 0, 30, 6.25, 30, 6.25, 36, 30, 36, 30, 30, 36.25, 30, 36.25, 18, 30, 18, 30, 12, 36.25, 12, 36.25, 0, 30, 0, 30, -6, 23.75, -6, 23.75, -18, 31.25, -18, 31.25, -23, 37.5, -23, 37.5, -36, 30, -36, 30, -42, 23.75, -42, 23.75, -48, 18.75, -48, 18.75, -55, -17.5, -55, -17.5, -48, -23.75, -48, -23.75, -42, -30, -42)
+
 [node name="Character" type="CharacterBody2D"]
 scale = Vector2(0.8, 1)
 script = ExtResource("1_okua4")
@@ -167,3 +170,6 @@ speed_scale = 2.0
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.6, 0.6)
 position_smoothing_enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_i5ebi")
