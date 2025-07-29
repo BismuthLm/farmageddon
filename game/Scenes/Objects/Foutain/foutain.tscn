@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://t3kmrcsfdrqj"]
+
+[ext_resource type="Texture2D" uid="uid://b12021kbvep8d" path="res://Assets/Garden items/Fountain.png" id="1_ng2xv"]
+
+[node name="Foutain" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ng2xv")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-122, 260, -62, 267, 47, 267, 95, 258, 145, 234, 162, 210, 160, 192, 160, 152, 152, 152, 152, 144, 144, 144, 144, 136, 136, 136, 136, 128, 128, 128, 128, 120, 112, 120, 112, 112, 80, 112, 80, 104, -120, 104, -120, 112, -152, 112, -152, 120, -168, 120, -168, 128, -176, 128, -176, 136, -184, 136, -184, 144, -192, 144, -192, 152, -200, 152, -200, 195, -195, 217, -171, 242)
