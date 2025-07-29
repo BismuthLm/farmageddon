@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b12021kbvep8d" path="res://Assets/Garden items/Fountain.png" id="1_ng2xv"]
 
-[node name="Foutain" type="StaticBody2D"]
+[node name="Fountain" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_ng2xv")
