@@ -236,5 +236,9 @@ libraries = {
 "": SubResource("AnimationLibrary_3svtk")
 }
 
+[node name="DelayTimer" type="Timer" parent="."]
+wait_time = 2.0
+
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="timeout" from="DelayTimer" to="." method="_on_delay_timer_timeout"]
