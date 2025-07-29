@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://crkscaiiikso0" path="res://Scenes/Objects/Sleep/sleep.tscn" id="3_jhhal"]
 [ext_resource type="Texture2D" uid="uid://dfy6yshlpmgbd" path="res://Assets/ground/farmground-1.png" id="4_n2i4p"]
 [ext_resource type="Texture2D" uid="uid://gitot22t8u3q" path="res://Assets/Carrot/Carrot grown.png" id="7_80mrc"]
-[ext_resource type="PackedScene" uid="uid://t3kmrcsfdrqj" path="res://Scenes/Objects/Foutain/foutain.tscn" id="8_xetvi"]
+[ext_resource type="PackedScene" uid="uid://t3kmrcsfdrqj" path="res://Scenes/Objects/Fountain/fountain.tscn" id="8_xetvi"]
 [ext_resource type="PackedScene" uid="uid://budlqw02xjssu" path="res://Scenes/Entities/Monster/monster.tscn" id="9_3t0bb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hovo0"]
@@ -88,6 +88,7 @@ scale = Vector2(3, 3)
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 position = Vector2(10964, -1455)
 color = Color(0.72549, 0.72549, 0.72549, 1)
+energy = 0.0
 blend_mode = 1
 shadow_enabled = true
 

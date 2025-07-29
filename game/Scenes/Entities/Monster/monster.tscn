@@ -12,23 +12,6 @@
 radius = 248.0
 height = 768.0
 
-[sub_resource type="Animation" id="Animation_8rok1"]
-resource_name = "Monster walking right"
-length = 0.3
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("2_sfkg7"), ExtResource("3_e5t0i"), ExtResource("1_y3eyr"), ExtResource("2_sfkg7")]
-}
-
 [sub_resource type="Animation" id="Animation_kcpp7"]
 resource_name = "Monster walking left"
 length = 0.3
@@ -44,6 +27,23 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [ExtResource("4_k6pg3"), ExtResource("5_gxa4q"), ExtResource("6_qaapg"), ExtResource("4_k6pg3")]
+}
+
+[sub_resource type="Animation" id="Animation_8rok1"]
+resource_name = "Monster walking right"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_sfkg7"), ExtResource("3_e5t0i"), ExtResource("1_y3eyr"), ExtResource("2_sfkg7")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_c7p7b"]
@@ -70,11 +70,13 @@ libraries = {
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(35, -121)
 energy = 3.0
+shadow_enabled = true
 texture = ExtResource("7_ilt7p")
 texture_scale = 0.5
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
 position = Vector2(19, -122)
 energy = 3.0
+shadow_enabled = true
 texture = ExtResource("7_ilt7p")
 texture_scale = 0.5
