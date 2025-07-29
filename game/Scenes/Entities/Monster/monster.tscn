@@ -1,0 +1,80 @@
+[gd_scene load_steps=12 format=3 uid="uid://budlqw02xjssu"]
+
+[ext_resource type="Texture2D" uid="uid://55cleeyh0nd" path="res://Assets/Monster/Monster right 3.png" id="1_y3eyr"]
+[ext_resource type="Texture2D" uid="uid://dhmep6d8s6ypj" path="res://Assets/Monster/Monster right 1.png" id="2_sfkg7"]
+[ext_resource type="Texture2D" uid="uid://cykyepgp6lidn" path="res://Assets/Monster/Monster right 2.png" id="3_e5t0i"]
+[ext_resource type="Texture2D" uid="uid://cbefd0y48xsc8" path="res://Assets/Monster/Monster left 1.png" id="4_k6pg3"]
+[ext_resource type="Texture2D" uid="uid://ubuyhgbfpd3o" path="res://Assets/Monster/Monster left 2.png" id="5_gxa4q"]
+[ext_resource type="Texture2D" uid="uid://bodvajlrk3giw" path="res://Assets/Monster/Monster left 3.png" id="6_qaapg"]
+[ext_resource type="Texture2D" uid="uid://bostilb1yhds1" path="res://Assets/light texture.jpg" id="7_ilt7p"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_khndi"]
+radius = 248.0
+height = 768.0
+
+[sub_resource type="Animation" id="Animation_8rok1"]
+resource_name = "Monster walking right"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_sfkg7"), ExtResource("3_e5t0i"), ExtResource("1_y3eyr"), ExtResource("2_sfkg7")]
+}
+
+[sub_resource type="Animation" id="Animation_kcpp7"]
+resource_name = "Monster walking left"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("4_k6pg3"), ExtResource("5_gxa4q"), ExtResource("6_qaapg"), ExtResource("4_k6pg3")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c7p7b"]
+_data = {
+"Monster walking left": SubResource("Animation_kcpp7"),
+"Monster walking right": SubResource("Animation_8rok1")
+}
+
+[node name="Monster" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(14, -38)
+texture = ExtResource("2_sfkg7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(14, 10)
+shape = SubResource("CapsuleShape2D_khndi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_c7p7b")
+}
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(35, -121)
+energy = 3.0
+texture = ExtResource("7_ilt7p")
+texture_scale = 0.5
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(19, -122)
+energy = 3.0
+texture = ExtResource("7_ilt7p")
+texture_scale = 0.5
