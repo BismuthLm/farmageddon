@@ -86,6 +86,7 @@ position = Vector2(142, 4071)
 scale = Vector2(3, 3)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+position = Vector2(10964, -1455)
 color = Color(0.72549, 0.72549, 0.72549, 1)
 blend_mode = 1
 shadow_enabled = true
