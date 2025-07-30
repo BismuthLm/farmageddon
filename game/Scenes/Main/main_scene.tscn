@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://5ngwkqk858lp"]
+[gd_scene load_steps=17 format=3 uid="uid://5ngwkqk858lp"]
 
 [ext_resource type="Script" path="res://Scenes/Main/main_scene.gd" id="1_1rti3"]
 [ext_resource type="Texture2D" uid="uid://2q3lmphfherl" path="res://Assets/ground/ground-v2.png" id="2_24ww3"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://gitot22t8u3q" path="res://Assets/Carrot/Carrot grown.png" id="7_80mrc"]
 [ext_resource type="PackedScene" uid="uid://t3kmrcsfdrqj" path="res://Scenes/Objects/Fountain/fountain.tscn" id="8_xetvi"]
 [ext_resource type="PackedScene" uid="uid://budlqw02xjssu" path="res://Scenes/Entities/Monster/monster.tscn" id="9_3t0bb"]
+[ext_resource type="PackedScene" uid="uid://b28eauenff5gw" path="res://Scenes/Objects/House/House.tscn" id="10_5wjhf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hovo0"]
 texture = ExtResource("2_24ww3")
@@ -74,7 +75,7 @@ layer_0/tile_data = PackedInt32Array(-1507366, 0, 0, -1441830, 0, 0, -1376294, 0
 
 [node name="Character" parent="." instance=ExtResource("2_nb0gi")]
 
-[node name="Camera2D" type="Camera2D" parent="Character"]
+[node name="Camera2D2" type="Camera2D" parent="Character"]
 zoom = Vector2(0.6, 0.6)
 position_smoothing_enabled = true
 
@@ -98,6 +99,9 @@ shadow_enabled = true
 
 [node name="Monster" parent="." instance=ExtResource("9_3t0bb")]
 position = Vector2(-435, -598)
+
+[node name="house" parent="." instance=ExtResource("10_5wjhf")]
+position = Vector2(98, -1767)
 
 [connection signal="timeout" from="HourTimer" to="." method="_on_hour_timer_timeout"]
 [connection signal="sleep" from="Sleep" to="." method="_on_sleep_sleep"]
