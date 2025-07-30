@@ -107,5 +107,10 @@ position = Vector2(-435, -598)
 [node name="house" parent="." instance=ExtResource("10_5wjhf")]
 position = Vector2(98, -1767)
 
+[node name="Plants" type="Node2D" parent="."]
+
+[node name="Plant" parent="Plants" instance=ExtResource("11_k1oo7")]
+position = Vector2(3850, 343)
+
 [connection signal="timeout" from="HourTimer" to="." method="_on_hour_timer_timeout"]
 [connection signal="sleep" from="Sleep" to="." method="_on_sleep_sleep"]
