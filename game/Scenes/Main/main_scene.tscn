@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://5ngwkqk858lp"]
+[gd_scene load_steps=18 format=3 uid="uid://5ngwkqk858lp"]
 
 [ext_resource type="Script" path="res://Scenes/Main/main_scene.gd" id="1_1rti3"]
 [ext_resource type="Texture2D" uid="uid://2q3lmphfherl" path="res://Assets/ground/ground-v2.png" id="2_24ww3"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://t3kmrcsfdrqj" path="res://Scenes/Objects/Fountain/fountain.tscn" id="8_xetvi"]
 [ext_resource type="PackedScene" uid="uid://budlqw02xjssu" path="res://Scenes/Entities/Monster/monster.tscn" id="9_3t0bb"]
 [ext_resource type="PackedScene" uid="uid://b28eauenff5gw" path="res://Scenes/Objects/House/House.tscn" id="10_5wjhf"]
+[ext_resource type="PackedScene" uid="uid://byneuhr600vtr" path="res://Scenes/Objects/Plant/plant.tscn" id="11_k1oo7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hovo0"]
 texture = ExtResource("2_24ww3")
@@ -102,6 +103,11 @@ position = Vector2(-435, -598)
 
 [node name="house" parent="." instance=ExtResource("10_5wjhf")]
 position = Vector2(98, -1767)
+
+[node name="Plants" type="Node2D" parent="."]
+
+[node name="Plant" parent="Plants" instance=ExtResource("11_k1oo7")]
+position = Vector2(3850, 343)
 
 [connection signal="timeout" from="HourTimer" to="." method="_on_hour_timer_timeout"]
 [connection signal="sleep" from="Sleep" to="." method="_on_sleep_sleep"]
