@@ -1,12 +1,12 @@
 [gd_scene load_steps=17 format=3 uid="uid://byneuhr600vtr"]
 
-[ext_resource type="Texture2D" uid="uid://bic2dvq2u420n" path="res://Assets/Carrot/Carrot Seeds.png" id="1_vcorr"]
+[ext_resource type="Texture2D" uid="uid://bic2dvq2u420n" path="res://Assets/carrot/Carrot Seeds.png" id="1_vcorr"]
 [ext_resource type="Script" path="res://Scenes/Objects/Plant/plant.gd" id="1_x3wq4"]
-[ext_resource type="Texture2D" uid="uid://bcgk76fq3rl52" path="res://Assets/Beetroot/Beetroot.png" id="2_64shl"]
-[ext_resource type="Texture2D" uid="uid://ccjj0mjpmd15" path="res://Assets/Carrot/Carrot sprout.png" id="2_uok3i"]
-[ext_resource type="Texture2D" uid="uid://gitot22t8u3q" path="res://Assets/Carrot/Carrot grown.png" id="4_bab2n"]
-[ext_resource type="Texture2D" uid="uid://casnjgxl1achb" path="res://Assets/Beetroot/Beetroot seeds.png" id="6_wpcka"]
-[ext_resource type="Texture2D" uid="uid://nm3s5xrecfad" path="res://Assets/Beetroot/Beetroot Sprout.png" id="7_dg3cw"]
+[ext_resource type="Texture2D" uid="uid://bcgk76fq3rl52" path="res://Assets/beetroot/Beetroot.png" id="2_64shl"]
+[ext_resource type="Texture2D" uid="uid://ccjj0mjpmd15" path="res://Assets/carrot/Carrot sprout.png" id="2_uok3i"]
+[ext_resource type="Texture2D" uid="uid://gitot22t8u3q" path="res://Assets/carrot/Carrot grown.png" id="4_bab2n"]
+[ext_resource type="Texture2D" uid="uid://casnjgxl1achb" path="res://Assets/beetroot/Beetroot seeds.png" id="6_wpcka"]
+[ext_resource type="Texture2D" uid="uid://nm3s5xrecfad" path="res://Assets/beetroot/Beetroot Sprout.png" id="7_dg3cw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3r8k3"]
 size = Vector2(100, 100)
