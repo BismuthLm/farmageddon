@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://df6xjttbv2u5w" path="res://Assets/ground/Ground tileset.png" id="2_p0imi"]
 [ext_resource type="PackedScene" uid="uid://crkscaiiikso0" path="res://Scenes/Objects/Sleep/sleep.tscn" id="3_jhhal"]
 [ext_resource type="Texture2D" uid="uid://dfy6yshlpmgbd" path="res://Assets/ground/farmground-1.png" id="4_n2i4p"]
-[ext_resource type="Texture2D" uid="uid://gitot22t8u3q" path="res://Assets/carrot/Carrot grown.png" id="7_80mrc"]
+[ext_resource type="Texture2D" uid="uid://gitot22t8u3q" path="res://Assets/Carrot/Carrot grown.png" id="7_80mrc"]
 [ext_resource type="PackedScene" uid="uid://t3kmrcsfdrqj" path="res://Scenes/Objects/Fountain/fountain.tscn" id="8_xetvi"]
 [ext_resource type="PackedScene" uid="uid://budlqw02xjssu" path="res://Scenes/Entities/Monster/monster.tscn" id="9_3t0bb"]
 [ext_resource type="PackedScene" uid="uid://b28eauenff5gw" path="res://Scenes/Objects/House Top/House Top.tscn" id="10_5wjhf"]

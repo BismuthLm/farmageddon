@@ -29,6 +29,10 @@ window/stretch/scale_mode="integer"
 
 project/assembly_name="Farmageddon"
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 left={
