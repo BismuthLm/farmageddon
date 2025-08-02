@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://5ngwkqk858lp"]
+[gd_scene load_steps=19 format=3 uid="uid://5ngwkqk858lp"]
 
 [ext_resource type="Script" path="res://Scenes/Main/main_scene.gd" id="1_1rti3"]
 [ext_resource type="Texture2D" uid="uid://2q3lmphfherl" path="res://Assets/ground/ground-v2.png" id="2_24ww3"]
@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://budlqw02xjssu" path="res://Scenes/Entities/Monster/monster.tscn" id="9_3t0bb"]
 [ext_resource type="PackedScene" uid="uid://b28eauenff5gw" path="res://Scenes/Objects/House Top/House Top.tscn" id="10_5wjhf"]
 [ext_resource type="PackedScene" uid="uid://n70cua6eu7us" path="res://Scenes/Objects/House Bottom/house_bottom.tscn" id="11_fe6yi"]
-[ext_resource type="PackedScene" uid="uid://byneuhr600vtr" path="res://Scenes/Objects/Plant/plant.tscn" id="12_2qpic"]
 [ext_resource type="PackedScene" uid="uid://br8rktro6ekil" path="res://Scenes/UI/ui.tscn" id="13_5bdl4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hovo0"]
@@ -109,16 +108,15 @@ position = Vector2(-435, -598)
 [node name="House Top" parent="." instance=ExtResource("10_5wjhf")]
 position = Vector2(98, -1767)
 
-[node name="Plants" type="Node2D" parent="."]
+[node name="Plant Markers" type="Node2D" parent="."]
 
-[node name="Plant" parent="Plants" instance=ExtResource("12_2qpic")]
-position = Vector2(351, 92)
+[node name="PlantMarker" type="Marker2D" parent="Plant Markers"]
+position = Vector2(283, 92)
 
-[node name="Plant2" parent="Plants" instance=ExtResource("12_2qpic")]
-position = Vector2(452, 91)
+[node name="PlantMarker2" type="Marker2D" parent="Plant Markers"]
+position = Vector2(379, 96)
 
 [node name="CanvasLayer" parent="." instance=ExtResource("13_5bdl4")]
 
-[connection signal="plant_sleep" from="." to="Plants/Plant" method="_on_main_scene_plant_sleep"]
 [connection signal="timeout" from="HourTimer" to="." method="_on_hour_timer_timeout"]
 [connection signal="sleep" from="Sleep" to="." method="_on_sleep_sleep"]
