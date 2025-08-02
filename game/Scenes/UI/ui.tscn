@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://br8rktro6ekil"]
+
+[ext_resource type="Script" path="res://Scenes/UI/ui.gd" id="1_5plb2"]
+[ext_resource type="Texture2D" uid="uid://gitot22t8u3q" path="res://Assets/Carrot/Carrot grown.png" id="1_440hj"]
+[ext_resource type="Texture2D" uid="uid://bcgk76fq3rl52" path="res://Assets/Beetroot/Beetroot.png" id="2_2mxtg"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_5plb2")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -140.0
+offset_top = -80.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Beetroot" type="Sprite2D" parent="Control"]
+modulate = Color(0.262745, 0.262745, 0.262745, 1)
+position = Vector2(-16, 58)
+texture = ExtResource("2_2mxtg")
+
+[node name="Carrot" type="Sprite2D" parent="Control"]
+position = Vector2(92, 52)
+texture = ExtResource("1_440hj")
