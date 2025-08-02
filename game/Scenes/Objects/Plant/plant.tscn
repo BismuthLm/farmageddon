@@ -222,9 +222,10 @@ _data = {
 script = ExtResource("1_x3wq4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("2_64shl")
-offset = Vector2(4, 5)
+position = Vector2(0, 26)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_bab2n")
+offset = Vector2(4, -6)
 
 [node name="Area2D" type="Area2D" parent="."]
 
