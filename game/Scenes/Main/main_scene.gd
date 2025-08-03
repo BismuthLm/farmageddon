@@ -1,16 +1,27 @@
 extends Node2D
 
-var cursor_day_up = load("res://Assets/cursors/cursor-1.0.png")
-var cursor_day_down = load("res://Assets/cursors/cursor-1.1.png")
-
-func _ready():
-	Input.set_custom_mouse_cursor(cursor_day_up, 0, Vector2(64, 64))
-	
-
 func _process(_delta):
 	if Globals.time_of_day == 25:
 		Globals.time_of_day = 1
 signal plant_sleep
+
+var plant_scene: PackedScene = preload("res://Scenes/Objects/Plant/plant.tscn")
+
+func _ready():
+
+		
+		var pos = $"Plant Markers/PlantMarker".position
+		var plant = plant_scene.instantiate() as Node2D
+		plant.global_position = pos
+		$Plants.add_child(plant)
+		
+		pos = $"Plant Markers/PlantMarker2".position
+		plant = plant_scene.instantiate() as Node2D
+		plant.global_position = pos
+		$Plants.add_child(plant)
+
+
+
 
 func _on_hour_timer_timeout():
 	if Globals.time_of_day <= 23:

@@ -117,6 +117,8 @@ position = Vector2(283, 92)
 [node name="PlantMarker2" type="Marker2D" parent="Plant Markers"]
 position = Vector2(379, 96)
 
+[node name="Plants" type="Node2D" parent="."]
+
 [node name="CanvasLayer" parent="." instance=ExtResource("13_5bdl4")]
 
 [connection signal="timeout" from="HourTimer" to="." method="_on_hour_timer_timeout"]
