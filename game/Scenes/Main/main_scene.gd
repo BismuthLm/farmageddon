@@ -1,5 +1,11 @@
 extends Node2D
 
+var cursor_day_up = load("res://Assets/cursors/cursor-1.0.png")
+var cursor_day_down = load("res://Assets/cursors/cursor-1.1.png")
+
+func _ready():
+	Input.set_custom_mouse_cursor(cursor_day_up, 0, Vector2(64, 64))
+	
 
 func _process(_delta):
 	if Globals.time_of_day == 25:
