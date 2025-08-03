@@ -1,5 +1,4 @@
 [gd_scene load_steps=13 format=3 uid="uid://budlqw02xjssu"]
-[gd_scene load_steps=11 format=3 uid="uid://budlqw02xjssu"]
 
 [ext_resource type="Script" path="res://Scenes/Entities/Monster/monster.gd" id="1_ve1bt"]
 [ext_resource type="Texture2D" uid="uid://55cleeyh0nd" path="res://Assets/Monster/Monster right 3.png" id="1_y3eyr"]
