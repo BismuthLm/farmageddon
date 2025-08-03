@@ -1,5 +1,8 @@
 extends Node2D
 
+func _process(_delta):
+	if Globals.time_of_day == 25:
+		Globals.time_of_day = 1
 signal plant_sleep
 
 var plant_scene: PackedScene = preload("res://Scenes/Objects/Plant/plant.tscn")
