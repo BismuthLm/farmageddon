@@ -1,5 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://budlqw02xjssu"]
+[gd_scene load_steps=13 format=3 uid="uid://budlqw02xjssu"]
+[gd_scene load_steps=11 format=3 uid="uid://budlqw02xjssu"]
 
+[ext_resource type="Script" path="res://Scenes/Entities/Monster/monster.gd" id="1_ve1bt"]
 [ext_resource type="Texture2D" uid="uid://55cleeyh0nd" path="res://Assets/Monster/Monster right 3.png" id="1_y3eyr"]
 [ext_resource type="Texture2D" uid="uid://dhmep6d8s6ypj" path="res://Assets/Monster/Monster right 1.png" id="2_sfkg7"]
 [ext_resource type="Texture2D" uid="uid://cykyepgp6lidn" path="res://Assets/Monster/Monster right 2.png" id="3_e5t0i"]
@@ -7,10 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://ubuyhgbfpd3o" path="res://Assets/Monster/Monster left 2.png" id="5_gxa4q"]
 [ext_resource type="Texture2D" uid="uid://bodvajlrk3giw" path="res://Assets/Monster/Monster left 3.png" id="6_qaapg"]
 [ext_resource type="Texture2D" uid="uid://bostilb1yhds1" path="res://Assets/light texture.jpg" id="7_ilt7p"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_khndi"]
-radius = 248.0
-height = 768.0
 
 [sub_resource type="Animation" id="Animation_kcpp7"]
 resource_name = "Monster walking left"
@@ -53,14 +51,11 @@ _data = {
 }
 
 [node name="Monster" type="CharacterBody2D"]
+script = ExtResource("1_ve1bt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(14, -38)
 texture = ExtResource("2_sfkg7")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(14, 10)
-shape = SubResource("CapsuleShape2D_khndi")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -68,15 +63,30 @@ libraries = {
 }
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(35, -121)
+position = Vector2(457.712, -67.4363)
+rotation = 0.120428
+scale = Vector2(8.44644, 0.686667)
 energy = 3.0
 shadow_enabled = true
 texture = ExtResource("7_ilt7p")
 texture_scale = 0.5
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(19, -122)
+position = Vector2(470, -127)
+scale = Vector2(8.65003, 0.774204)
 energy = 3.0
 shadow_enabled = true
 texture = ExtResource("7_ilt7p")
 texture_scale = 0.5
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(88, 417, 148, 396, 152, 359, 132, 260, 109, 262, 74, 291, 63, 316, 65, 327, 59, 340, 53, 353, 60, 382)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(245, 425, 278, 411, 293, 388, 284, 327, 279, 295, 265, 270, 257, 262, 239, 257, 209, 268, 208, 287, 213, 301, 203, 311, 204, 327, 196, 347, 188, 383, 214, 413)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-168, 410, -125, 422, -102, 400, -92, 370, -103, 348, -110, 336, -107, 303, -107, 283, -163, 254, -162, 315, -156, 325, -175, 355)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-182, 419, -248, 413, -277, 366, -249, 296, -241, 259, -197, 235, -184, 261, -183, 276, -166, 327, -169, 350, -167, 382)
