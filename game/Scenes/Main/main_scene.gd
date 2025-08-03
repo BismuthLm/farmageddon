@@ -10,6 +10,7 @@ func _ready():
 func _process(_delta):
 	if Globals.time_of_day == 25:
 		Globals.time_of_day = 1
+signal plant_sleep
 
 func _on_hour_timer_timeout():
 	if Globals.time_of_day <= 23:
@@ -25,5 +26,6 @@ func _on_sleep_sleep():
 		$HourTimer.start()
 		print("Sleeping")
 		print(Globals.time_of_day)
+		plant_sleep.emit()
 	else:
 		print("You Cannot Sleep Yet")

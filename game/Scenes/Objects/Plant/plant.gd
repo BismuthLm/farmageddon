@@ -6,21 +6,37 @@ var time_since_planted: int = 0
 var planted: bool = false
 var growing: bool = false
 var grown: bool = false
+var plant_planted: int = 0
 
 func _ready():
 	$AnimationPlayer.play("Nothing")
-	Globals.connect("time_change", time_of_day_change)
-	time_of_day_change()
 
 func _process(_delta):
-	if Input.is_action_pressed("click") and mouse_entered == true and planted == false:
+	if Input.is_action_just_pressed("click") and mouse_entered == true and planted == false:
 		time_planted = Globals.time_of_day - 1
 		planted = true
-		$AnimationPlayer.play("Carrot Seeds")
-	else:
-		print("Cannot plant here plant is already here")
-	if time_since_planted == time_planted:
+		
+		if Globals.plant_selected == 0:
+			$AnimationPlayer.play("Beetroot Seeds")
+			plant_planted = 0
+			
+		if Globals.plant_selected == 1:
+			$AnimationPlayer.play("Carrot Seeds")
+			plant_planted = 1
+		
+	if Input.is_action_just_pressed("click") and mouse_entered == true and planted == true:
+		print("Cannot plant here, plant is already here")
+
+	if Globals.time_of_day == time_planted:
 		grown = true
+		
+		if plant_planted == 0:
+			$AnimationPlayer.play("Beetroot Grown")
+			
+		if plant_planted == 1:
+			$AnimationPlayer.play("Carrot Grown")
+			
+		print("Plant Grown")
 
 func _on_area_2d_mouse_entered():
 	mouse_entered = true
@@ -34,6 +50,10 @@ func _on_delay_timer_timeout():
 	time_planted += 1
 	growing = true
 	
-func time_of_day_change():
-	if planted == true:
-		time_since_planted += 1
+
+func _on_main_scene_plant_sleep():
+	if plant_planted == 0 and grown == false:
+		$AnimationPlayer.play("Beetroot Sprout")
+		
+	if plant_planted == 1 and grown == false:
+		$AnimationPlayer.play("Carrot Sprout")
