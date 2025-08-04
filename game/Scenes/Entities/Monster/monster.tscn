@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://budlqw02xjssu"]
+[gd_scene load_steps=13 format=3 uid="uid://budlqw02xjssu"]
 
 [ext_resource type="Texture2D" uid="uid://55cleeyh0nd" path="res://Assets/Monster/Monster right 3.png" id="1_y3eyr"]
 [ext_resource type="Texture2D" uid="uid://dhmep6d8s6ypj" path="res://Assets/Monster/Monster right 1.png" id="2_sfkg7"]
@@ -60,14 +60,17 @@ libraries = {
 }
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(35, -121)
+position = Vector2(457.712, -67.4363)
+rotation = 0.120428
+scale = Vector2(8.44644, 0.686667)
 energy = 3.0
 shadow_enabled = true
 texture = ExtResource("7_ilt7p")
 texture_scale = 0.5
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(19, -122)
+position = Vector2(470, -127)
+scale = Vector2(8.65003, 0.774204)
 energy = 3.0
 shadow_enabled = true
 texture = ExtResource("7_ilt7p")
