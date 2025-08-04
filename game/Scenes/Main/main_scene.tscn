@@ -79,20 +79,20 @@ layer_0/tile_data = PackedInt32Array(-1507366, 0, 0, -1441830, 0, 0, -1376294, 0
 position = Vector2(98, -1767)
 
 [node name="Character" parent="." instance=ExtResource("2_nb0gi")]
-position = Vector2(16, -86)
+position = Vector2(103, -987)
 
 [node name="Camera2D2" type="Camera2D" parent="Character"]
 zoom = Vector2(0.6, 0.6)
 position_smoothing_enabled = true
 
 [node name="Sleep" parent="." instance=ExtResource("3_jhhal")]
-position = Vector2(427, 291)
+position = Vector2(432, -1158)
 
 [node name="CarrotGrown" type="Sprite2D" parent="."]
 position = Vector2(3911, 2316)
 texture = ExtResource("7_80mrc")
 
-[node name="Foutain" parent="." instance=ExtResource("8_xetvi")]
+[node name="Fountain" parent="." instance=ExtResource("8_xetvi")]
 position = Vector2(142, 4071)
 scale = Vector2(3, 3)
 
