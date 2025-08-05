@@ -89,7 +89,7 @@ position_smoothing_enabled = true
 position = Vector2(427, 291)
 
 [node name="CarrotGrown" type="Sprite2D" parent="."]
-position = Vector2(3911, 2316)
+position = Vector2(688, -292)
 texture = ExtResource("7_80mrc")
 
 [node name="Foutain" parent="." instance=ExtResource("8_xetvi")]
@@ -107,7 +107,7 @@ shadow_enabled = true
 position = Vector2(-435, -598)
 
 [node name="House Top" parent="." instance=ExtResource("10_5wjhf")]
-position = Vector2(98, -1767)
+position = Vector2(100, -1767)
 
 [node name="Plant Markers" type="Node2D" parent="."]
 
