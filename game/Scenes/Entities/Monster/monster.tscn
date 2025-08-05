@@ -81,13 +81,13 @@ script = ExtResource("1_gcdd3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(14, -38)
-texture = ExtResource("17_5l7xj")
+texture = ExtResource("1_y3eyr")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_c7p7b")
 }
-speed_scale = 2.0
+speed_scale = 1.8
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(457.712, -67.4363)
