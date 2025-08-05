@@ -1,12 +1,23 @@
-[gd_scene load_steps=13 format=3 uid="uid://budlqw02xjssu"]
+[gd_scene load_steps=23 format=3 uid="uid://budlqw02xjssu"]
 
+[ext_resource type="Script" path="res://Scenes/Entities/Monster/monster.gd" id="1_gcdd3"]
 [ext_resource type="Texture2D" uid="uid://55cleeyh0nd" path="res://Assets/Monster/Monster right 3.png" id="1_y3eyr"]
+[ext_resource type="Texture2D" uid="uid://bstr1lehubsf7" path="res://Assets/Monster/Monster bite/Monster bite 1.png" id="2_gribh"]
 [ext_resource type="Texture2D" uid="uid://dhmep6d8s6ypj" path="res://Assets/Monster/Monster right 1.png" id="2_sfkg7"]
 [ext_resource type="Texture2D" uid="uid://cykyepgp6lidn" path="res://Assets/Monster/Monster right 2.png" id="3_e5t0i"]
 [ext_resource type="Texture2D" uid="uid://cbefd0y48xsc8" path="res://Assets/Monster/Monster left 1.png" id="4_k6pg3"]
 [ext_resource type="Texture2D" uid="uid://ubuyhgbfpd3o" path="res://Assets/Monster/Monster left 2.png" id="5_gxa4q"]
 [ext_resource type="Texture2D" uid="uid://bodvajlrk3giw" path="res://Assets/Monster/Monster left 3.png" id="6_qaapg"]
 [ext_resource type="Texture2D" uid="uid://bostilb1yhds1" path="res://Assets/light texture.jpg" id="7_ilt7p"]
+[ext_resource type="Texture2D" uid="uid://e18ufiju2ckt" path="res://Assets/Monster/Monster bite/Monster bite 2.png" id="9_xkmjb"]
+[ext_resource type="Texture2D" uid="uid://fd3o7ig551jk" path="res://Assets/Monster/Monster bite/Monster bite 3.png" id="10_8ff47"]
+[ext_resource type="Texture2D" uid="uid://ldp44ucn4iis" path="res://Assets/Monster/Monster bite/Monster bite 4.png" id="11_vtugi"]
+[ext_resource type="Texture2D" uid="uid://ome7s425t0u" path="res://Assets/Monster/Monster bite/Monster bite 5.png" id="12_1g7r0"]
+[ext_resource type="Texture2D" uid="uid://cys5vhg66de1q" path="res://Assets/Monster/Monster bite/Monster bite 6.png" id="13_j560n"]
+[ext_resource type="Texture2D" uid="uid://cawwx16fo11ao" path="res://Assets/Monster/Monster bite/Monster bite 7.png" id="14_uvvvs"]
+[ext_resource type="Texture2D" uid="uid://ht352bjixypf" path="res://Assets/Monster/Monster bite/Monster bite 8.png" id="15_730re"]
+[ext_resource type="Texture2D" uid="uid://de4x4x65m6cdb" path="res://Assets/Monster/Monster bite/Monster bite 9.png" id="16_hsjtq"]
+[ext_resource type="Texture2D" uid="uid://n33gipjcb7ye" path="res://Assets/Monster/Monster bite/Monster bite 10.png" id="17_5l7xj"]
 
 [sub_resource type="Animation" id="Animation_kcpp7"]
 resource_name = "Monster walking left"
@@ -42,22 +53,41 @@ tracks/0/keys = {
 "values": [ExtResource("2_sfkg7"), ExtResource("3_e5t0i"), ExtResource("1_y3eyr"), ExtResource("2_sfkg7")]
 }
 
+[sub_resource type="Animation" id="Animation_ch66p"]
+resource_name = "Monster bite"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_gribh"), ExtResource("9_xkmjb"), ExtResource("10_8ff47"), ExtResource("11_vtugi"), ExtResource("12_1g7r0"), ExtResource("13_j560n"), ExtResource("14_uvvvs"), ExtResource("15_730re"), ExtResource("16_hsjtq"), ExtResource("17_5l7xj")]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_c7p7b"]
 _data = {
+"Monster bite": SubResource("Animation_ch66p"),
 "Monster walking left": SubResource("Animation_kcpp7"),
 "Monster walking right": SubResource("Animation_8rok1")
 }
 
 [node name="Monster" type="CharacterBody2D"]
+script = ExtResource("1_gcdd3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(14, -38)
-texture = ExtResource("2_sfkg7")
+texture = ExtResource("2_gribh")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_c7p7b")
 }
+speed_scale = 2.0
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(457.712, -67.4363)
