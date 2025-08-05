@@ -104,7 +104,7 @@ blend_mode = 1
 shadow_enabled = true
 
 [node name="Monster" parent="." instance=ExtResource("9_3t0bb")]
-position = Vector2(-435, -598)
+position = Vector2(-239, -304)
 
 [node name="House Top" parent="." instance=ExtResource("10_5wjhf")]
 position = Vector2(98, -1767)
