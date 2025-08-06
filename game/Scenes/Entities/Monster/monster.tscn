@@ -90,21 +90,20 @@ libraries = {
 speed_scale = 1.8
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(457.712, -67.4363)
-rotation = 0.120428
-scale = Vector2(8.44644, 0.686667)
-energy = 3.0
+position = Vector2(469, -32)
+scale = Vector2(0.792038, 0.686667)
+energy = 1.5
 shadow_enabled = true
 texture = ExtResource("7_ilt7p")
-texture_scale = 0.5
+texture_scale = 4.5
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(470, -127)
-scale = Vector2(8.65003, 0.774204)
-energy = 3.0
+position = Vector2(251.071, -80.4615)
+rotation = 0.200713
+scale = Vector2(0.969649, 0.0544444)
 shadow_enabled = true
 texture = ExtResource("7_ilt7p")
-texture_scale = 0.5
+texture_scale = 2.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(88, 417, 148, 396, 152, 359, 132, 260, 109, 262, 74, 291, 63, 316, 65, 327, 59, 340, 53, 353, 60, 382)
