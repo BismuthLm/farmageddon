@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvfq88ahceoxp"]
+
+[ext_resource type="Texture2D" uid="uid://dyvd5163qfyp8" path="res://Assets/cursors/tile-outline.png" id="1_0twpw"]
+[ext_resource type="Script" path="res://Scenes/UI/highlight.gd" id="1_eojuj"]
+
+[node name="Highlight" type="Node2D"]
+script = ExtResource("1_eojuj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_0twpw")

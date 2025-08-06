@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bx3rptr7ucdlp"]
+
+[ext_resource type="Texture2D" uid="uid://b0j1dsh7s6tg6" path="res://Assets/Garden items/Lamp.png" id="1_v1tlp"]
+[ext_resource type="Texture2D" uid="uid://bostilb1yhds1" path="res://Assets/light texture.jpg" id="2_jsvdt"]
+
+[node name="Lamp" type="StaticBody2D"]
+position = Vector2(-1, -10)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(44, -59)
+scale = Vector2(1.00844, 1)
+energy = 2.5
+shadow_enabled = true
+texture = ExtResource("2_jsvdt")
+texture_scale = 3.5
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4, 1)
+texture = ExtResource("1_v1tlp")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-235, 313, -189, 311, -188, 275, -236, 275)
