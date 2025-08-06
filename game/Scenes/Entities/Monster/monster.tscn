@@ -80,7 +80,7 @@ _data = {
 script = ExtResource("1_gcdd3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(14, -38)
+position = Vector2(14, -44)
 texture = ExtResource("2_gribh")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -92,15 +92,15 @@ speed_scale = 1.8
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(469, -32)
 scale = Vector2(0.792038, 0.686667)
-energy = 1.5
+energy = 2.5
 shadow_enabled = true
 texture = ExtResource("7_ilt7p")
 texture_scale = 4.5
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(251.071, -80.4615)
+position = Vector2(252.755, -86.9157)
 rotation = 0.200713
-scale = Vector2(0.969649, 0.0544444)
+scale = Vector2(0.968036, 0.0840456)
 shadow_enabled = true
 texture = ExtResource("7_ilt7p")
 texture_scale = 2.0
