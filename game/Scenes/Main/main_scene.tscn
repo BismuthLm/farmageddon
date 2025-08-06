@@ -111,7 +111,7 @@ scale = Vector2(3, 3)
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 position = Vector2(10601, -1879)
 color = Color(0.72549, 0.72549, 0.72549, 1)
-energy = 0.0
+energy = 1.33
 blend_mode = 1
 shadow_enabled = true
 
@@ -127,7 +127,7 @@ position = Vector2(100, -1767)
 position = Vector2(484, -72)
 
 [node name="Lamp" parent="." instance=ExtResource("14_1ybne")]
-position = Vector2(-54, -272)
+position = Vector2(-74, -343)
 
 [connection signal="timeout" from="HourTimer" to="." method="_on_hour_timer_timeout"]
 [connection signal="sleep" from="Sleep" to="." method="_on_sleep_sleep"]
