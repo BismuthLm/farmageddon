@@ -6,7 +6,6 @@ var time_since_planted: int = 0
 var planted: bool = false
 var grown: bool = false
 var plant_planted: int = 0
-var harvested: bool = false
 
 func _ready():
 	$AnimationPlayer.play("Nothing")
@@ -19,11 +18,13 @@ func _process(_delta):
 		if Globals.plant_selected == 0:
 			$AnimationPlayer.play("Beetroot Seeds")
 			plant_planted = 0
+			Globals.beetroot_amount -= 1
 			print("Plant Planted is Beetroot")
 			
 		if Globals.plant_selected == 1:
 			$AnimationPlayer.play("Carrot Seeds")
 			plant_planted = 1
+			Globals.carrot_amount -= 1
 			print("Plant planted is Carrot")
 		
 	if Input.is_action_just_pressed("left click") and mouse_entered == true and planted == true and Globals.time_of_day < 20 and Globals.time_of_day > 5:
@@ -59,14 +60,18 @@ func _process(_delta):
 		
 		
 	if Input.is_action_just_pressed("right click") and mouse_entered == true and grown == true:
+		
+		if plant_planted == 0:
+			Globals.beetroot_amount += 5
+			
+		if plant_planted == 1:
+			Globals.carrot_amount += 3
+		
+		
 		time_planted = 0
 		time_since_planted = 0
 		planted = false
 		grown = false
-		
-		harvested = true
-		#Plus 3 carrots or 5 beetroots into the inventory
-		#Set harvested to false
 		
 func _on_area_2d_mouse_entered():
 	mouse_entered = true

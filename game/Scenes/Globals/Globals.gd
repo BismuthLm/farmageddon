@@ -13,3 +13,7 @@ var plant_selected: int = 1
 
 #Is set true for a small amount of time when sleeping
 var sleeping = false
+
+
+var beetroot_amount: int = 2
+var carrot_amount: int = 2
