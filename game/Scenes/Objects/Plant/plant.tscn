@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://bic2dvq2u420n" path="res://Assets/Carrot/Carrot Seeds.png" id="1_vcorr"]
 [ext_resource type="Script" path="res://Scenes/Objects/Plant/plant.gd" id="1_x3wq4"]
-[ext_resource type="Texture2D" uid="uid://bcgk76fq3rl52" path="res://Assets/Beetroot/Beetroot.png" id="2_64shl"]
 [ext_resource type="Texture2D" uid="uid://vwqg4edv05r3" path="res://Assets/Carrot/Carrot grown1.png" id="2_il45h"]
+[ext_resource type="Texture2D" uid="uid://btr2b7cb5d03x" path="res://Assets/Beetroot/Beetroot4.png" id="2_jaek5"]
 [ext_resource type="Texture2D" uid="uid://ccjj0mjpmd15" path="res://Assets/Carrot/Carrot sprout.png" id="2_uok3i"]
 [ext_resource type="Texture2D" uid="uid://casnjgxl1achb" path="res://Assets/Beetroot/Beetroot seeds.png" id="6_wpcka"]
 [ext_resource type="Texture2D" uid="uid://nm3s5xrecfad" path="res://Assets/Beetroot/Beetroot Sprout.png" id="7_dg3cw"]
@@ -24,7 +24,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_64shl")]
+"values": [ExtResource("2_jaek5")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -36,7 +36,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(4, 5)]
+"values": [Vector2(5, -10)]
 }
 
 [sub_resource type="Animation" id="Animation_vf738"]
@@ -211,8 +211,8 @@ script = ExtResource("1_x3wq4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-8, 4)
-texture = ExtResource("2_il45h")
-offset = Vector2(10, -6)
+texture = ExtResource("2_jaek5")
+offset = Vector2(5, -10)
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -226,6 +226,7 @@ libraries = {
 
 [node name="DelayTimer" type="Timer" parent="."]
 wait_time = 2.0
+one_shot = true
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

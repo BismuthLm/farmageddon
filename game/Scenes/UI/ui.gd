@@ -17,3 +17,7 @@ func _process(_delta):
 			print("Plant selected is Beetroot")
 			$Control/Beetroot.modulate = selected
 			$Control/Carrot.modulate = not_selected
+	
+	
+	$"Control/Beetroot amount".text = str(Globals.beetroot_amount)
+	$"Control/Carrot amount".text = str(Globals.carrot_amount)

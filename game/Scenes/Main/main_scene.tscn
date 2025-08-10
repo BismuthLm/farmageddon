@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://5ngwkqk858lp"]
+[gd_scene load_steps=22 format=3 uid="uid://5ngwkqk858lp"]
 
 [ext_resource type="Script" path="res://Scenes/Main/main_scene.gd" id="1_1rti3"]
 [ext_resource type="Texture2D" uid="uid://2q3lmphfherl" path="res://Assets/ground/ground-v2.png" id="2_24ww3"]
@@ -6,13 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://df6xjttbv2u5w" path="res://Assets/ground/Ground tileset.png" id="2_p0imi"]
 [ext_resource type="PackedScene" uid="uid://crkscaiiikso0" path="res://Scenes/Objects/Sleep/sleep.tscn" id="3_jhhal"]
 [ext_resource type="Texture2D" uid="uid://dfy6yshlpmgbd" path="res://Assets/ground/farmground-1.png" id="4_n2i4p"]
-[ext_resource type="Texture2D" uid="uid://gitot22t8u3q" path="res://Assets/Carrot/Carrot grown.png" id="7_80mrc"]
+[ext_resource type="PackedScene" uid="uid://byneuhr600vtr" path="res://Scenes/Objects/Plant/plant.tscn" id="7_fi151"]
 [ext_resource type="PackedScene" uid="uid://t3kmrcsfdrqj" path="res://Scenes/Objects/Fountain/fountain.tscn" id="8_xetvi"]
 [ext_resource type="PackedScene" uid="uid://budlqw02xjssu" path="res://Scenes/Entities/Monster/monster.tscn" id="9_3t0bb"]
 [ext_resource type="PackedScene" uid="uid://b28eauenff5gw" path="res://Scenes/Objects/House Top/House Top.tscn" id="10_5wjhf"]
+[ext_resource type="PackedScene" uid="uid://b4p5au60klmna" path="res://Scenes/Main/Directional light/directional_light.tscn" id="10_kllul"]
 [ext_resource type="PackedScene" uid="uid://n70cua6eu7us" path="res://Scenes/Objects/House Bottom/house_bottom.tscn" id="11_fe6yi"]
 [ext_resource type="PackedScene" uid="uid://br8rktro6ekil" path="res://Scenes/UI/ui.tscn" id="13_5bdl4"]
-[ext_resource type="PackedScene" path="res://Scenes/UI/highlight.tscn" id="13_ccr7g"]
+[ext_resource type="PackedScene" uid="uid://dvfq88ahceoxp" path="res://Scenes/UI/highlight.tscn" id="13_ccr7g"]
 [ext_resource type="PackedScene" uid="uid://bx3rptr7ucdlp" path="res://Scenes/Objects/Lamp/lamp.tscn" id="14_1ybne"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hovo0"]
@@ -83,15 +84,19 @@ position = Vector2(98, -1767)
 [node name="Sleep" parent="." instance=ExtResource("3_jhhal")]
 position = Vector2(432, -1158)
 
-[node name="Plant Markers" type="Node2D" parent="."]
-
-[node name="PlantMarker" type="Marker2D" parent="Plant Markers" groups=["Markers"]]
-position = Vector2(484, -72)
-
-[node name="PlantMarker2" type="Marker2D" parent="Plant Markers" groups=["Markers"]]
-position = Vector2(594, -72)
-
 [node name="Plants" type="Node2D" parent="."]
+
+[node name="Plant" parent="Plants" groups=["Plants"] instance=ExtResource("7_fi151")]
+position = Vector2(500, -100)
+scale = Vector2(2, 2)
+
+[node name="Plant2" parent="Plants" groups=["Plants"] instance=ExtResource("7_fi151")]
+position = Vector2(700, -100)
+scale = Vector2(2, 2)
+
+[node name="Plant3" parent="Plants" groups=["Plants"] instance=ExtResource("7_fi151")]
+position = Vector2(899, -100)
+scale = Vector2(2, 2)
 
 [node name="Character" parent="." instance=ExtResource("2_nb0gi")]
 position = Vector2(103, -987)
@@ -99,10 +104,6 @@ position = Vector2(103, -987)
 [node name="Camera2D2" type="Camera2D" parent="Character"]
 zoom = Vector2(0.6, 0.6)
 position_smoothing_enabled = true
-
-[node name="CarrotGrown" type="Sprite2D" parent="."]
-position = Vector2(688, -292)
-texture = ExtResource("7_80mrc")
 
 [node name="Fountain" parent="." instance=ExtResource("8_xetvi")]
 position = Vector2(142, 4071)
@@ -124,7 +125,8 @@ position = Vector2(100, -1767)
 [node name="CanvasLayer" parent="." instance=ExtResource("13_5bdl4")]
 
 [node name="Highlight" parent="." instance=ExtResource("13_ccr7g")]
-position = Vector2(484, -72)
+position = Vector2(500, -100)
+scale = Vector2(0.666, 0.666)
 
 [node name="Lamp" parent="." instance=ExtResource("14_1ybne")]
 position = Vector2(-74, -343)
