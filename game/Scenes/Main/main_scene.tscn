@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://5ngwkqk858lp"]
+[gd_scene load_steps=21 format=3 uid="uid://5ngwkqk858lp"]
 
 [ext_resource type="Script" path="res://Scenes/Main/main_scene.gd" id="1_1rti3"]
 [ext_resource type="Texture2D" uid="uid://2q3lmphfherl" path="res://Assets/ground/ground-v2.png" id="2_24ww3"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://t3kmrcsfdrqj" path="res://Scenes/Objects/Fountain/fountain.tscn" id="8_xetvi"]
 [ext_resource type="PackedScene" uid="uid://budlqw02xjssu" path="res://Scenes/Entities/Monster/monster.tscn" id="9_3t0bb"]
 [ext_resource type="PackedScene" uid="uid://b28eauenff5gw" path="res://Scenes/Objects/House Top/House Top.tscn" id="10_5wjhf"]
-[ext_resource type="PackedScene" uid="uid://b4p5au60klmna" path="res://Scenes/Main/Directional light/directional_light.tscn" id="10_kllul"]
 [ext_resource type="PackedScene" uid="uid://n70cua6eu7us" path="res://Scenes/Objects/House Bottom/house_bottom.tscn" id="11_fe6yi"]
 [ext_resource type="PackedScene" uid="uid://br8rktro6ekil" path="res://Scenes/UI/ui.tscn" id="13_5bdl4"]
 [ext_resource type="PackedScene" uid="uid://dvfq88ahceoxp" path="res://Scenes/UI/highlight.tscn" id="13_ccr7g"]
@@ -117,7 +116,7 @@ blend_mode = 1
 shadow_enabled = true
 
 [node name="Monster" parent="." instance=ExtResource("9_3t0bb")]
-position = Vector2(-650, -950)
+position = Vector2(-4009, -3020)
 
 [node name="House Top" parent="." instance=ExtResource("10_5wjhf")]
 position = Vector2(100, -1767)

@@ -8,7 +8,7 @@ var move: bool = true
 
 func _process(_delta):
 	if move == true:
-		$AnimationPlayer.stop()
+		$AnimationPlayer.play("Monster walking right")
 		var direction: Vector2 = (Globals.player_pos - position).normalized()
 		print(direction)
 		velocity = direction * speed
