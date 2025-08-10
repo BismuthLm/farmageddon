@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://b28eauenff5gw" path="res://Scenes/Objects/House Top/House Top.tscn" id="10_5wjhf"]
 [ext_resource type="PackedScene" uid="uid://n70cua6eu7us" path="res://Scenes/Objects/House Bottom/house_bottom.tscn" id="11_fe6yi"]
 [ext_resource type="PackedScene" uid="uid://br8rktro6ekil" path="res://Scenes/UI/ui.tscn" id="13_5bdl4"]
-[ext_resource type="PackedScene" path="res://Scenes/UI/highlight.tscn" id="13_ccr7g"]
+[ext_resource type="PackedScene" uid="uid://dvfq88ahceoxp" path="res://Scenes/UI/highlight.tscn" id="13_ccr7g"]
 [ext_resource type="PackedScene" uid="uid://bx3rptr7ucdlp" path="res://Scenes/Objects/Lamp/lamp.tscn" id="14_1ybne"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hovo0"]
