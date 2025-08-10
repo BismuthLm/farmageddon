@@ -15,5 +15,10 @@ var plant_selected: int = 1
 var sleeping = false
 
 
+#How many beetroots and carrots you have in your inventory
 var beetroot_amount: int = 2
 var carrot_amount: int = 2
+
+
+#If you are able to interact with things
+var interactable: bool = false
