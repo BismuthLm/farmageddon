@@ -85,7 +85,7 @@ script = ExtResource("1_gcdd3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(14, -44)
-texture = ExtResource("17_5l7xj")
+texture = ExtResource("2_gribh")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -94,6 +94,7 @@ libraries = {
 speed_scale = 1.8
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
+visible = false
 position = Vector2(469, -32)
 scale = Vector2(0.792038, 0.686667)
 energy = 2.5
@@ -101,13 +102,10 @@ shadow_enabled = true
 texture = ExtResource("7_ilt7p")
 texture_scale = 4.5
 
-[node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(252.755, -86.9157)
-rotation = 0.200713
-scale = Vector2(0.968036, 0.0840456)
-shadow_enabled = true
+[node name="PointLight2D3" type="PointLight2D" parent="."]
+position = Vector2(31, -134)
+scale = Vector2(0.431111, 0.457778)
 texture = ExtResource("7_ilt7p")
-texture_scale = 2.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(88, 417, 148, 396, 152, 359, 132, 260, 109, 262, 74, 291, 63, 316, 65, 327, 59, 340, 53, 353, 60, 382)

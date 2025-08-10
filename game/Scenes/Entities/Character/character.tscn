@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://ca1mh2m0on8ud"]
+[gd_scene load_steps=27 format=3 uid="uid://ca1mh2m0on8ud"]
 
 [ext_resource type="Script" path="res://Scenes/Entities/Character/character.gd" id="1_okua4"]
 [ext_resource type="Texture2D" uid="uid://b4i6b5pwbk2vd" path="res://Assets/character/Backward Man 1.png" id="2_c878k"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://cjwp2putyeq76" path="res://Assets/character/Right Man 2.png" id="15_rtix0"]
 [ext_resource type="Texture2D" uid="uid://jfvjkrg8uiss" path="res://Assets/character/Right Man 3.png" id="16_qxgj7"]
 [ext_resource type="Texture2D" uid="uid://bim3t4yj0ke57" path="res://Assets/character/RIght Man 4.png" id="17_dps7q"]
+[ext_resource type="Texture2D" uid="uid://bostilb1yhds1" path="res://Assets/light texture.jpg" id="18_edkap"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rb027"]
 size = Vector2(68, 18)
@@ -186,6 +187,11 @@ shape = SubResource("CircleShape2D_7gcsn")
 position = Vector2(1, 66)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_llip6")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-1, 2)
+scale = Vector2(1.02889, 0.864444)
+texture = ExtResource("18_edkap")
 
 [connection signal="mouse_entered" from="Interactable Area" to="." method="_on_interactable_area_mouse_entered"]
 [connection signal="mouse_exited" from="Interactable Area" to="." method="_on_interactable_area_mouse_exited"]
