@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://5ngwkqk858lp"]
+[gd_scene load_steps=26 format=3 uid="uid://5ngwkqk858lp"]
 
 [ext_resource type="Script" path="res://Scenes/Main/main_scene.gd" id="1_1rti3"]
 [ext_resource type="Texture2D" uid="uid://2q3lmphfherl" path="res://Assets/ground/ground-v2.png" id="2_24ww3"]
@@ -7,12 +7,13 @@
 [ext_resource type="PackedScene" uid="uid://crkscaiiikso0" path="res://Scenes/Objects/Sleep/sleep.tscn" id="3_jhhal"]
 [ext_resource type="Texture2D" uid="uid://dfy6yshlpmgbd" path="res://Assets/ground/farmground-1.png" id="4_n2i4p"]
 [ext_resource type="Texture2D" uid="uid://ca28emlqs8i1l" path="res://Assets/FENCEPOST-HORIZONTAL-1.png" id="5_351bx"]
-[ext_resource type="Texture2D" uid="uid://cq8k1y00r8iwq" path="res://Assets/fencepost-V2.png" id="6_yodsu"]
+[ext_resource type="Texture2D" uid="uid://cq8k1y00r8iwq" path="res://Assets/ground/fencepost-V2.png" id="6_yodsu"]
 [ext_resource type="PackedScene" uid="uid://byneuhr600vtr" path="res://Scenes/Objects/Plant/plant.tscn" id="7_fi151"]
 [ext_resource type="PackedScene" uid="uid://t3kmrcsfdrqj" path="res://Scenes/Objects/Fountain/fountain.tscn" id="8_xetvi"]
 [ext_resource type="PackedScene" uid="uid://budlqw02xjssu" path="res://Scenes/Entities/Monster/monster.tscn" id="9_3t0bb"]
 [ext_resource type="PackedScene" uid="uid://b28eauenff5gw" path="res://Scenes/Objects/House Top/House Top.tscn" id="10_5wjhf"]
 [ext_resource type="PackedScene" uid="uid://n70cua6eu7us" path="res://Scenes/Objects/House Bottom/house_bottom.tscn" id="11_fe6yi"]
+[ext_resource type="PackedScene" uid="uid://b4p5au60klmna" path="res://Scenes/Main/Directional light/directional_light.tscn" id="12_tnajp"]
 [ext_resource type="PackedScene" uid="uid://br8rktro6ekil" path="res://Scenes/UI/ui.tscn" id="13_5bdl4"]
 [ext_resource type="PackedScene" uid="uid://dvfq88ahceoxp" path="res://Scenes/UI/highlight.tscn" id="13_ccr7g"]
 [ext_resource type="PackedScene" uid="uid://bx3rptr7ucdlp" path="res://Scenes/Objects/Lamp/lamp.tscn" id="14_1ybne"]
@@ -122,12 +123,8 @@ position_smoothing_enabled = true
 position = Vector2(142, 4071)
 scale = Vector2(3, 3)
 
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+[node name="Directional Light" parent="." instance=ExtResource("12_tnajp")]
 position = Vector2(10601, -1879)
-color = Color(0.72549, 0.72549, 0.72549, 1)
-energy = 0.0
-blend_mode = 1
-shadow_enabled = true
 
 [node name="Monster" parent="." instance=ExtResource("9_3t0bb")]
 position = Vector2(-4009, -3020)
