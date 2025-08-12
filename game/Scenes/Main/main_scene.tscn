@@ -126,20 +126,20 @@ scale = Vector2(3, 3)
 [node name="Directional Light" parent="." instance=ExtResource("12_tnajp")]
 position = Vector2(10601, -1879)
 
+[node name="House Top" parent="." instance=ExtResource("10_5wjhf")]
+position = Vector2(100, -1767)
+
 [node name="Monster" parent="." instance=ExtResource("9_3t0bb")]
 position = Vector2(-4009, -3020)
 
-[node name="House Top" parent="." instance=ExtResource("10_5wjhf")]
-position = Vector2(100, -1767)
+[node name="Lamp" parent="." instance=ExtResource("14_1ybne")]
+position = Vector2(-74, -343)
 
 [node name="CanvasLayer" parent="." instance=ExtResource("13_5bdl4")]
 
 [node name="Highlight" parent="." instance=ExtResource("13_ccr7g")]
 position = Vector2(500, -100)
 scale = Vector2(0.666, 0.666)
-
-[node name="Lamp" parent="." instance=ExtResource("14_1ybne")]
-position = Vector2(-74, -343)
 
 [connection signal="timeout" from="HourTimer" to="." method="_on_hour_timer_timeout"]
 [connection signal="sleep" from="Sleep" to="." method="_on_sleep_sleep"]

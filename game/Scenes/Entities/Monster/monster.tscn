@@ -78,6 +78,7 @@ _data = {
 
 [node name="Monster" type="CharacterBody2D"]
 collision_layer = 2
+collision_mask = 0
 script = ExtResource("1_gcdd3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -115,10 +116,6 @@ polygon = PackedVector2Array(-168, 410, -125, 422, -102, 400, -92, 370, -103, 34
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-182, 419, -248, 413, -277, 366, -249, 296, -241, 259, -197, 235, -184, 261, -183, 276, -166, 327, -169, 350, -167, 382)
-
-[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="."]
-position = Vector2(130, -537)
-polygon = PackedVector2Array(-214, 441, -285, 442, -283, 365, -257, 316, -225, 293, -144, 276, -98, 237, -44, 218, 19, 207, 92, 213, 108, 250, 96, 352, 67, 376, -52, 369, -59, 357, -94, 348, -111, 357, -165, 355, -192, 366)
 
 [node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="."]
 position = Vector2(20, -252)
