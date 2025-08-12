@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ca28emlqs8i1l"
-path="res://.godot/imported/FENCEPOST-HORIZONTAL-1.png-ea08b0ece7b90275f358082fd74f9f73.ctex"
+uid="uid://cuf80l3ne4nqr"
+path="res://.godot/imported/CoinImage.png-1d8746ea2a0cb051dfdf952ff1ae9c7c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/FENCEPOST-HORIZONTAL-1.png"
-dest_files=["res://.godot/imported/FENCEPOST-HORIZONTAL-1.png-ea08b0ece7b90275f358082fd74f9f73.ctex"]
+source_file="res://Assets/Money/CoinImage.png"
+dest_files=["res://.godot/imported/CoinImage.png-1d8746ea2a0cb051dfdf952ff1ae9c7c.ctex"]
 
 [params]
 
