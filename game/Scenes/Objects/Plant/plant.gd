@@ -42,7 +42,7 @@ func _process(_delta):
 	if Input.is_action_just_pressed("left click") and mouse_entered == true and Globals.interactable == true and planted == true and Globals.time_of_day < 20 and Globals.time_of_day > 5:
 		print("Cannot plant here, plant is already here")
 		
-	if Input.is_action_just_pressed("left click") and mouse_entered == true and Globals.interactable == true and planted == true and Globals.time_of_day > 19 and Globals.time_of_day < 6:
+	if Input.is_action_just_pressed("left click") and mouse_entered == true and Globals.interactable == true and planted == true and Globals.time_of_day > 19 or Input.is_action_just_pressed("left click") and mouse_entered == true and Globals.interactable == true and planted == true and Globals.time_of_day < 6:
 		print("It is too late in the day to plant")
 		
 		

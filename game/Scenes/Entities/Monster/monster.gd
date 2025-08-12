@@ -7,14 +7,18 @@ var move: bool = true
 
 
 func _process(_delta):
-	if move == true:
-		$AnimationPlayer.play("Monster walking right")
-		var direction: Vector2 = (Globals.player_pos - position).normalized()
-		print(direction)
-		velocity = direction * speed
-		move_and_slide()
-	elif move == false:
-		$AnimationPlayer.play("Monster bite")
+	if Globals.time_of_day > 19 or Globals.time_of_day < 5:
+		$Sprite2D.visible = true
+		if move == true:
+			$AnimationPlayer.play("Monster walking right")
+			var direction: Vector2 = (Globals.player_pos - position).normalized()
+			print(direction)
+			velocity = direction * speed
+			move_and_slide()
+		elif move == false:
+			$AnimationPlayer.play("Monster bite")
+	elif Globals.time_of_day < 20 or Globals.time_of_day > 4:
+		$Sprite2D.visible = false
 
 
 func _on_area_2d_area_entered(area):
