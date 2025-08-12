@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://fvsr61vjocgo"]
+
+[ext_resource type="Texture2D" uid="uid://inlan4rkmphy" path="res://Assets/Garden items/Cash Cash man.png" id="1_yxjwc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4py0j"]
+size = Vector2(142, 136.5)
+
+[node name="Cash stand" type="StaticBody2D"]
+scale = Vector2(4, 4)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yxjwc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 36.25)
+shape = SubResource("RectangleShape2D_4py0j")
