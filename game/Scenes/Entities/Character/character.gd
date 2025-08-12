@@ -5,7 +5,18 @@ var max_speed: int = 325
 var speed: int = max_speed
 
 func _process(_delta):
-	
+	if Globals.time_of_day >= 20 or Globals.time_of_day <5:
+		if $PointLight2D.energy < 2.5:
+			$PointLight2D.energy += 0.1
+	else:
+		if $PointLight2D.energy > 0:
+			$PointLight2D.energy -= 0.1
+	if Globals.time_of_day == 6:
+		$PointLight2D.enabled = false
+	else:
+		$PointLight2D.enabled = true
+
+
 	#Input for movement
 	var direction = Input.get_vector("left", "right", "up", "down")
 	velocity = direction * speed
