@@ -21,9 +21,41 @@ grow_vertical = 0
 
 [node name="Beetroot" type="Sprite2D" parent="Control"]
 modulate = Color(0.262745, 0.262745, 0.262745, 1)
-position = Vector2(-16, 58)
+position = Vector2(-15, 62)
 texture = ExtResource("2_2mxtg")
 
 [node name="Carrot" type="Sprite2D" parent="Control"]
 position = Vector2(92, 52)
 texture = ExtResource("1_440hj")
+
+[node name="Beetroot amount" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = -14.0
+offset_top = 59.0
+offset_right = 26.0
+offset_bottom = 82.0
+text = "0"
+
+[node name="Carrot amount" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 60.0
+offset_right = 134.0
+offset_bottom = 83.0
+text = "0"
+
+[node name="Times" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 59.0
+offset_right = 120.0
+offset_bottom = 82.0
+text = "x"
+
+[node name="Times2" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = -29.0
+offset_top = 59.0
+offset_right = 11.0
+offset_bottom = 82.0
+text = "x"

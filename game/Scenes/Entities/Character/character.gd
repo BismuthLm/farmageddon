@@ -12,7 +12,6 @@ func _process(_delta):
 	move_and_slide()
 	Globals.player_pos = global_position
 	
-	
 	if Input.is_action_pressed("left"):
 		$AnimationPlayer.play("Walking Left")
 		
@@ -46,3 +45,11 @@ func _process(_delta):
 	if Input.is_action_just_released("down"):
 		$AnimationPlayer.pause()
 		$AnimationPlayer.seek(0.4, true)
+
+
+func _on_interactable_area_mouse_entered():
+	Globals.interactable = true
+
+
+func _on_interactable_area_mouse_exited():
+	Globals.interactable = false
