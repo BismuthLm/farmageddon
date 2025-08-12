@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b4p5au60klmna"]
+[gd_scene load_steps=7 format=3 uid="uid://b4p5au60klmna"]
 
 [ext_resource type="Script" path="res://Scenes/Main/Directional light/directional_light.gd" id="1_xqpi8"]
 
-[sub_resource type="Animation" id="Animation_8cw7t"]
+[sub_resource type="Animation" id="Animation_Time"]
 resource_name = "Time"
 length = 14.0
 tracks/0/type = "value"
@@ -18,22 +18,203 @@ tracks/0/keys = {
 "values": [Color(0.772549, 0.772549, 0.772549, 1), Color(0, 0, 0, 1), Color(0.772549, 0.772549, 0.772549, 1)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_elnm3"]
+[sub_resource type="Animation" id="Animation_DayNightCycle"]
+resource_name = "DayNightCycle"
+length = 60.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/enabled = true
+tracks/0/path = NodePath("DirectionalLight2D:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10, 30, 50, 60),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [
+	# Sunrise  -> Midday -> Sunset -> Night -> Sunrise
+	Color(1.0, 0.78, 0.56, 1),
+	Color(0.95, 0.95, 0.95, 1),
+	Color(0.98, 0.60, 0.40, 1),
+	Color(0.20, 0.25, 0.50, 1),
+	Color(1.0, 0.78, 0.56, 1)
+]
+}
+tracks/1/type = "value"
+tracks/1/enabled = true
+tracks/1/path = NodePath("DirectionalLight2D:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 10, 30, 50, 60),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": PackedFloat32Array(0.5, 1.2, 1.33, 0.6, 0.5)
+}
+tracks/2/type = "value"
+tracks/2/enabled = true
+tracks/2/path = NodePath("DirectionalLight2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 30, 60),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+# Rotate the sun across the sky (-35° -> +180°)
+"values": PackedFloat32Array(-0.61, 0.0, 3.14159)
+}
+tracks/3/type = "value"
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasModulate:color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 10, 30, 50, 60),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [
+	# Global tint for ambience
+	Color(0.95, 0.90, 0.85, 1), # sunrise
+	Color(1, 1, 1, 1),          # midday
+	Color(0.90, 0.75, 0.60, 1), # sunset
+	Color(0.20, 0.20, 0.28, 1), # night
+	Color(0.95, 0.90, 0.85, 1)  # sunrise
+]
+}
+tracks/4/type = "value"
+tracks/4/enabled = true
+tracks/4/path = NodePath("DirectionalLight2D:shadow_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 30, 50, 60),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [
+	Color(0, 0, 0, 0.3),  # softer shadows at dawn
+	Color(0, 0, 0, 0.5),  # midday
+	Color(0, 0, 0, 0.6),  # sunset
+	Color(0, 0, 0, 0.75)  # night – stronger shadows
+]
+}
+tracks/5/type = "value"
+tracks/5/enabled = true
+tracks/5/path = NodePath("AmbienceDay:volume_db")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 10, 30, 50, 60),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": PackedFloat32Array(-60, -12, -8, -20, -60)
+}
+tracks/6/type = "value"
+tracks/6/enabled = true
+tracks/6/path = NodePath("AmbienceNight:volume_db")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 10, 30, 50, 60),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": PackedFloat32Array(-18, -60, -60, -12, -18)
+}
+
+[sub_resource type="Animation" id="Animation_Sunrise"]
+resource_name = "Sunrise"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/enabled = true
+tracks/0/path = NodePath("DirectionalLight2D:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": PackedFloat32Array(0.4, 1.1)
+}
+tracks/1/type = "value"
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasModulate:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.85, 0.75, 0.65, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_Sunset"]
+resource_name = "Sunset"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/enabled = true
+tracks/0/path = NodePath("DirectionalLight2D:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": PackedFloat32Array(1.1, 0.5)
+}
+tracks/1/type = "value"
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasModulate:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.22, 0.22, 0.28, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_Main"]
 _data = {
-"Time": SubResource("Animation_8cw7t")
+"Time": SubResource("Animation_Time"),
+"DayNightCycle": SubResource("Animation_DayNightCycle"),
+"Sunrise": SubResource("Animation_Sunrise"),
+"Sunset": SubResource("Animation_Sunset")
 }
 
 [node name="Directional Light" type="Node2D"]
+editor_description = "Root pivot for 2D directional lighting & day/night cycle."
 script = ExtResource("1_xqpi8")
+rotation = -0.61
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 position = Vector2(10601, -1879)
-color = Color(0, 0, 0, 1)
+color = Color(0.772549, 0.772549, 0.772549, 1)
 energy = 1.33
 blend_mode = 1
 shadow_enabled = true
+shadow_color = Color(0, 0, 0, 0.5)
+shadow_filter = 2
+shadow_filter_smooth = 2.0
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(1, 1, 1, 1)
+
+[node name="AmbienceDay" type="AudioStreamPlayer2D" parent="."]
+autoplay = false
+volume_db = -60.0
+bus = "Master"
+# stream can be assigned in editor to a daytime ambience (birds/wind/etc.)
+
+[node name="AmbienceNight" type="AudioStreamPlayer2D" parent="."]
+autoplay = false
+volume_db = -18.0
+bus = "Master"
+# stream can be assigned in editor to a night ambience (crickets/owls/etc.)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+playback_default_blend_time = 0.25
+playback_process_mode = 0
+speed_scale = 1.0
+autoplay = "DayNightCycle"
 libraries = {
-"": SubResource("AnimationLibrary_elnm3")
+"": SubResource("AnimationLibrary_Main")
 }
