@@ -1,4 +1,5 @@
 [gd_scene load_steps=24 format=3 uid="uid://budlqw02xjssu"]
+[gd_scene load_steps=24 format=3 uid="uid://budlqw02xjssu"]
 
 [ext_resource type="Script" path="res://Scenes/Entities/Monster/monster.gd" id="1_gcdd3"]
 [ext_resource type="Texture2D" uid="uid://55cleeyh0nd" path="res://Assets/Monster/Monster right 3.png" id="1_y3eyr"]
@@ -18,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://ht352bjixypf" path="res://Assets/Monster/Monster bite/Monster bite 8.png" id="15_730re"]
 [ext_resource type="Texture2D" uid="uid://de4x4x65m6cdb" path="res://Assets/Monster/Monster bite/Monster bite 9.png" id="16_hsjtq"]
 [ext_resource type="Texture2D" uid="uid://n33gipjcb7ye" path="res://Assets/Monster/Monster bite/Monster bite 10.png" id="17_5l7xj"]
+[ext_resource type="Texture2D" uid="uid://c0c7cjo60j3mt" path="res://Assets/ground/gravel-1.png.png" id="19_bpoal"]
 
 [sub_resource type="Animation" id="Animation_ch66p"]
 resource_name = "Monster bite"
@@ -119,11 +121,6 @@ polygon = PackedVector2Array(-168, 410, -125, 422, -102, 400, -92, 370, -103, 34
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-182, 419, -248, 413, -277, 366, -249, 296, -241, 259, -197, 235, -184, 261, -183, 276, -166, 327, -169, 350, -167, 382)
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(132, -44)
-shape = SubResource("CircleShape2D_dt8x8")
-
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
-[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[node name="Gravel-1_png" type="Sprite2D" parent="."]
+position = Vector2(-595, 162)
+texture = ExtResource("19_bpoal")
