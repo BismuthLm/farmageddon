@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://vwqg4edv05r3" path="res://Assets/Carrot/Carrot grown1.png" id="2_il45h"]
 [ext_resource type="Texture2D" uid="uid://btr2b7cb5d03x" path="res://Assets/Beetroot/Beetroot4.png" id="2_jaek5"]
 [ext_resource type="Texture2D" uid="uid://ccjj0mjpmd15" path="res://Assets/Carrot/Carrot sprout.png" id="2_uok3i"]
+[ext_resource type="Texture2D" uid="uid://cuum06gged2va" path="res://Assets/Beetroot/Beetroot Sprout-1.png.png" id="5_bd2l8"]
 [ext_resource type="Texture2D" uid="uid://casnjgxl1achb" path="res://Assets/Beetroot/Beetroot seeds.png" id="6_wpcka"]
-[ext_resource type="Texture2D" uid="uid://nm3s5xrecfad" path="res://Assets/Beetroot/Beetroot Sprout.png" id="7_dg3cw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3r8k3"]
 size = Vector2(100, 100)
@@ -38,6 +38,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(5, -10)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_vf738"]
 resource_name = "Beetroot Seeds"
@@ -66,6 +78,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(15, 0)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_y2toy"]
 resource_name = "Beetroot Sprout"
@@ -80,7 +104,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("7_dg3cw")]
+"values": [ExtResource("5_bd2l8")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -92,7 +116,19 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(2, -5)]
+"values": [Vector2(7, -5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
 }
 
 [sub_resource type="Animation" id="Animation_sdugi"]
@@ -122,6 +158,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(10, -6)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_twcro"]
 resource_name = "Carrot Seeds"
@@ -150,6 +198,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(13, 7)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_mmgsy"]
 resource_name = "Carrot Sprout"
@@ -177,6 +237,18 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(8, -4)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_38bux"]
@@ -211,8 +283,8 @@ script = ExtResource("1_x3wq4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-8, 4)
-texture = ExtResource("2_jaek5")
-offset = Vector2(5, -10)
+texture = ExtResource("2_il45h")
+offset = Vector2(10, -6)
 
 [node name="Area2D" type="Area2D" parent="."]
 
