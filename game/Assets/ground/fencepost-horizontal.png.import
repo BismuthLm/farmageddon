@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ca28emlqs8i1l"
-path="res://.godot/imported/FENCEPOST-HORIZONTAL-1.png-ea08b0ece7b90275f358082fd74f9f73.ctex"
+uid="uid://dwagd2kjmrm8"
+path="res://.godot/imported/fencepost-horizontal.png-ffd4d1d387c99d67c2177599a097d6f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/FENCEPOST-HORIZONTAL-1.png"
-dest_files=["res://.godot/imported/FENCEPOST-HORIZONTAL-1.png-ea08b0ece7b90275f358082fd74f9f73.ctex"]
+source_file="res://Assets/ground/fencepost-horizontal.png"
+dest_files=["res://.godot/imported/fencepost-horizontal.png-ffd4d1d387c99d67c2177599a097d6f4.ctex"]
 
 [params]
 

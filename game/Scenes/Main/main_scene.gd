@@ -1,6 +1,5 @@
 extends Node2D
 
-
 func _on_hour_timer_timeout():
 	#If time of day is smaller than 24 then it adds one to it
 	if Globals.time_of_day < 24:
