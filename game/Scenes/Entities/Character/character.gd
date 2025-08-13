@@ -52,10 +52,8 @@ func _process(_delta):
 		$AnimationPlayer.pause()
 		$AnimationPlayer.seek(0.4, true)
 
-
 func _on_interactable_area_mouse_entered():
 	Globals.interactable = true
-
 
 func _on_interactable_area_mouse_exited():
 	Globals.interactable = false
