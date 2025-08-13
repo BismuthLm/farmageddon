@@ -134,121 +134,12 @@ position = Vector2(100, -1767)
 position = Vector2(-301, -8672)
 
 [node name="Monster" parent="." instance=ExtResource("9_3t0bb")]
-position = Vector2(-4009, -3020)
+position = Vector2(-2715, -889)
 
 [node name="Lamps" type="Node2D" parent="."]
 
 [node name="Lamp" parent="Lamps" instance=ExtResource("14_1ybne")]
 position = Vector2(-72, -313)
-
-[node name="Lamp2" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(-62, 433)
-
-[node name="Lamp3" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(538, 438)
-
-[node name="Lamp4" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(553, -323)
-
-[node name="Lamp5" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(-5243, 403)
-
-[node name="Lamp6" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(-7633, 155)
-
-[node name="Lamp7" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(-7681, 2819)
-
-[node name="Lamp8" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(-7624, 4722)
-
-[node name="Lamp9" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(-70, 2943)
-
-[node name="Lamp27" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(-352, 4253)
-
-[node name="Lamp28" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(716, 3462)
-
-[node name="Lamp29" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(101, 5800)
-
-[node name="Lamp30" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(5905, 416)
-
-[node name="Lamp31" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(8318, 391)
-
-[node name="Lamp32" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(6007, 2283)
-
-[node name="Lamp33" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(8293, 2334)
-
-[node name="Lamp34" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(8382, 5763)
-
-[node name="Lamp10" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(-4263, 3351)
-
-[node name="Lamp11" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(-3573, 3376)
-
-[node name="Lamp12" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(-3916, 4293)
-
-[node name="Lamp13" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(-2323, 4530)
-
-[node name="Lamp14" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(-2021, 3421)
-
-[node name="Lamp15" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(-2918, 3960)
-
-[node name="Lamp16" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(-3190, 4862)
-
-[node name="Lamp17" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(1799, 3395)
-rotation = -0.00133521
-
-[node name="Lamp18" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(3044, 3476)
-rotation = -0.00133521
-
-[node name="Lamp19" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(2162, 4565)
-rotation = -0.00133521
-
-[node name="Lamp20" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(3911, 4464)
-rotation = -0.00133521
-
-[node name="Lamp21" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(3100, 4232)
-rotation = -0.00133521
-
-[node name="Lamp22" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(4239, 3385)
-rotation = -0.0207522
-
-[node name="Lamp23" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(5358, 3516)
-rotation = -0.0207522
-
-[node name="Lamp24" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(5020, 4458)
-rotation = -0.0207522
-
-[node name="Lamp25" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(4521, 4932)
-rotation = -0.0207522
-
-[node name="Lamp26" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(4521, 4932)
-rotation = -0.0207522
 
 [node name="CanvasLayer" parent="." instance=ExtResource("13_5bdl4")]
 
