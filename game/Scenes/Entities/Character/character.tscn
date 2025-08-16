@@ -153,7 +153,7 @@ radius = 447.028
 radius = 128.0
 height = 384.0
 
-[node name="Character" type="CharacterBody2D"]
+[node name="Character" type="CharacterBody2D" groups=["Character"]]
 collision_layer = 4
 script = ExtResource("1_okua4")
 
