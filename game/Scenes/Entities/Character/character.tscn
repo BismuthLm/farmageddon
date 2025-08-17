@@ -162,7 +162,7 @@ scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_c878k")
 offset = Vector2(1, -4)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Character"]]
 position = Vector2(-2, 28)
 shape = SubResource("RectangleShape2D_rb027")
 

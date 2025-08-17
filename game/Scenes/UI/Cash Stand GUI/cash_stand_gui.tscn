@@ -1,0 +1,108 @@
+[gd_scene load_steps=11 format=3 uid="uid://dlwp3c7alhci6"]
+
+[ext_resource type="Script" path="res://Scenes/UI/Cash Stand GUI/cash_stand_gui.gd" id="1_rcgi1"]
+[ext_resource type="Texture2D" uid="uid://dbvdr0q25prxq" path="res://Assets/Cash Stand UI/cash_stand_GUI.png.png" id="2_ejodk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_13f6b"]
+size = Vector2(132, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gm746"]
+size = Vector2(132, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h04pp"]
+size = Vector2(132, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jrbo7"]
+size = Vector2(132, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xy2t4"]
+size = Vector2(132, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hev68"]
+size = Vector2(132, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r4qbh"]
+size = Vector2(132, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r160s"]
+size = Vector2(132, 90)
+
+[node name="Cash Stand GUI" type="CanvasLayer"]
+script = ExtResource("1_rcgi1")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Control"]
+position = Vector2(553, 320)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_ejodk")
+
+[node name="Sell 10 Carrots" type="Area2D" parent="Control"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Sell 10 Carrots"]
+position = Vector2(331, 257)
+shape = SubResource("RectangleShape2D_13f6b")
+
+[node name="Sell 1 Carrot" type="Area2D" parent="Control"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Sell 1 Carrot"]
+position = Vector2(469, 257)
+shape = SubResource("RectangleShape2D_gm746")
+
+[node name="Buy 1 Carrot" type="Area2D" parent="Control"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Buy 1 Carrot"]
+position = Vector2(637, 257)
+shape = SubResource("RectangleShape2D_h04pp")
+
+[node name="Buy 10 Carrots" type="Area2D" parent="Control"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Buy 10 Carrots"]
+position = Vector2(775, 257)
+shape = SubResource("RectangleShape2D_jrbo7")
+
+[node name="Sell 10 Beetroots" type="Area2D" parent="Control"]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Sell 10 Beetroots"]
+position = Vector2(331, 467)
+shape = SubResource("RectangleShape2D_xy2t4")
+
+[node name="Sell 1 Beetroot" type="Area2D" parent="Control"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Sell 1 Beetroot"]
+position = Vector2(469, 467)
+shape = SubResource("RectangleShape2D_hev68")
+
+[node name="Buy 1 Beetroot" type="Area2D" parent="Control"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Buy 1 Beetroot"]
+position = Vector2(637, 467)
+shape = SubResource("RectangleShape2D_r4qbh")
+
+[node name="Buy 10 Beetroots" type="Area2D" parent="Control"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Buy 10 Beetroots"]
+position = Vector2(775, 467)
+shape = SubResource("RectangleShape2D_r160s")
+
+[connection signal="mouse_entered" from="Control/Sell 10 Carrots" to="." method="_on_sell_10_carrots_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Sell 10 Carrots" to="." method="_on_sell_10_carrots_mouse_exited"]
+[connection signal="mouse_entered" from="Control/Sell 1 Carrot" to="." method="_on_sell_1_carrot_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Sell 1 Carrot" to="." method="_on_sell_1_carrot_mouse_exited"]
+[connection signal="mouse_entered" from="Control/Buy 1 Carrot" to="." method="_on_buy_1_carrot_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Buy 1 Carrot" to="." method="_on_buy_1_carrot_mouse_exited"]
+[connection signal="mouse_entered" from="Control/Buy 10 Carrots" to="." method="_on_buy_10_carrots_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Buy 10 Carrots" to="." method="_on_buy_10_carrots_mouse_exited"]
+[connection signal="mouse_entered" from="Control/Sell 10 Beetroots" to="." method="_on_sell_10_beetroots_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Sell 10 Beetroots" to="." method="_on_sell_10_beetroots_mouse_exited"]
+[connection signal="mouse_entered" from="Control/Sell 1 Beetroot" to="." method="_on_sell_1_beetroot_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Sell 1 Beetroot" to="." method="_on_sell_1_beetroot_mouse_exited"]
+[connection signal="mouse_entered" from="Control/Buy 1 Beetroot" to="." method="_on_buy_1_beetroot_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Buy 1 Beetroot" to="." method="_on_buy_1_beetroot_mouse_exited"]
+[connection signal="mouse_entered" from="Control/Buy 10 Beetroots" to="." method="_on_buy_10_beetroots_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Buy 10 Beetroots" to="." method="_on_buy_10_beetroots_mouse_exited"]

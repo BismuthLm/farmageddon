@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqhomc7c1w670"
-path="res://.godot/imported/close.png.png-05782d5a971f371102329156808ef976.ctex"
+uid="uid://dbvdr0q25prxq"
+path="res://.godot/imported/cash_stand_GUI.png.png-7f761bb1413e2c6bd62398f66ac23061.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cash Stand UI/close.png.png"
-dest_files=["res://.godot/imported/close.png.png-05782d5a971f371102329156808ef976.ctex"]
+source_file="res://Assets/Cash Stand UI/cash_stand_GUI.png.png"
+dest_files=["res://.godot/imported/cash_stand_GUI.png.png-7f761bb1413e2c6bd62398f66ac23061.ctex"]
 
 [params]
 
