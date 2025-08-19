@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://8v342raa48yn"]
+[gd_scene load_steps=15 format=3 uid="uid://8v342raa48yn"]
 
 [ext_resource type="Texture2D" uid="uid://blbaqv023e3ku" path="res://Assets/ground/wood tilemap.png" id="1_jklyp"]
 [ext_resource type="Script" path="res://Scenes/Main/Inside/inside.gd" id="1_qrfk1"]
@@ -65,3 +65,9 @@ shape = SubResource("RectangleShape2D_47ksd")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
 polygon = PackedVector2Array(-1500, -938, -1635, -937, -1612, 724, 1019, 713, 996, -936, 900, -938, 901, 600, -1501, 601)
+
+[node name="Door" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Door"]
+position = Vector2(586, 450)
+texture = ExtResource("8_iiat3")
