@@ -14,4 +14,5 @@ texture = ExtResource("2_kk6j3")
 position = Vector2(-436, -249)
 polygon = PackedVector2Array(426, 137, 328, 126, 269, 149, 286, 327, 520, 323, 564, 364, 608, 340, 604, 213, 492, 206)
 
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
