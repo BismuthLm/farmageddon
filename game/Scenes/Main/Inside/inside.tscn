@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://8v342raa48yn"]
+[gd_scene load_steps=15 format=3 uid="uid://8v342raa48yn"]
 
 [ext_resource type="Texture2D" uid="uid://blbaqv023e3ku" path="res://Assets/ground/wood tilemap.png" id="1_jklyp"]
 [ext_resource type="PackedScene" uid="uid://ca1mh2m0on8ud" path="res://Scenes/Entities/Character/character.tscn" id="2_4fthn"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://4o6ea74td5vw" path="res://Assets/ground/Shadow.png" id="3_b6gii"]
 [ext_resource type="Texture2D" uid="uid://bs75r8doah5ti" path="res://Assets/House/Monkey painting.png" id="5_d6g68"]
 [ext_resource type="Texture2D" uid="uid://86uhnapj0i7i" path="res://Assets/House/example-painting1.png" id="7_6yt84"]
+[ext_resource type="Texture2D" uid="uid://cmmdpvydukgr3" path="res://Assets/House/Door.png" id="8_iiat3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qk0uc"]
 texture = ExtResource("1_jklyp")
@@ -74,3 +75,9 @@ shape = SubResource("RectangleShape2D_47ksd")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
 polygon = PackedVector2Array(-1500, -938, -1635, -937, -1612, 724, 1019, 713, 996, -936, 900, -938, 901, 600, -1501, 601)
+
+[node name="Door" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Door"]
+position = Vector2(586, 450)
+texture = ExtResource("8_iiat3")
