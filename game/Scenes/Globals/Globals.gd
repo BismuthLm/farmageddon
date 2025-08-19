@@ -21,7 +21,7 @@ var carrot_amount: int = 2
 
 
 #Amount of Gold you have
-var gold_amount: int = 0
+var gold_amount: int = 10
 
 #If you are able to interact with things
 var interactable: bool = false

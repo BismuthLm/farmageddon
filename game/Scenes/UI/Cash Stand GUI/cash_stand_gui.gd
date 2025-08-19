@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Node2D
 
 var sell_10_carrots: bool = false
 var sell_1_carrot: bool = false
@@ -14,13 +14,13 @@ var buy_10_beetroots: bool = false
 func _process(_delta):
 	
 	
+	$".".position = Globals.player_pos
+	
 	if Globals.cash_stand == true:
 		$".".visible = true
 		
 	if Globals.cash_stand == false:
 		$".".visible = false
-	
-	
 	
 	
 	#If left click input is pressed and the mouse is inside a box it does that action

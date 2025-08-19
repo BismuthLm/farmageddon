@@ -132,7 +132,7 @@ position = Vector2(10601, -1879)
 position = Vector2(100, -1767)
 
 [node name="Cash stand" parent="." instance=ExtResource("14_24gst")]
-position = Vector2(-1541, -517)
+position = Vector2(-2350, -677)
 
 [node name="Monster" parent="." instance=ExtResource("9_3t0bb")]
 position = Vector2(-1222, -1202)
@@ -140,7 +140,7 @@ position = Vector2(-1222, -1202)
 [node name="Lamps" type="Node2D" parent="."]
 
 [node name="Lamp" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(-72, -313)
+position = Vector2(-177, -304)
 
 [node name="Highlight" parent="." instance=ExtResource("13_ccr7g")]
 position = Vector2(500, -100)
@@ -149,6 +149,8 @@ scale = Vector2(0.666, 0.666)
 [node name="UI" parent="." instance=ExtResource("13_5bdl4")]
 
 [node name="Cash Stand GUI" parent="." instance=ExtResource("19_c48os")]
+position = Vector2(103, -987)
+scale = Vector2(2, 2)
 
 [connection signal="timeout" from="HourTimer" to="." method="_on_hour_timer_timeout"]
 [connection signal="sleep" from="Sleep" to="." method="_on_sleep_sleep"]

@@ -7,7 +7,7 @@
 size = Vector2(144, 143.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i4d1u"]
-size = Vector2(170, 17)
+size = Vector2(144.5, 17)
 
 [node name="Cash stand" type="StaticBody2D"]
 scale = Vector2(4, 4)
@@ -26,6 +26,7 @@ shape = SubResource("RectangleShape2D_4py0j")
 position = Vector2(0, 120)
 shape = SubResource("RectangleShape2D_i4d1u")
 
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
-[connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]
