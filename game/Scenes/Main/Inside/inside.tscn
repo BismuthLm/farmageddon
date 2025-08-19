@@ -1,0 +1,60 @@
+[gd_scene load_steps=11 format=3 uid="uid://8v342raa48yn"]
+
+[ext_resource type="Texture2D" uid="uid://blbaqv023e3ku" path="res://Assets/ground/wood tilemap.png" id="1_jklyp"]
+[ext_resource type="PackedScene" uid="uid://ca1mh2m0on8ud" path="res://Scenes/Entities/Character/character.tscn" id="2_4fthn"]
+[ext_resource type="Texture2D" uid="uid://veb0gp3vsa5e" path="res://Assets/ground/wooden wall.png" id="2_5v5bk"]
+[ext_resource type="Texture2D" uid="uid://4hcdrselqulj" path="res://Assets/House/Bed.png" id="2_cjt4u"]
+[ext_resource type="Texture2D" uid="uid://bs75r8doah5ti" path="res://Assets/House/Monkey painting.png" id="5_d6g68"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qk0uc"]
+texture = ExtResource("1_jklyp")
+texture_region_size = Vector2i(300, 300)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1pfdx"]
+texture = ExtResource("2_5v5bk")
+texture_region_size = Vector2i(300, 300)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_eh8iv"]
+tile_size = Vector2i(300, 300)
+sources/1 = SubResource("TileSetAtlasSource_qk0uc")
+sources/2 = SubResource("TileSetAtlasSource_1pfdx")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_13wld"]
+size = Vector2(366, 432)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_47ksd"]
+size = Vector2(2400, 862)
+
+[node name="Inside" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_eh8iv")
+format = 2
+layer_0/tile_data = PackedInt32Array(-65539, 1, 0, -65538, 1, 0, -65537, 1, 0, -1, 1, 0, -65536, 1, 0, 0, 1, 0, 65536, 1, 0, 131071, 1, 0, 131070, 1, 0, 131069, 1, 0, 65533, 1, 0, 65532, 1, 0, -3, 1, 0, -2, 1, 0, 65534, 1, 0, 65535, 1, 0, 1, 1, 0, -65535, 1, 0, -131072, 1, 0, -196608, 1, 0, -131073, 1, 0, -131074, 1, 0, -131075, 1, 0, -65540, 1, 0, -65541, 1, 0, -4, 1, 0, 131068, 1, 0, 131067, 1, 0, 65531, 1, 0, -5, 1, 0, -131077, 1, 0, -131076, 1, 0, -196607, 1, 0, -196606, 1, 0, -131070, 1, 0, -65534, 1, 0, -131071, 1, 0, 2, 1, 0, 65538, 1, 0, 65537, 1, 0, -196613, 2, 0, -196612, 2, 0, -196611, 2, 0, -196610, 2, 0, -196609, 2, 0, -262144, 2, 0, -262143, 2, 0, -262142, 2, 0, -327678, 2, 0, -393214, 2, 0, -393215, 2, 0, -327679, 2, 0, -327680, 2, 0, -393216, 2, 0, -262145, 2, 0, -262146, 2, 0, -327682, 2, 0, -327681, 2, 0, -327683, 2, 0, -262147, 2, 0, -262148, 2, 0, -327684, 2, 0, -327685, 2, 0, -262149, 2, 0)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(-1210, -600)
+scale = Vector2(2.61, 2.29)
+texture = ExtResource("2_cjt4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1263, -593)
+shape = SubResource("RectangleShape2D_13wld")
+
+[node name="Character" parent="StaticBody2D" instance=ExtResource("2_4fthn")]
+position = Vector2(52, 54)
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(560, -1336)
+texture = ExtResource("5_d6g68")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-300, -1369)
+shape = SubResource("RectangleShape2D_47ksd")
