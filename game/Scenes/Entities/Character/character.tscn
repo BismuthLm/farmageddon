@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://ca1mh2m0on8ud"]
+[gd_scene load_steps=28 format=3 uid="uid://ca1mh2m0on8ud"]
 
 [ext_resource type="Script" path="res://Scenes/Entities/Character/character.gd" id="1_okua4"]
 [ext_resource type="Texture2D" uid="uid://b4i6b5pwbk2vd" path="res://Assets/character/Backward Man 1.png" id="2_c878k"]
@@ -153,6 +153,9 @@ radius = 447.028
 radius = 128.0
 height = 384.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f07ps"]
+size = Vector2(70, 20)
+
 [node name="Character" type="CharacterBody2D" groups=["Character"]]
 collision_layer = 4
 script = ExtResource("1_okua4")
@@ -181,7 +184,7 @@ position_smoothing_enabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable Area"]
 shape = SubResource("CircleShape2D_7gcsn")
 
-[node name="Monster Stop Area" type="Area2D" parent="." groups=["Character", "Monster Stop"]]
+[node name="Monster Stop Area" type="Area2D" parent="." groups=["Monster Stop"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Monster Stop Area"]
 position = Vector2(1, 66)
@@ -192,6 +195,12 @@ shape = SubResource("CapsuleShape2D_llip6")
 position = Vector2(-1, 2)
 scale = Vector2(1.02889, 0.864444)
 texture = ExtResource("18_edkap")
+
+[node name="Hitbox area" type="Area2D" parent="." groups=["Character"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox area"]
+position = Vector2(-2, 28)
+shape = SubResource("RectangleShape2D_f07ps")
 
 [connection signal="mouse_entered" from="Interactable Area" to="." method="_on_interactable_area_mouse_entered"]
 [connection signal="mouse_exited" from="Interactable Area" to="." method="_on_interactable_area_mouse_exited"]

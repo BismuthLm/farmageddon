@@ -21,4 +21,4 @@ func _process(_delta):
 	
 	$"Control/Beetroot amount".text = str(Globals.beetroot_amount)
 	$"Control/Carrot amount".text = str(Globals.carrot_amount)
-	$"Control/Money amount".text = str(Globals.gold_amount)
+	$"Control2/Money amount".text = str(Globals.gold_amount)

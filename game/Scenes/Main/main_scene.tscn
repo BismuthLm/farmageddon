@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://2q3lmphfherl" path="res://Assets/ground/ground-v2.png" id="2_24ww3"]
 [ext_resource type="PackedScene" uid="uid://ca1mh2m0on8ud" path="res://Scenes/Entities/Character/character.tscn" id="2_nb0gi"]
 [ext_resource type="Texture2D" uid="uid://df6xjttbv2u5w" path="res://Assets/ground/Ground tileset.png" id="2_p0imi"]
-[ext_resource type="PackedScene" uid="uid://crkscaiiikso0" path="res://Scenes/Objects/Sleep/sleep.tscn" id="3_jhhal"]
 [ext_resource type="Texture2D" uid="uid://dfy6yshlpmgbd" path="res://Assets/ground/farmground-1.png" id="4_n2i4p"]
 [ext_resource type="Texture2D" uid="uid://i65f4klqqxgy" path="res://Assets/ground/fencepost-vertical.png" id="5_02uo7"]
 [ext_resource type="Texture2D" uid="uid://dwagd2kjmrm8" path="res://Assets/ground/fencepost-horizontal.png" id="6_01qre"]
@@ -19,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://bx3rptr7ucdlp" path="res://Scenes/Objects/Lamp/lamp.tscn" id="14_1ybne"]
 [ext_resource type="PackedScene" uid="uid://fvsr61vjocgo" path="res://Scenes/Objects/Cash stand/cash_stand.tscn" id="14_24gst"]
 [ext_resource type="PackedScene" uid="uid://dlwp3c7alhci6" path="res://Scenes/UI/Cash Stand GUI/cash_stand_gui.tscn" id="19_c48os"]
+[ext_resource type="PackedScene" uid="uid://dkkufdq84e5qs" path="res://Scenes/Main/Door Transition/Door/door.tscn" id="19_jnc8f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hovo0"]
 texture = ExtResource("2_24ww3")
@@ -97,9 +97,6 @@ layer_0/tile_data = PackedInt32Array(-1507366, 0, 0, -1441830, 0, 0, -1376294, 7
 [node name="house bottom" parent="." instance=ExtResource("11_fe6yi")]
 position = Vector2(98, -1767)
 
-[node name="Sleep" parent="." instance=ExtResource("3_jhhal")]
-position = Vector2(432, -1158)
-
 [node name="Plants" type="Node2D" parent="."]
 
 [node name="Plant" parent="Plants" groups=["Plants"] instance=ExtResource("7_fi151")]
@@ -149,8 +146,12 @@ scale = Vector2(0.666, 0.666)
 [node name="UI" parent="." instance=ExtResource("13_5bdl4")]
 
 [node name="Cash Stand GUI" parent="." instance=ExtResource("19_c48os")]
+visible = false
 position = Vector2(103, -987)
 scale = Vector2(2, 2)
 
+[node name="Door" parent="." instance=ExtResource("19_jnc8f")]
+position = Vector2(95, -1410)
+
 [connection signal="timeout" from="HourTimer" to="." method="_on_hour_timer_timeout"]
-[connection signal="sleep" from="Sleep" to="." method="_on_sleep_sleep"]
+[connection signal="player_entered_house" from="Door" to="." method="_on_door_player_entered_house"]
