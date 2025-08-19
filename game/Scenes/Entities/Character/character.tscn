@@ -181,7 +181,7 @@ position_smoothing_enabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable Area"]
 shape = SubResource("CircleShape2D_7gcsn")
 
-[node name="Monster Stop Area" type="Area2D" parent="." groups=["Character", "Monster Stop"]]
+[node name="Monster Stop Area" type="Area2D" parent="." groups=["Monster Stop"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Monster Stop Area"]
 position = Vector2(1, 66)
