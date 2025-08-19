@@ -132,10 +132,10 @@ position = Vector2(10601, -1879)
 position = Vector2(100, -1767)
 
 [node name="Cash stand" parent="." instance=ExtResource("14_24gst")]
-position = Vector2(-1545, -524)
+position = Vector2(-1541, -517)
 
 [node name="Monster" parent="." instance=ExtResource("9_3t0bb")]
-position = Vector2(-2715, -889)
+position = Vector2(-1222, -1202)
 
 [node name="Lamps" type="Node2D" parent="."]
 

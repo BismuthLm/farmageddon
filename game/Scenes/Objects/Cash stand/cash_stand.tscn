@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://inlan4rkmphy" path="res://Assets/Garden items/Cash Cash man.png" id="1_yxjwc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4py0j"]
-size = Vector2(142, 143.25)
+size = Vector2(144, 143.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i4d1u"]
-size = Vector2(181.75, 34.5)
+size = Vector2(170, 17)
 
 [node name="Cash stand" type="StaticBody2D"]
 scale = Vector2(4, 4)
@@ -23,8 +23,9 @@ shape = SubResource("RectangleShape2D_4py0j")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-1.625, 111.75)
+position = Vector2(0, 120)
 shape = SubResource("RectangleShape2D_i4d1u")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]
