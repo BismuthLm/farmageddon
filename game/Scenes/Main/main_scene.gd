@@ -11,7 +11,7 @@ func _on_hour_timer_timeout():
 	print(Globals.time_of_day)
 
 #When sleeping
-func _process(delta):
+func _process(_delta):
 	#If time of day is bigger or equal to 20 then sleeping is equal to true and time of day is set to 6
 	if Globals.sleeping == true:
 		if Globals.time_of_day >= 20:
@@ -26,7 +26,7 @@ func _process(delta):
 
 
 
-func _on_door_player_entered_house():
+func _on_door_character_entered_house():
 	var tween = create_tween()
-	tween.tween_property($Player,"speed",0,0.25)
-	TransitionLayer.change_scene("res://Scenes/Level/Inside/inside.tscn")
+	tween.tween_property($Character,"speed",0,0.25)
+	TransitionLayer.change_scene("res://Scenes/Main/Inside/inside.tscn")
