@@ -154,4 +154,3 @@ scale = Vector2(2, 2)
 position = Vector2(95, -1410)
 
 [connection signal="timeout" from="HourTimer" to="." method="_on_hour_timer_timeout"]
-[connection signal="player_entered_house" from="Door" to="." method="_on_door_player_entered_house"]
