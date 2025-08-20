@@ -20,5 +20,11 @@ var beetroot_amount: int = 2
 var carrot_amount: int = 2
 
 
+#Amount of Gold you have
+var gold_amount: int = 10
+
 #If you are able to interact with things
 var interactable: bool = false
+
+#If true the cash stand ui opens
+var cash_stand: bool = false

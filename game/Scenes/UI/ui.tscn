@@ -29,11 +29,6 @@ texture = ExtResource("2_2mxtg")
 position = Vector2(92, 52)
 texture = ExtResource("1_440hj")
 
-[node name="Gold" type="Sprite2D" parent="Control"]
-position = Vector2(-956, 37)
-scale = Vector2(2, 2)
-texture = ExtResource("4_cj7f3")
-
 [node name="Beetroot amount" type="Label" parent="Control"]
 layout_mode = 0
 offset_left = -14.0
@@ -66,10 +61,25 @@ offset_right = 11.0
 offset_bottom = 82.0
 text = "x"
 
-[node name="Money amount" type="Label" parent="Control"]
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="Gold" type="Sprite2D" parent="Control2"]
+position = Vector2(50, -9)
+texture = ExtResource("4_cj7f3")
+
+[node name="Money amount" type="Label" parent="Control2"]
 layout_mode = 0
-offset_left = -918.0
-offset_top = 46.0
-offset_right = -854.0
-offset_bottom = 69.0
+offset_left = 69.0
+offset_top = -4.5
+offset_right = 133.0
+offset_bottom = 18.5
 text = "1234567"

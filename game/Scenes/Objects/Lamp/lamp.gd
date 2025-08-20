@@ -8,7 +8,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	if Globals.time_of_day >= 12 or Globals.time_of_day <7:
+	if Globals.time_of_day >= 12 or Globals.time_of_day < 7:
 		if $PointLight2D.energy < 2.5:
 			$PointLight2D.energy += 0.005
 	else:

@@ -1,0 +1,73 @@
+[gd_scene load_steps=15 format=3 uid="uid://8v342raa48yn"]
+
+[ext_resource type="Texture2D" uid="uid://blbaqv023e3ku" path="res://Assets/ground/wood tilemap.png" id="1_jklyp"]
+[ext_resource type="Script" path="res://Scenes/Main/Inside/inside.gd" id="1_qrfk1"]
+[ext_resource type="PackedScene" uid="uid://ca1mh2m0on8ud" path="res://Scenes/Entities/Character/character.tscn" id="2_4fthn"]
+[ext_resource type="Texture2D" uid="uid://veb0gp3vsa5e" path="res://Assets/ground/wooden wall.png" id="2_5v5bk"]
+[ext_resource type="Texture2D" uid="uid://4o6ea74td5vw" path="res://Assets/ground/Shadow.png" id="3_b6gii"]
+[ext_resource type="Texture2D" uid="uid://bs75r8doah5ti" path="res://Assets/House/Monkey painting.png" id="5_d6g68"]
+[ext_resource type="Texture2D" uid="uid://86uhnapj0i7i" path="res://Assets/House/example-painting1.png" id="7_6yt84"]
+[ext_resource type="PackedScene" uid="uid://bcsqoca6o2ery" path="res://Scenes/Main/Inside/bed/bed.tscn" id="8_4g4a5"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qk0uc"]
+texture = ExtResource("1_jklyp")
+texture_region_size = Vector2i(300, 300)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1pfdx"]
+texture = ExtResource("2_5v5bk")
+texture_region_size = Vector2i(300, 300)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rhyhu"]
+texture = ExtResource("3_b6gii")
+texture_region_size = Vector2i(300, 300)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_eh8iv"]
+tile_size = Vector2i(300, 300)
+sources/1 = SubResource("TileSetAtlasSource_qk0uc")
+sources/2 = SubResource("TileSetAtlasSource_1pfdx")
+sources/3 = SubResource("TileSetAtlasSource_rhyhu")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_47ksd"]
+size = Vector2(2400, 869)
+
+[node name="Inside" type="Node2D"]
+script = ExtResource("1_qrfk1")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_eh8iv")
+format = 2
+layer_0/tile_data = PackedInt32Array(-65539, 1, 0, -65538, 1, 0, -65537, 1, 0, -1, 1, 0, -65536, 1, 0, 0, 1, 0, 65536, 1, 0, 131071, 1, 0, 131070, 1, 0, 131069, 1, 0, 65533, 1, 0, 65532, 1, 0, -3, 1, 0, -2, 1, 0, 65534, 1, 0, 65535, 1, 0, 1, 1, 0, -65535, 1, 0, -131072, 1, 0, -196608, 1, 0, -131073, 1, 0, -131074, 1, 0, -131075, 1, 0, -65540, 1, 0, -65541, 1, 0, -4, 1, 0, 131068, 1, 0, 131067, 1, 0, 65531, 1, 0, -5, 1, 0, -131077, 1, 0, -131076, 1, 0, -196607, 1, 0, -196606, 1, 0, -131070, 1, 0, -65534, 1, 0, -131071, 1, 0, 2, 1, 0, 65538, 1, 0, 65537, 1, 0, -196613, 2, 0, -196612, 2, 0, -196611, 2, 0, -196610, 2, 0, -196609, 2, 0, -262144, 2, 0, -262143, 2, 0, -262142, 2, 0, -327678, 2, 0, -393214, 2, 0, -393215, 2, 0, -327679, 2, 0, -327680, 2, 0, -393216, 2, 0, -262145, 2, 0, -262146, 2, 0, -327682, 2, 0, -327681, 2, 0, -327683, 2, 0, -262147, 2, 0, -262148, 2, 0, -327684, 2, 0, -327685, 2, 0, -262149, 2, 0, -131078, 3, 0, -65542, 3, 0, -6, 3, 0, 65530, 3, 0, 131066, 3, 0, 131065, 3, 0, 65529, 3, 0, -7, 3, 0, -65543, 3, 0, -131079, 3, 0, -196615, 3, 0, -196614, 3, 0, -262150, 3, 0, -327686, 3, 0, -327687, 3, 0, -262151, 3, 0, 196601, 3, 0, 196602, 3, 0, 196603, 3, 0, 196604, 3, 0, 196605, 3, 0, 196606, 3, 0, 196607, 3, 0, 131072, 3, 0, 131073, 3, 0, 131074, 3, 0, 131075, 3, 0, 65539, 3, 0, 3, 3, 0, -65533, 3, 0, -131069, 3, 0, -196605, 3, 0, -262141, 3, 0, -327677, 3, 0, -393213, 3, 0, -393212, 3, 0, -327676, 3, 0, -262140, 3, 0, -196604, 3, 0, -131068, 3, 0, -65532, 3, 0, 4, 3, 0, 65540, 3, 0, 131076, 3, 0, 196612, 3, 0, 196611, 3, 0, 196610, 3, 0, 196609, 3, 0, 196608, 3, 0, 262143, 3, 0, 262142, 3, 0, 262141, 3, 0, 262140, 3, 0, 262139, 3, 0, 262138, 3, 0, 262137, 3, 0, 262136, 3, 0, 196600, 3, 0, 131064, 3, 0, 65528, 3, 0, -8, 3, 0, -65544, 3, 0, -131080, 3, 0, -196616, 3, 0, -262152, 3, 0, -327688, 3, 0, -327689, 3, 0, -262153, 3, 0, -196617, 3, 0, -131081, 3, 0, -65545, 3, 0, -9, 3, 0, 65527, 3, 0, 131063, 3, 0, 196599, 3, 0, 262135, 3, 0, 327671, 3, 0, 327672, 3, 0, 393207, 3, 0, 393208, 3, 0, 327673, 3, 0, 327674, 3, 0, 327675, 3, 0, 327676, 3, 0, 327677, 3, 0, 327678, 3, 0, 327679, 3, 0, 262144, 3, 0, 262145, 3, 0, 262146, 3, 0, 262147, 3, 0, 262148, 3, 0, 327684, 3, 0, 327683, 3, 0, 327682, 3, 0, 327681, 3, 0, 327680, 3, 0, 393215, 3, 0, 393214, 3, 0, 393213, 3, 0, 393212, 3, 0, 393211, 3, 0, 393210, 3, 0, 393209, 3, 0, 327685, 3, 0, 262149, 3, 0, 196613, 3, 0, 131077, 3, 0, 65541, 3, 0, 5, 3, 0, -65531, 3, 0, -131067, 3, 0, -196603, 3, 0, -262139, 3, 0, -327675, 3, 0, -393211, 3, 0, -393210, 3, 0, -327674, 3, 0, -262138, 3, 0, -196602, 3, 0, -131066, 3, 0, -65530, 3, 0, 6, 3, 0, 65542, 3, 0, 131078, 3, 0, 196614, 3, 0, 262150, 3, 0, 327686, 3, 0, -327690, 3, 0, -262154, 3, 0, -196618, 3, 0, -131082, 3, 0, -65546, 3, 0, -10, 3, 0, 65526, 3, 0, 131062, 3, 0, 196598, 3, 0, 262134, 3, 0, 327670, 3, 0, 393206, 3, 0, 327687, 3, 0, 262151, 3, 0, 196615, 3, 0, 131079, 3, 0, 65543, 3, 0, 7, 3, 0, -65529, 3, 0, -131065, 3, 0, -196601, 3, 0, -262137, 3, 0, -327673, 3, 0, -393209, 3, 0)
+
+[node name="Bed" parent="." instance=ExtResource("8_4g4a5")]
+position = Vector2(-1280, -665)
+
+[node name="Character" parent="." instance=ExtResource("2_4fthn")]
+position = Vector2(52, 54)
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(560, -1336)
+texture = ExtResource("5_d6g68")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-380, -1340)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("7_6yt84")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-300, -1365.5)
+shape = SubResource("RectangleShape2D_47ksd")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
+polygon = PackedVector2Array(-1500, -938, -1635, -937, -1612, 724, 1019, 713, 996, -936, 900, -938, 901, 600, -1501, 601)
+
+[node name="Door" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Door"]
+position = Vector2(586, 450)
+texture = ExtResource("8_iiat3")
