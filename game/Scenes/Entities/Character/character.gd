@@ -17,7 +17,7 @@ func _process(_delta):
 	velocity = direction * speed
 	move_and_slide()
 	Globals.player_pos = global_position
-	
+
 	if Input.is_action_pressed("left"):
 		$AnimationPlayer.play("Walking Left")
 		
