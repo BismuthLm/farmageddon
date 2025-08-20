@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcsgeoivkq1hc"]
+
+[ext_resource type="Script" path="res://Scenes/Main/Door Transition/Transition Layer/transition_layer.gd" id="1_lhg6k"]
+
+[node name="Transition Layer" type="CanvasLayer"]
+script = ExtResource("1_lhg6k")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

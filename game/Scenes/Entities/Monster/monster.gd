@@ -12,7 +12,6 @@ func _process(_delta):
 		if move == true:
 			$AnimationPlayer.play("Monster walking right")
 			var direction: Vector2 = (Globals.player_pos - position).normalized()
-			print(direction)
 			velocity = direction * speed
 			move_and_slide()
 		elif move == false:
