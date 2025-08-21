@@ -10,7 +10,7 @@ func _on_hour_timer_timeout():
 	$HourTimer.start()
 	print(Globals.time_of_day)
 
-#When sleeping
+#When sleepinga
 func _process(delta):
 	#If time of day is bigger or equal to 20 then sleeping is equal to true and time of day is set to 6
 	if Globals.sleeping == true:
@@ -22,9 +22,6 @@ func _process(delta):
 			print(Globals.time_of_day)
 		else:
 			print("You Cannot Sleep Yet")
-
-
-
 
 func _on_door_player_entered_house():
 	var tween = create_tween()
