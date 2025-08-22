@@ -122,10 +122,6 @@ scale = Vector2(2, 2)
 [node name="Character" parent="." instance=ExtResource("2_nb0gi")]
 position = Vector2(103, -987)
 
-[node name="Camera2D2" type="Camera2D" parent="Character"]
-zoom = Vector2(0.6, 0.6)
-position_smoothing_enabled = true
-
 [node name="Fountain" parent="." instance=ExtResource("8_xetvi")]
 position = Vector2(142, 4071)
 scale = Vector2(3, 3)

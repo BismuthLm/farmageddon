@@ -24,7 +24,6 @@ TransitionLayer="*res://Scenes/Main/Door Transition/Transition Layer/transition_
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
-window/stretch/scale_mode="integer"
 mouse_cursor/custom_image="res://Assets/cursors/cursor-1.0.png"
 mouse_cursor/custom_image_hotspot=Vector2(20, 10)
 
