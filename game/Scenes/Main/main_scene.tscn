@@ -18,7 +18,6 @@
 [ext_resource type="PackedScene" uid="uid://bx3rptr7ucdlp" path="res://Scenes/Objects/Lamp/lamp.tscn" id="14_1ybne"]
 [ext_resource type="PackedScene" uid="uid://fvsr61vjocgo" path="res://Scenes/Objects/Cash stand/cash_stand.tscn" id="14_24gst"]
 [ext_resource type="PackedScene" uid="uid://dlwp3c7alhci6" path="res://Scenes/UI/Cash Stand GUI/cash_stand_gui.tscn" id="19_c48os"]
-[ext_resource type="PackedScene" uid="uid://d1cngf5vkwr8x" path="res://Scenes/Main/Door Transition/Door/door2.tscn" id="19_e1yug"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hovo0"]
 texture = ExtResource("2_24ww3")
@@ -81,6 +80,9 @@ sources/0 = SubResource("TileSetAtlasSource_hovo0")
 sources/6 = SubResource("TileSetAtlasSource_qd2hd")
 sources/7 = SubResource("TileSetAtlasSource_e1ufo")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wh642"]
+size = Vector2(121, 40)
+
 [node name="Main Scene" type="Node2D"]
 script = ExtResource("1_1rti3")
 
@@ -96,6 +98,12 @@ layer_0/tile_data = PackedInt32Array(-1507366, 0, 0, -1441830, 0, 0, -1376294, 7
 
 [node name="house bottom" parent="." instance=ExtResource("11_fe6yi")]
 position = Vector2(98, -1767)
+
+[node name="Door Area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door Area"]
+position = Vector2(96.5, -1394)
+shape = SubResource("RectangleShape2D_wh642")
 
 [node name="Plants" type="Node2D" parent="."]
 
@@ -137,7 +145,7 @@ position = Vector2(-1222, -1202)
 [node name="Lamps" type="Node2D" parent="."]
 
 [node name="Lamp" parent="Lamps" instance=ExtResource("14_1ybne")]
-position = Vector2(-177, -304)
+position = Vector2(-128, -311)
 
 [node name="Highlight" parent="." instance=ExtResource("13_ccr7g")]
 position = Vector2(500, -100)
@@ -150,7 +158,5 @@ visible = false
 position = Vector2(103, -987)
 scale = Vector2(2, 2)
 
-[node name="Door" parent="." instance=ExtResource("19_e1yug")]
-position = Vector2(94, -1410)
-
 [connection signal="timeout" from="HourTimer" to="." method="_on_hour_timer_timeout"]
+[connection signal="area_entered" from="Door Area" to="." method="_on_door_area_area_entered"]
