@@ -120,7 +120,7 @@ position = Vector2(899, -100)
 scale = Vector2(2, 2)
 
 [node name="Character" parent="." instance=ExtResource("2_nb0gi")]
-position = Vector2(103, -987)
+position = Vector2(99, -1362)
 
 [node name="Fountain" parent="." instance=ExtResource("8_xetvi")]
 position = Vector2(142, 4071)

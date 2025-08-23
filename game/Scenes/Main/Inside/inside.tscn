@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://8v342raa48yn"]
+[gd_scene load_steps=16 format=3 uid="uid://8v342raa48yn"]
 
 [ext_resource type="Texture2D" uid="uid://blbaqv023e3ku" path="res://Assets/ground/wood tilemap.png" id="1_jklyp"]
 [ext_resource type="Script" path="res://Scenes/Main/Inside/inside.gd" id="1_qrfk1"]
@@ -34,6 +34,9 @@ sources/3 = SubResource("TileSetAtlasSource_rhyhu")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_47ksd"]
 size = Vector2(2400, 869)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gkopn"]
+size = Vector2(146, 20)
+
 [node name="Inside" type="Node2D"]
 script = ExtResource("1_qrfk1")
 
@@ -48,7 +51,7 @@ position = Vector2(-609, -315)
 scale = Vector2(0.5, 0.5)
 
 [node name="Character" parent="." instance=ExtResource("2_4fthn")]
-position = Vector2(52, 54)
+position = Vector2(290, 231)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(232, -671)
@@ -75,5 +78,14 @@ polygon = PackedVector2Array(-1500, -938, -1635, -937, -1612, 724, 1019, 713, 99
 scale = Vector2(0.5, 0.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Door"]
-position = Vector2(586, 450)
+position = Vector2(580, 750)
 texture = ExtResource("8_iiat3")
+flip_v = true
+
+[node name="Door Area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door Area"]
+position = Vector2(290, 288)
+shape = SubResource("RectangleShape2D_gkopn")
+
+[connection signal="area_entered" from="Door Area" to="." method="_on_door_area_area_entered"]
