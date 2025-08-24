@@ -26,7 +26,5 @@ func _process(_delta):
 
 
 
-func _on_door_character_entered_house():
-	var tween = create_tween()
-	tween.tween_property($Character,"speed",0,0.25)
-	TransitionLayer.change_scene("res://Scenes/Main/Inside/inside.tscn")
+
+

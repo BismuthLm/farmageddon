@@ -5,7 +5,7 @@ var max_speed: int = 325
 var speed: int = max_speed
 
 func _process(_delta):
-	if Globals.time_of_day >= 12 or Globals.time_of_day <7:
+	if Globals.time_of_day >= 15 or Globals.time_of_day < 12:
 		if $PointLight2D.energy < 2.5:
 			$PointLight2D.energy += 0.005
 	else:

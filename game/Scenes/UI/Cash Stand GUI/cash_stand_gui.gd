@@ -9,7 +9,8 @@ var sell_1_beetroot: bool = false
 var buy_1_beetroot: bool = false
 var buy_10_beetroots: bool = false
 
-
+func _ready():
+	$".".visible = true
 
 func _process(_delta):
 	

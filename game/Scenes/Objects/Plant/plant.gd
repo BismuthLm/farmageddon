@@ -5,13 +5,13 @@ var time_planted: int = 0
 var time_since_planted: int = 0
 var planted: bool = false
 var grown: bool = false
-var plant_planted: int = 0
+var plant_planted: int = 9
 
 func _ready():
 	$AnimationPlayer.play("Nothing")
 
 func _process(_delta):
-	if Input.is_action_just_pressed("left click") and mouse_entered == true and Globals.interactable == true and planted == false and Globals.time_of_day < 20 and Globals.time_of_day > 5:
+	if Input.is_action_just_pressed("left click") and mouse_entered == true and Globals.interactable == true and planted == false:
 		time_planted = Globals.time_of_day - 1
 		planted = true
 		
@@ -39,11 +39,9 @@ func _process(_delta):
 			time_planted = 0
 			planted = false
 		
-	if Input.is_action_just_pressed("left click") and mouse_entered == true and Globals.interactable == true and planted == true and Globals.time_of_day < 20 and Globals.time_of_day > 5:
+	if Input.is_action_just_pressed("left click") and mouse_entered == true and Globals.interactable == true and planted == true:
 		print("Cannot plant here, plant is already here")
 		
-	if Input.is_action_just_pressed("left click") and mouse_entered == true and Globals.interactable == true and planted == true and Globals.time_of_day > 19 or Input.is_action_just_pressed("left click") and mouse_entered == true and Globals.interactable == true and planted == true and Globals.time_of_day < 6:
-		print("It is too late in the day to plant")
 		
 		
 		

@@ -22,3 +22,76 @@ func _process(_delta):
 	$"Control/Beetroot amount".text = str(Globals.beetroot_amount)
 	$"Control/Carrot amount".text = str(Globals.carrot_amount)
 	$"Control2/Money amount".text = str(Globals.gold_amount)
+	
+	
+	if Globals.time_of_day == 1:
+		$Control3/Time.text = str("1:00 AM")
+		
+	if Globals.time_of_day == 2:
+		$Control3/Time.text = str("2:00 AM")
+		
+	if Globals.time_of_day == 3:
+		$Control3/Time.text = str("3:00 AM")
+		
+	if Globals.time_of_day == 4:
+		$Control3/Time.text = str("4:00 AM")
+		
+	if Globals.time_of_day == 5:
+		$Control3/Time.text = str("5:00 AM")
+		
+	if Globals.time_of_day == 6:
+		$Control3/Time.text = str("6:00 AM")
+		
+	if Globals.time_of_day == 7:
+		$Control3/Time.text = str("7:00 AM")
+		
+	if Globals.time_of_day == 8:
+		$Control3/Time.text = str("8:00 AM")
+		
+	if Globals.time_of_day == 9:
+		$Control3/Time.text = str("9:00 AM")
+		
+	if Globals.time_of_day == 10:
+		$Control3/Time.text = str("10:00 AM")
+		
+	if Globals.time_of_day == 11:
+		$Control3/Time.text = str("11:00 AM")
+		
+	if Globals.time_of_day == 12:
+		$Control3/Time.text = str("12:00 PM")
+		
+	if Globals.time_of_day == 13:
+		$Control3/Time.text = str("1:00 PM")
+		
+	if Globals.time_of_day == 14:
+		$Control3/Time.text = str("2:00 PM")
+		
+	if Globals.time_of_day == 15:
+		$Control3/Time.text = str("3:00 PM")
+		
+	if Globals.time_of_day == 16:
+		$Control3/Time.text = str("4:00 PM")
+		
+	if Globals.time_of_day == 17:
+		$Control3/Time.text = str("5:00 PM")
+		
+	if Globals.time_of_day == 18:
+		$Control3/Time.text = str("6:00 PM")
+		
+	if Globals.time_of_day == 19:
+		$Control3/Time.text = str("7:00 PM")
+		
+	if Globals.time_of_day == 20:
+		$Control3/Time.text = str("8:00 PM")
+		
+	if Globals.time_of_day == 21:
+		$Control3/Time.text = str("9:00 PM")
+		
+	if Globals.time_of_day == 22:
+		$Control3/Time.text = str("10:00 PM")
+		
+	if Globals.time_of_day == 23:
+		$Control3/Time.text = str("11:00 PM")
+		
+	if Globals.time_of_day == 24:
+		$Control3/Time.text = str("12:00 AM")
