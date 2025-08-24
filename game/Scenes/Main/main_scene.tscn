@@ -18,8 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://bx3rptr7ucdlp" path="res://Scenes/Objects/Lamp/lamp.tscn" id="14_1ybne"]
 [ext_resource type="PackedScene" uid="uid://fvsr61vjocgo" path="res://Scenes/Objects/Cash stand/cash_stand.tscn" id="14_24gst"]
 [ext_resource type="PackedScene" uid="uid://dlwp3c7alhci6" path="res://Scenes/UI/Cash Stand GUI/cash_stand_gui.tscn" id="19_c48os"]
-[ext_resource type="PackedScene" uid="uid://dkkufdq84e5qs" path="res://Scenes/Main/Door Transition/Door/door.tscn" id="19_jnc8f"]
-[ext_resource type="Texture2D" uid="uid://bgjlofw3x2x14" path="res://Assets/Title screen-1.png.png" id="20_en3jr"]
+[ext_resource type="PackedScene" uid="uid://d1cngf5vkwr8x" path="res://Scenes/Main/Door Transition/Door/door2.tscn" id="19_e1yug"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hovo0"]
 texture = ExtResource("2_24ww3")
@@ -151,8 +150,8 @@ visible = false
 position = Vector2(103, -987)
 scale = Vector2(2, 2)
 
-[node name="Door" parent="." instance=ExtResource("19_jnc8f")]
-position = Vector2(95, -1410)
+[node name="Door" parent="." instance=ExtResource("19_e1yug")]
+position = Vector2(94, -1410)
 
 [node name="TitleScreen-1_png" type="Sprite2D" parent="."]
 position = Vector2(234, -992)
@@ -160,4 +159,3 @@ scale = Vector2(33.9219, 33.9219)
 texture = ExtResource("20_en3jr")
 
 [connection signal="timeout" from="HourTimer" to="." method="_on_hour_timer_timeout"]
-[connection signal="player_entered_house" from="Door" to="." method="_on_door_player_entered_house"]
