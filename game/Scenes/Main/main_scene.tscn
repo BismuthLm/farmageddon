@@ -79,7 +79,7 @@ sources/7 = SubResource("TileSetAtlasSource_e1ufo")
 script = ExtResource("1_1rti3")
 
 [node name="HourTimer" type="Timer" parent="."]
-wait_time = 12.5
+wait_time = 10.0
 one_shot = true
 autostart = true
 
