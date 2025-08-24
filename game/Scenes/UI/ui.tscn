@@ -83,3 +83,15 @@ offset_top = -4.5
 offset_right = 133.0
 offset_bottom = 18.5
 text = "1234567"
+
+[node name="Control3" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Time" type="Label" parent="Control3"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "12:00 PM"

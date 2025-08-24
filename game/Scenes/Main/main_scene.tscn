@@ -87,6 +87,7 @@ size = Vector2(121, 40)
 script = ExtResource("1_1rti3")
 
 [node name="HourTimer" type="Timer" parent="."]
+wait_time = 12.5
 one_shot = true
 autostart = true
 
@@ -111,12 +112,36 @@ shape = SubResource("RectangleShape2D_wh642")
 position = Vector2(500, -100)
 scale = Vector2(2, 2)
 
+[node name="Plant4" parent="Plants" groups=["Plants"] instance=ExtResource("7_fi151")]
+position = Vector2(500, -300)
+scale = Vector2(2, 2)
+
+[node name="Plant5" parent="Plants" groups=["Plants"] instance=ExtResource("7_fi151")]
+position = Vector2(700, -300)
+scale = Vector2(2, 2)
+
+[node name="Plant6" parent="Plants" groups=["Plants"] instance=ExtResource("7_fi151")]
+position = Vector2(900, -300)
+scale = Vector2(2, 2)
+
+[node name="Plant7" parent="Plants" groups=["Plants"] instance=ExtResource("7_fi151")]
+position = Vector2(900, -500)
+scale = Vector2(2, 2)
+
+[node name="Plant8" parent="Plants" groups=["Plants"] instance=ExtResource("7_fi151")]
+position = Vector2(700, -500)
+scale = Vector2(2, 2)
+
+[node name="Plant9" parent="Plants" groups=["Plants"] instance=ExtResource("7_fi151")]
+position = Vector2(500, -500)
+scale = Vector2(2, 2)
+
 [node name="Plant2" parent="Plants" groups=["Plants"] instance=ExtResource("7_fi151")]
 position = Vector2(700, -100)
 scale = Vector2(2, 2)
 
 [node name="Plant3" parent="Plants" groups=["Plants"] instance=ExtResource("7_fi151")]
-position = Vector2(899, -100)
+position = Vector2(900, -100)
 scale = Vector2(2, 2)
 
 [node name="Character" parent="." instance=ExtResource("2_nb0gi")]
@@ -144,13 +169,12 @@ position = Vector2(-1222, -1202)
 position = Vector2(-128, -311)
 
 [node name="Highlight" parent="." instance=ExtResource("13_ccr7g")]
-position = Vector2(500, -100)
+position = Vector2(500, -102)
 scale = Vector2(0.666, 0.666)
 
 [node name="UI" parent="." instance=ExtResource("13_5bdl4")]
 
 [node name="Cash Stand GUI" parent="." instance=ExtResource("19_c48os")]
-visible = false
 position = Vector2(103, -987)
 scale = Vector2(2, 2)
 
