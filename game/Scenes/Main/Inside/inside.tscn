@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://8v342raa48yn"]
+[gd_scene load_steps=14 format=3 uid="uid://8v342raa48yn"]
 
 [ext_resource type="Texture2D" uid="uid://blbaqv023e3ku" path="res://Assets/ground/wood tilemap.png" id="1_jklyp"]
 [ext_resource type="Script" path="res://Scenes/Main/Inside/inside.gd" id="1_qrfk1"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bs75r8doah5ti" path="res://Assets/House/Monkey painting.png" id="5_d6g68"]
 [ext_resource type="Texture2D" uid="uid://86uhnapj0i7i" path="res://Assets/House/example-painting1.png" id="7_6yt84"]
 [ext_resource type="PackedScene" uid="uid://bcsqoca6o2ery" path="res://Scenes/Main/Inside/bed/bed.tscn" id="8_4g4a5"]
+[ext_resource type="Texture2D" uid="uid://metn8r3f0ob2" path="res://Assets/pointlightsquare.png" id="8_hc15i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qk0uc"]
 texture = ExtResource("1_jklyp")
@@ -71,3 +72,9 @@ polygon = PackedVector2Array(-2100, -314, -2126, -314, -2112, 606, -396, 618, -3
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D2"]
 scale = Vector2(0.5, 0.5)
 polygon = PackedVector2Array(56, 598, 62, 762, 178, 764, 176, 616, 914, 614, 916, -300, 902, -302, 901, 600)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-302.5, -71)
+scale = Vector2(1497, 748)
+energy = 0.57
+texture = ExtResource("8_hc15i")
