@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Farmageddon"
-run/main_scene="res://Scenes/Main/main_scene.tscn"
+run/main_scene="res://Scenes/Main/Level/level.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -87,6 +87,7 @@ down={
 2d_physics/layer_1="Objects"
 2d_physics/layer_2="Monster"
 2d_physics/layer_3="Player"
+2d_physics/layer_4="Inside"
 
 [rendering]
 

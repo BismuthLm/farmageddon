@@ -1,0 +1,53 @@
+[gd_scene load_steps=11 format=3 uid="uid://bwwydwxoeaev6"]
+
+[ext_resource type="PackedScene" uid="uid://5ngwkqk858lp" path="res://Scenes/Main/main_scene.tscn" id="1_a1rn5"]
+[ext_resource type="Script" path="res://Scenes/Main/Level/level.gd" id="1_wv0m1"]
+[ext_resource type="PackedScene" uid="uid://8v342raa48yn" path="res://Scenes/Main/Inside/inside.tscn" id="2_s8pkg"]
+[ext_resource type="PackedScene" uid="uid://n70cua6eu7us" path="res://Scenes/Objects/House Bottom/house_bottom.tscn" id="3_tuwrl"]
+[ext_resource type="PackedScene" uid="uid://b28eauenff5gw" path="res://Scenes/Objects/House Top/House Top.tscn" id="4_2ydua"]
+[ext_resource type="PackedScene" uid="uid://ca1mh2m0on8ud" path="res://Scenes/Entities/Character/character.tscn" id="5_cfu7d"]
+[ext_resource type="PackedScene" uid="uid://br8rktro6ekil" path="res://Scenes/UI/ui.tscn" id="7_1ok3l"]
+[ext_resource type="PackedScene" uid="uid://dlwp3c7alhci6" path="res://Scenes/UI/Cash Stand GUI/cash_stand_gui.tscn" id="8_5gs5k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbdtc"]
+size = Vector2(121, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g1cu7"]
+size = Vector2(119, 24)
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_wv0m1")
+
+[node name="Main Scene" parent="." instance=ExtResource("1_a1rn5")]
+
+[node name="Inside" parent="." instance=ExtResource("2_s8pkg")]
+position = Vector2(134, -1679)
+scale = Vector2(0.7, 0.7)
+
+[node name="Door Area Entry" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door Area Entry"]
+position = Vector2(101, -1459.5)
+shape = SubResource("RectangleShape2D_xbdtc")
+
+[node name="Door Area Exit" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door Area Exit"]
+position = Vector2(100.5, -1417)
+shape = SubResource("RectangleShape2D_g1cu7")
+
+[node name="house bottom" parent="." instance=ExtResource("3_tuwrl")]
+position = Vector2(98, -1767)
+
+[node name="Character2" parent="." instance=ExtResource("5_cfu7d")]
+
+[node name="House Top" parent="." instance=ExtResource("4_2ydua")]
+position = Vector2(100, -1767)
+
+[node name="UI" parent="." instance=ExtResource("7_1ok3l")]
+
+[node name="Cash Stand GUI" parent="." instance=ExtResource("8_5gs5k")]
+
+[connection signal="area_entered" from="Door Area Entry" to="." method="_on_door_area_area_entered"]
+[connection signal="area_entered" from="Door Area Entry" to="." method="_on_door_area_entry_area_entered"]
+[connection signal="area_entered" from="Door Area Exit" to="." method="_on_door_area_exit_area_entered"]

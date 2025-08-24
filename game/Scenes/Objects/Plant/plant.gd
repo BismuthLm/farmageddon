@@ -5,7 +5,7 @@ var time_planted: int = 0
 var time_since_planted: int = 0
 var planted: bool = false
 var grown: bool = false
-var plant_planted: int = 0
+var plant_planted: int = 9
 
 func _ready():
 	$AnimationPlayer.play("Nothing")

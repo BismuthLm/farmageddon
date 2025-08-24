@@ -26,13 +26,5 @@ func _process(_delta):
 
 
 
-func character_entered_house():
-	var tween = create_tween()
-	tween.tween_property($Character,"speed",0,0.25)
-	TransitionLayer.change_scene("res://Scenes/Main/Inside/inside.tscn")
 
 
-func _on_door_area_area_entered(area):
-	if area in get_tree().get_nodes_in_group('Character'):
-		character_entered_house()
-		TransitionLayer.change_scene("res://Scenes/Main/Inside/inside.tscn")
