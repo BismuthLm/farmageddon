@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://5ngwkqk858lp"]
+[gd_scene load_steps=22 format=3 uid="uid://5ngwkqk858lp"]
 
 [ext_resource type="Script" path="res://Scenes/Main/main_scene.gd" id="1_1rti3"]
 [ext_resource type="Texture2D" uid="uid://2q3lmphfherl" path="res://Assets/ground/ground-v2.png" id="2_24ww3"]
@@ -149,20 +149,5 @@ position = Vector2(-128, -311)
 [node name="Highlight" parent="." instance=ExtResource("13_ccr7g")]
 position = Vector2(500, -102)
 scale = Vector2(0.666, 0.666)
-
-[node name="UI" parent="." instance=ExtResource("13_5bdl4")]
-
-[node name="Cash Stand GUI" parent="." instance=ExtResource("19_c48os")]
-visible = false
-position = Vector2(103, -987)
-scale = Vector2(2, 2)
-
-[node name="Door" parent="." instance=ExtResource("19_e1yug")]
-position = Vector2(94, -1410)
-
-[node name="TitleScreen-1_png" type="Sprite2D" parent="."]
-position = Vector2(234, -992)
-scale = Vector2(33.9219, 33.9219)
-texture = ExtResource("20_en3jr")
 
 [connection signal="timeout" from="HourTimer" to="." method="_on_hour_timer_timeout"]
