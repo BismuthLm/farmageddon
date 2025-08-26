@@ -22,9 +22,3 @@ func _process(_delta):
 			print(Globals.time_of_day)
 		else:
 			print("You Cannot Sleep Yet")
-
-
-
-
-
-
