@@ -21,6 +21,7 @@ script = ExtResource("1_wv0m1")
 [node name="Main Scene" parent="." instance=ExtResource("1_a1rn5")]
 
 [node name="Inside" parent="." instance=ExtResource("2_s8pkg")]
+visible = false
 position = Vector2(134, -1679)
 scale = Vector2(0.7, 0.7)
 
@@ -48,6 +49,6 @@ position = Vector2(100, -1767)
 
 [node name="Cash Stand GUI" parent="." instance=ExtResource("8_5gs5k")]
 
-[connection signal="area_entered" from="Door Area Entry" to="." method="_on_door_area_area_entered"]
 [connection signal="area_entered" from="Door Area Entry" to="." method="_on_door_area_entry_area_entered"]
+[connection signal="area_entered" from="Door Area Entry" to="." method="_on_door_area_area_entered"]
 [connection signal="area_entered" from="Door Area Exit" to="." method="_on_door_area_exit_area_entered"]

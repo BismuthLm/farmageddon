@@ -132,7 +132,6 @@ position = Vector2(142, 4071)
 scale = Vector2(3, 3)
 
 [node name="Directional Light" parent="." instance=ExtResource("12_tnajp")]
-visible = false
 position = Vector2(10601, -1879)
 
 [node name="Cash stand" parent="." instance=ExtResource("14_24gst")]
@@ -147,7 +146,7 @@ position = Vector2(-1222, -1202)
 position = Vector2(-128, -311)
 
 [node name="Highlight" parent="." instance=ExtResource("13_ccr7g")]
-position = Vector2(500, -102)
+position = Vector2(500, -100)
 scale = Vector2(0.666, 0.666)
 
 [connection signal="timeout" from="HourTimer" to="." method="_on_hour_timer_timeout"]

@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var max_speed: int = 250
+var max_speed: int = 350
 var speed: int = max_speed
 
 var move: bool = true

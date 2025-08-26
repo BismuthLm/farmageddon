@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-var max_speed: int = 325
+var max_speed: int = 375
 var speed: int = max_speed
 
 func _process(_delta):

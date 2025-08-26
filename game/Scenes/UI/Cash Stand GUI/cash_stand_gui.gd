@@ -9,16 +9,12 @@ var sell_1_beetroot: bool = false
 var buy_1_beetroot: bool = false
 var buy_10_beetroots: bool = false
 
-func _ready():
-	$".".visible = true
-
 func _process(_delta):
 	
 	
-	$".".position = Globals.player_pos
-	
 	if Globals.cash_stand == true:
 		$".".visible = true
+		$".".position = Globals.player_pos
 		
 	if Globals.cash_stand == false:
 		$".".visible = false
@@ -81,6 +77,66 @@ func _process(_delta):
 			Globals.beetroot_amount += 10
 		else:
 			print("Can't buy 10 beetroots, not enough gold")
+
+
+
+#func sell_10_carrots():
+	#
+#
+#
+#func sell_1_carrot():
+	#
+#
+#
+#
+#func buy_1_carrot():
+#
+#
+#
+#func buy_10_carrots():
+#
+#func buy_10_carrots():
+#
+#
+#
+#func _on_sell_10_beetroots_mouse_entered():
+	#sell_10_beetroots = true
+#
+#func _on_sell_10_beetroots_mouse_exited():
+	#sell_10_beetroots = false
+#
+#
+#
+#func _on_sell_1_beetroot_mouse_entered():
+	#sell_1_beetroot = true
+#
+#func _on_sell_1_beetroot_mouse_exited():
+	#sell_1_beetroot = false
+#
+#
+#
+#func _on_buy_1_beetroot_mouse_entered():
+	#buy_1_beetroot = true
+#
+#func _on_buy_1_beetroot_mouse_exited():
+	#buy_1_beetroot = false
+#
+#
+#
+#func _on_buy_10_beetroots_mouse_entered():
+	#buy_10_beetroots = true
+#
+#func _on_buy_10_beetroots_mouse_exited():
+	#buy_10_beetroots = false
+
+
+
+
+
+
+
+
+
 
 
 #When the mouse enters an area it's variable turns from false to true and when the mouse exits the area it turns it from false to true
