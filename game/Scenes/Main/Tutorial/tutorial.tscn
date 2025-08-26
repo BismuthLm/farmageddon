@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b80w1pgk4woe6"]
+[gd_scene load_steps=17 format=3 uid="uid://b80w1pgk4woe6"]
 
 [ext_resource type="Texture2D" uid="uid://2q3lmphfherl" path="res://Assets/ground/ground-v2.png" id="1_gc2cd"]
 [ext_resource type="Texture2D" uid="uid://dwagd2kjmrm8" path="res://Assets/ground/fencepost-horizontal.png" id="2_tr5iy"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ca1mh2m0on8ud" path="res://Scenes/Entities/Character/character.tscn" id="4_v3m2o"]
 [ext_resource type="PackedScene" uid="uid://fvsr61vjocgo" path="res://Scenes/Objects/Cash stand/cash_stand.tscn" id="5_co1cp"]
 [ext_resource type="Texture2D" uid="uid://cmmdpvydukgr3" path="res://Assets/House/Door.png" id="6_fkt20"]
+[ext_resource type="PackedScene" uid="uid://br8rktro6ekil" path="res://Scenes/UI/ui.tscn" id="7_475aj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ucgg"]
 texture = ExtResource("1_gc2cd")
@@ -121,3 +122,5 @@ texture = ExtResource("6_fkt20")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(36, -1436)
 shape = SubResource("RectangleShape2D_r2x5a")
+
+[node name="UI" parent="." instance=ExtResource("7_475aj")]
