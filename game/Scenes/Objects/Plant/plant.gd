@@ -11,6 +11,7 @@ func _ready():
 	$AnimationPlayer.play("Nothing")
 
 func _process(_delta):
+	print(mouse_entered)
 	if Input.is_action_just_pressed("left click") and mouse_entered == true and Globals.interactable == true and planted == false:
 		time_planted = Globals.time_of_day - 1
 		planted = true
