@@ -99,7 +99,6 @@ func _process(_delta):
 func _on_area_2d_mouse_entered():
 	mouse_entered = true
 	
-
 func _on_area_2d_mouse_exited():
 	mouse_entered = false
 
@@ -107,4 +106,3 @@ func _on_area_2d_mouse_exited():
 #After more than 1 hour in game has passed it sets the time the plant was planted to the right time
 func _on_delay_timer_timeout():
 	time_planted += 1
-	
