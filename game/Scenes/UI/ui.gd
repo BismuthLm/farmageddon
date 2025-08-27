@@ -19,9 +19,9 @@ func _process(_delta):
 			$Control/Carrot.modulate = not_selected
 	
 	
-	$"Control/Beetroot amount".text = str(Globals.beetroot_amount)
-	$"Control/Carrot amount".text = str(Globals.carrot_amount)
-	$"Control2/Money amount".text = str(Globals.gold_amount)
+	$"Control/BeetrootAmount".text = str(Globals.beetroot_amount)
+	$"Control/CarrotAmount".text = str(Globals.carrot_amount)
+	$"Control2/MoneyAmount".text = str(Globals.gold_amount)
 	
 	
 	if Globals.time_of_day == 1:

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://veb0gp3vsa5e" path="res://Assets/ground/wooden wall.png" id="2_5v5bk"]
 [ext_resource type="Texture2D" uid="uid://4o6ea74td5vw" path="res://Assets/ground/Shadow.png" id="3_b6gii"]
 [ext_resource type="Texture2D" uid="uid://bs75r8doah5ti" path="res://Assets/House/Monkey painting.png" id="5_d6g68"]
-[ext_resource type="Texture2D" uid="uid://86uhnapj0i7i" path="res://Assets/House/example-painting1.png" id="7_6yt84"]
+[ext_resource type="Texture2D" uid="uid://dq7iipyqq0scr" path="res://Assets/House/example-painting1.png" id="7_6yt84"]
 [ext_resource type="PackedScene" uid="uid://bcsqoca6o2ery" path="res://Scenes/Main/Inside/bed/bed.tscn" id="8_4g4a5"]
 [ext_resource type="Texture2D" uid="uid://metn8r3f0ob2" path="res://Assets/pointlightsquare.png" id="8_hc15i"]
 

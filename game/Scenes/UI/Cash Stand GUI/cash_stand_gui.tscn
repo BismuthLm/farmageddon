@@ -27,75 +27,75 @@ size = Vector2(132, 90)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r160s"]
 size = Vector2(132, 90)
 
-[node name="Cash Stand GUI" type="Node2D"]
+[node name="CashStandGUI" type="Node2D"]
 script = ExtResource("1_rcgi1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_ejodk")
 
-[node name="Sell 10 Carrots" type="Area2D" parent="."]
+[node name="Sell10Carrots" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sell 10 Carrots"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sell10Carrots"]
 position = Vector2(-222, -63)
 shape = SubResource("RectangleShape2D_13f6b")
 
-[node name="Sell 1 Carrot" type="Area2D" parent="."]
+[node name="Sell1Carrot" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sell 1 Carrot"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sell1Carrot"]
 position = Vector2(-84, -63)
 shape = SubResource("RectangleShape2D_gm746")
 
-[node name="Buy 1 Carrot" type="Area2D" parent="."]
+[node name="Buy1Carrot" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Buy 1 Carrot"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buy1Carrot"]
 position = Vector2(84, -63)
 shape = SubResource("RectangleShape2D_h04pp")
 
-[node name="Buy 10 Carrots" type="Area2D" parent="."]
+[node name="Buy10Carrots" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Buy 10 Carrots"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buy10Carrots"]
 position = Vector2(222, -63)
 shape = SubResource("RectangleShape2D_jrbo7")
 
-[node name="Sell 10 Beetroots" type="Area2D" parent="."]
+[node name="Sell10Beetroots" type="Area2D" parent="."]
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sell 10 Beetroots"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sell10Beetroots"]
 position = Vector2(-222, 147)
 shape = SubResource("RectangleShape2D_xy2t4")
 
-[node name="Sell 1 Beetroot" type="Area2D" parent="."]
+[node name="Sell1Beetroot" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sell 1 Beetroot"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sell1Beetroot"]
 position = Vector2(-84, 147)
 shape = SubResource("RectangleShape2D_hev68")
 
-[node name="Buy 1 Beetroot" type="Area2D" parent="."]
+[node name="Buy1Beetroot" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Buy 1 Beetroot"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buy1Beetroot"]
 position = Vector2(84, 147)
 shape = SubResource("RectangleShape2D_r4qbh")
 
-[node name="Buy 10 Beetroots" type="Area2D" parent="."]
+[node name="Buy10Beetroots" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Buy 10 Beetroots"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buy10Beetroots"]
 position = Vector2(222, 147)
 shape = SubResource("RectangleShape2D_r160s")
 
-[connection signal="mouse_entered" from="Sell 10 Carrots" to="." method="_on_sell_10_carrots_mouse_entered"]
-[connection signal="mouse_exited" from="Sell 10 Carrots" to="." method="_on_sell_10_carrots_mouse_exited"]
-[connection signal="mouse_entered" from="Sell 1 Carrot" to="." method="_on_sell_1_carrot_mouse_entered"]
-[connection signal="mouse_exited" from="Sell 1 Carrot" to="." method="_on_sell_1_carrot_mouse_exited"]
-[connection signal="mouse_entered" from="Buy 1 Carrot" to="." method="_on_buy_1_carrot_mouse_entered"]
-[connection signal="mouse_exited" from="Buy 1 Carrot" to="." method="_on_buy_1_carrot_mouse_exited"]
-[connection signal="mouse_entered" from="Buy 10 Carrots" to="." method="_on_buy_10_carrots_mouse_entered"]
-[connection signal="mouse_exited" from="Buy 10 Carrots" to="." method="_on_buy_10_carrots_mouse_exited"]
-[connection signal="mouse_entered" from="Sell 10 Beetroots" to="." method="_on_sell_10_beetroots_mouse_entered"]
-[connection signal="mouse_exited" from="Sell 10 Beetroots" to="." method="_on_sell_10_beetroots_mouse_exited"]
-[connection signal="mouse_entered" from="Sell 1 Beetroot" to="." method="_on_sell_1_beetroot_mouse_entered"]
-[connection signal="mouse_exited" from="Sell 1 Beetroot" to="." method="_on_sell_1_beetroot_mouse_exited"]
-[connection signal="mouse_entered" from="Buy 1 Beetroot" to="." method="_on_buy_1_beetroot_mouse_entered"]
-[connection signal="mouse_exited" from="Buy 1 Beetroot" to="." method="_on_buy_1_beetroot_mouse_exited"]
-[connection signal="mouse_entered" from="Buy 10 Beetroots" to="." method="_on_buy_10_beetroots_mouse_entered"]
-[connection signal="mouse_exited" from="Buy 10 Beetroots" to="." method="_on_buy_10_beetroots_mouse_exited"]
+[connection signal="mouse_entered" from="Sell10Carrots" to="." method="_on_sell_10_carrots_mouse_entered"]
+[connection signal="mouse_exited" from="Sell10Carrots" to="." method="_on_sell_10_carrots_mouse_exited"]
+[connection signal="mouse_entered" from="Sell1Carrot" to="." method="_on_sell_1_carrot_mouse_entered"]
+[connection signal="mouse_exited" from="Sell1Carrot" to="." method="_on_sell_1_carrot_mouse_exited"]
+[connection signal="mouse_entered" from="Buy1Carrot" to="." method="_on_buy_1_carrot_mouse_entered"]
+[connection signal="mouse_exited" from="Buy1Carrot" to="." method="_on_buy_1_carrot_mouse_exited"]
+[connection signal="mouse_entered" from="Buy10Carrots" to="." method="_on_buy_10_carrots_mouse_entered"]
+[connection signal="mouse_exited" from="Buy10Carrots" to="." method="_on_buy_10_carrots_mouse_exited"]
+[connection signal="mouse_entered" from="Sell10Beetroots" to="." method="_on_sell_10_beetroots_mouse_entered"]
+[connection signal="mouse_exited" from="Sell10Beetroots" to="." method="_on_sell_10_beetroots_mouse_exited"]
+[connection signal="mouse_entered" from="Sell1Beetroot" to="." method="_on_sell_1_beetroot_mouse_entered"]
+[connection signal="mouse_exited" from="Sell1Beetroot" to="." method="_on_sell_1_beetroot_mouse_exited"]
+[connection signal="mouse_entered" from="Buy1Beetroot" to="." method="_on_buy_1_beetroot_mouse_entered"]
+[connection signal="mouse_exited" from="Buy1Beetroot" to="." method="_on_buy_1_beetroot_mouse_exited"]
+[connection signal="mouse_entered" from="Buy10Beetroots" to="." method="_on_buy_10_beetroots_mouse_entered"]
+[connection signal="mouse_exited" from="Buy10Beetroots" to="." method="_on_buy_10_beetroots_mouse_exited"]

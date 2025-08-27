@@ -75,7 +75,7 @@ layer_0/tile_data = PackedInt32Array(-458765, 1, 0, -393229, 1, 0, -327693, 1, 0
 [node name="Character" parent="." instance=ExtResource("4_v3m2o")]
 position = Vector2(30, -15)
 
-[node name="Cash stand" parent="." instance=ExtResource("5_co1cp")]
+[node name="CashStand" parent="." instance=ExtResource("5_co1cp")]
 position = Vector2(-770, -335)
 
 [node name="Label" type="Label" parent="."]
