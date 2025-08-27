@@ -5,7 +5,6 @@ var speed: int = max_speed
 
 var move: bool = true
 
-
 func _process(_delta):
 	if Globals.time_of_day > 19 or Globals.time_of_day < 5:
 		$".".visible = true
@@ -29,4 +28,3 @@ func _on_area_2d_area_entered(area):
 func _on_area_2d_area_exited(area):
 	if area in get_tree().get_nodes_in_group('Monster Stop'):
 		move = true
-	

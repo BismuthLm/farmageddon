@@ -42,10 +42,7 @@ func _process(_delta):
 		
 	if Input.is_action_just_pressed("left click") and mouse_entered == true and Globals.interactable == true and planted == true:
 		print("Cannot plant here, plant is already here")
-		
-		
-		
-		
+
 	if plant_planted == 0 and grown == false and Globals.sleeping == true and planted == true:
 		$AnimationPlayer.play("Beetroot Sprout")
 		
@@ -58,7 +55,6 @@ func _process(_delta):
 	if plant_planted == 1 and grown == false and Globals.time_of_day == 5 and planted == true:
 		$AnimationPlayer.play("Carrot Sprout")
 		
-		
 	if plant_planted == 0 and Globals.time_of_day == time_planted and grown == false:
 		$AnimationPlayer.play("Beetroot Grown")
 		grown = true
@@ -69,7 +65,6 @@ func _process(_delta):
 		grown = true
 		print("Carrot Grown")
 		
-		
 	if Input.is_action_just_pressed("right click") and mouse_entered == true and Globals.interactable == true and grown == true:
 		
 		if plant_planted == 0:
@@ -79,8 +74,6 @@ func _process(_delta):
 		if plant_planted == 1:
 			Globals.carrot_amount += 3
 			print("Carrot Harvested")
-		
-		
 		time_planted = 0
 		time_since_planted = 0
 		planted = false
@@ -90,11 +83,8 @@ func _process(_delta):
 func _on_area_2d_mouse_entered():
 	mouse_entered = true
 	
-
 func _on_area_2d_mouse_exited():
 	mouse_entered = false
 
-
 func _on_delay_timer_timeout():
 	time_planted += 1
-	

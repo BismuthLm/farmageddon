@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-
 var max_speed: int = 375
 var speed: int = max_speed
 
@@ -21,7 +20,6 @@ func _process(_delta):
 	if Input.is_action_pressed("left"):
 		$AnimationPlayer.play("Walking Left")
 		
-		
 	#If walking left input is released then it pauses on a standing still frame
 	if Input.is_action_just_released("left"): 
 		$AnimationPlayer.pause()
@@ -29,7 +27,6 @@ func _process(_delta):
 		
 	if Input.is_action_pressed("right"):
 		$AnimationPlayer.play("Walking Right")
-		
 		
 	#If walking right input is released then it pauses on a standing still frame
 	if Input.is_action_just_released("right"):
