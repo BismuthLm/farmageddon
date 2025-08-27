@@ -95,7 +95,6 @@ func buy_10_beetroots_func():
 			print("Can't buy 10 beetroots, not enough gold")
 
 #When the mouse enters an area its variable turns from false to true and when the mouse exits the area it turns it from false to true
-
 func _on_sell_10_carrots_mouse_entered():
 	sell_10_carrots = true
 
