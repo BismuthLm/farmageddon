@@ -127,7 +127,7 @@ sources/0 = SubResource("TileSetAtlasSource_hovo0")
 sources/6 = SubResource("TileSetAtlasSource_qd2hd")
 sources/7 = SubResource("TileSetAtlasSource_e1ufo")
 
-[node name="Main Scene" type="Node2D"]
+[node name="MainScene" type="Node2D"]
 script = ExtResource("1_1rti3")
 
 [node name="HourTimer" type="Timer" parent="."]
@@ -183,11 +183,11 @@ scale = Vector2(2, 2)
 position = Vector2(142, 4071)
 scale = Vector2(3, 3)
 
-[node name="Directional Light" parent="." instance=ExtResource("12_tnajp")]
+[node name="DirectionalLight" parent="." instance=ExtResource("12_tnajp")]
 visible = false
 position = Vector2(10601, -1879)
 
-[node name="Cash stand" parent="." instance=ExtResource("14_24gst")]
+[node name="CashStand" parent="." instance=ExtResource("14_24gst")]
 position = Vector2(-2350, -677)
 
 [node name="Monster" parent="." instance=ExtResource("9_3t0bb")]

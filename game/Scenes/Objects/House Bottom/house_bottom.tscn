@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dguulgx8m81jr" path="res://Assets/House/House bottom.png" id="1_0oit0"]
 
-[node name="house bottom" type="StaticBody2D"]
+[node name="HouseBottom" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(2, 0)

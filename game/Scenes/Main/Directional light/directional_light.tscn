@@ -23,7 +23,7 @@ _data = {
 "Time": SubResource("Animation_8cw7t")
 }
 
-[node name="Directional Light" type="Node2D"]
+[node name="DirectionalLight" type="Node2D"]
 script = ExtResource("1_xqpi8")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]

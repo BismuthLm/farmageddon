@@ -180,14 +180,14 @@ speed_scale = 2.0
 zoom = Vector2(0.6, 0.6)
 position_smoothing_enabled = true
 
-[node name="Interactable Area" type="Area2D" parent="."]
+[node name="InteractableArea" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable Area"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea"]
 shape = SubResource("CircleShape2D_7gcsn")
 
-[node name="Monster Stop Area" type="Area2D" parent="." groups=["Monster Stop"]]
+[node name="MonsterStopArea" type="Area2D" parent="." groups=["Monster Stop"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Monster Stop Area"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MonsterStopArea"]
 position = Vector2(1, 66)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_llip6")
@@ -197,11 +197,11 @@ position = Vector2(-1, 2)
 scale = Vector2(1.02889, 0.864444)
 texture = ExtResource("18_edkap")
 
-[node name="Hitbox area" type="Area2D" parent="." groups=["Character"]]
+[node name="HitboxArea" type="Area2D" parent="." groups=["Character"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox area"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxArea"]
 position = Vector2(-2.5, 28)
 shape = SubResource("RectangleShape2D_f07ps")
 
-[connection signal="mouse_entered" from="Interactable Area" to="." method="_on_interactable_area_mouse_entered"]
-[connection signal="mouse_exited" from="Interactable Area" to="." method="_on_interactable_area_mouse_exited"]
+[connection signal="mouse_entered" from="InteractableArea" to="." method="_on_interactable_area_mouse_entered"]
+[connection signal="mouse_exited" from="InteractableArea" to="." method="_on_interactable_area_mouse_exited"]

@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var max_speed: int = 375
 var speed: int = max_speed
-
+#Player iliumination
 func _process(_delta):
 	if Globals.time_of_day >= 15 or Globals.time_of_day < 12:
 		if $PointLight2D.energy < 1:
