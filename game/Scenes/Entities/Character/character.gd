@@ -49,6 +49,7 @@ func _process(_delta):
 		$AnimationPlayer.pause()
 		$AnimationPlayer.seek(0.4, true)
 
+#If the mouse is inside the area of interactability it lets you interact with things and if the mouse is outside the area of interactability you can't interact with things
 func _on_interactable_area_mouse_entered():
 	Globals.interactable = true
 
