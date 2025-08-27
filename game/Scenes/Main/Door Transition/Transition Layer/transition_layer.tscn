@@ -22,7 +22,7 @@ _data = {
 "fade to black": SubResource("Animation_sgsoi")
 }
 
-[node name="Transition Layer" type="CanvasLayer"]
+[node name="TransitionLayer" type="CanvasLayer"]
 script = ExtResource("1_lhg6k")
 
 [node name="ColorRect" type="ColorRect" parent="."]

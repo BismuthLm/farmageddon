@@ -9,7 +9,7 @@ size = Vector2(144, 143.25)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i4d1u"]
 size = Vector2(144.5, 17)
 
-[node name="Cash stand" type="StaticBody2D"]
+[node name="CashStand" type="StaticBody2D"]
 scale = Vector2(4, 4)
 script = ExtResource("1_a8dyb")
 
