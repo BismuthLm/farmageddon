@@ -1,7 +1,8 @@
 extends CharacterBody2D
 
-var max_speed: int = 350
+var max_speed: int = 400
 var speed: int = max_speed
+
 
 var move: bool = true
 
@@ -16,6 +17,7 @@ func _process(_delta):
 			move_and_slide()
 		elif move == false:
 			$AnimationPlayer.play("Monster bite")
+			Globals.player_health -= 1
 	elif Globals.time_of_day < 20 or Globals.time_of_day > 4:
 		$".".visible = false
 

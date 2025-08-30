@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://budlqw02xjssu"]
+[gd_scene load_steps=24 format=3 uid="uid://budlqw02xjssu"]
 
 [ext_resource type="Script" path="res://Scenes/Entities/Monster/monster.gd" id="1_gcdd3"]
 [ext_resource type="Texture2D" uid="uid://55cleeyh0nd" path="res://Assets/Monster/Monster right 3.png" id="1_y3eyr"]
@@ -76,6 +76,8 @@ _data = {
 "Monster walking right": SubResource("Animation_8rok1")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_hj8qj"]
+
 [node name="Monster" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 8
@@ -132,3 +134,11 @@ polygon = PackedVector2Array(178, -281, 179.5, -276, 209.6, -276, 211.5, -268, 2
 [node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="."]
 position = Vector2(392, -226)
 polygon = PackedVector2Array(-191, 396, -216, 409, -286, 423, -280, 380, -249, 365, -200, 352, -156, 282, -145, 372, -146, 440, -190, 425)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_hj8qj")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
