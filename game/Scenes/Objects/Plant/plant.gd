@@ -48,8 +48,6 @@ func _process(_delta):
 	if Input.is_action_just_pressed("left click") and mouse_entered == true and Globals.interactable == true and planted == true:
 		print("Cannot plant here, plant is already here")
 		
-		
-		
 	#If sleeping is equal to true and there is a plant planted then it grows into a sprout
 	if plant_planted == 0 and grown == false and Globals.sleeping == true and planted == true:
 		$AnimationPlayer.play("Beetroot Sprout")
