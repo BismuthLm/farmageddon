@@ -25,7 +25,6 @@ func _on_area_2d_area_entered(area):
 		move = false
 		print("monster not moving")
 
-
 func _on_area_2d_area_exited(area):
 	if area in get_tree().get_nodes_in_group('Monster Stop'):
 		move = true

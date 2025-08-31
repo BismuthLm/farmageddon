@@ -18,11 +18,9 @@ func _process(_delta):
 			$Control/Beetroot.modulate = selected
 			$Control/Carrot.modulate = not_selected
 	
-	
 	$"Control/BeetrootAmount".text = str(Globals.beetroot_amount)
 	$"Control/CarrotAmount".text = str(Globals.carrot_amount)
 	$"Control2/MoneyAmount".text = str(Globals.gold_amount)
-	
 	
 	if Globals.time_of_day == 1:
 		$Control3/Time.text = str("1:00 AM")

@@ -48,7 +48,3 @@ position = Vector2(100, -1767)
 [node name="UI" parent="." instance=ExtResource("7_1ok3l")]
 
 [node name="CashStandGUI" parent="." instance=ExtResource("8_5gs5k")]
-
-[connection signal="area_entered" from="Door Area Entry" to="." method="_on_door_area_area_entered"]
-[connection signal="area_entered" from="Door Area Entry" to="." method="_on_door_area_entry_area_entered"]
-[connection signal="area_entered" from="Door Area Exit" to="." method="_on_door_area_exit_area_entered"]
