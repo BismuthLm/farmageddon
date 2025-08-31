@@ -27,3 +27,6 @@ var interactable: bool = false
 var cash_stand: bool = false
 
 var player_health: int = 5
+
+#True means it is day false means it is night
+var day: bool = false

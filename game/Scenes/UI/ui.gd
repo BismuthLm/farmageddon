@@ -55,7 +55,7 @@ func _process(_delta):
 		$Control4/Sprite2D4.modulate = dead_heart
 		$Control4/Sprite2D5.modulate = alive_heart
 		
-	if Globals.player_health == 0:
+	if Globals.player_health <= 0:
 		$Control5/Sprite2D.visible = true
 		
 	
