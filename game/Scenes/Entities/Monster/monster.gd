@@ -3,6 +3,7 @@ extends CharacterBody2D
 var max_speed: int = 400
 var speed: int = max_speed
 
+var hit: bool = true
 
 var move: bool = true
 
@@ -17,7 +18,10 @@ func _process(_delta):
 			move_and_slide()
 		elif move == false:
 			$AnimationPlayer.play("Monster bite")
-			Globals.player_health -= 1
+			if hit == true:
+				Globals.player_health -= 1
+				hit = false
+				$HitTimer.start()
 	elif Globals.time_of_day < 20 or Globals.time_of_day > 4:
 		$".".visible = false
 
@@ -30,3 +34,7 @@ func _on_area_2d_area_entered(area):
 func _on_area_2d_area_exited(area):
 	if area in get_tree().get_nodes_in_group('Monster Stop'):
 		move = true
+
+
+func _on_hit_timer_timeout():
+	hit = true

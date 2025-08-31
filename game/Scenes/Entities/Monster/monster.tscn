@@ -132,3 +132,16 @@ polygon = PackedVector2Array(178, -281, 179.5, -276, 209.6, -276, 211.5, -268, 2
 [node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="."]
 position = Vector2(392, -226)
 polygon = PackedVector2Array(-191, 396, -216, 409, -286, 423, -280, 380, -249, 365, -200, 352, -156, 282, -145, 372, -146, 440, -190, 425)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_hj8qj")
+
+[node name="HitTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="timeout" from="HitTimer" to="." method="_on_hit_timer_timeout"]
