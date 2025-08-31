@@ -2,6 +2,8 @@ extends CanvasLayer
 
 var selected: Color = Color("ffffff")
 var not_selected: Color = Color("434343")
+var alive_heart: Color = Color("ffffffff")
+var dead_heart: Color = Color("ffffff00")
 
 func _process(_delta):
 	if Input.is_action_just_released("scroll down"):
@@ -17,6 +19,45 @@ func _process(_delta):
 			print("Plant selected is Beetroot")
 			$Control/Beetroot.modulate = selected
 			$Control/Carrot.modulate = not_selected
+		
+	if Globals.player_health == 5:
+		$Control4/Sprite2D.modulate = alive_heart
+		$Control4/Sprite2D2.modulate = alive_heart
+		$Control4/Sprite2D3.modulate = alive_heart
+		$Control4/Sprite2D4.modulate = alive_heart
+		$Control4/Sprite2D5.modulate = alive_heart
+	
+	if Globals.player_health == 4:
+		$Control4/Sprite2D.modulate = dead_heart
+		$Control4/Sprite2D2.modulate = alive_heart
+		$Control4/Sprite2D3.modulate = alive_heart
+		$Control4/Sprite2D4.modulate = alive_heart
+		$Control4/Sprite2D5.modulate = alive_heart
+	
+	if Globals.player_health == 3:
+		$Control4/Sprite2D.modulate = dead_heart
+		$Control4/Sprite2D2.modulate = dead_heart
+		$Control4/Sprite2D3.modulate = alive_heart
+		$Control4/Sprite2D4.modulate = alive_heart
+		$Control4/Sprite2D5.modulate = alive_heart
+		
+	if Globals.player_health == 2:
+		$Control4/Sprite2D.modulate = dead_heart
+		$Control4/Sprite2D2.modulate = dead_heart
+		$Control4/Sprite2D3.modulate = dead_heart
+		$Control4/Sprite2D4.modulate = alive_heart
+		$Control4/Sprite2D5.modulate = alive_heart
+	
+	if Globals.player_health == 1:
+		$Control4/Sprite2D.modulate = dead_heart
+		$Control4/Sprite2D2.modulate = dead_heart
+		$Control4/Sprite2D3.modulate = dead_heart
+		$Control4/Sprite2D4.modulate = dead_heart
+		$Control4/Sprite2D5.modulate = alive_heart
+		
+	if Globals.player_health == 0:
+		$Control5/Sprite2D.visible = true
+		
 	
 	$"Control/BeetrootAmount".text = str(Globals.beetroot_amount)
 	$"Control/CarrotAmount".text = str(Globals.carrot_amount)

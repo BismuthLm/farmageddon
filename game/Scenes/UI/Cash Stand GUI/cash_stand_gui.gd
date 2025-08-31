@@ -97,9 +97,11 @@ func buy_10_beetroots_func():
 #When the mouse enters an area its variable turns from false to true and when the mouse exits the area it turns it from false to true
 func _on_sell_10_carrots_mouse_entered():
 	sell_10_carrots = true
+	print("mouse entered")
 
 func _on_sell_10_carrots_mouse_exited():
 	sell_10_carrots = false
+	print("mouse exited")
 
 func _on_sell_1_carrot_mouse_entered():
 	sell_1_carrot = true

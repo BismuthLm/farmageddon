@@ -25,3 +25,5 @@ var interactable: bool = false
 
 #If true the cash stand ui opens
 var cash_stand: bool = false
+
+var player_health: int = 5
