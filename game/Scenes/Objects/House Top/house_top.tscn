@@ -5,5 +5,6 @@
 [node name="HouseTop" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, -183)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_hwljn")
