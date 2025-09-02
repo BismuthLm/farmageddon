@@ -831,6 +831,7 @@ position = Vector2(142, 4071)
 scale = Vector2(3, 3)
 
 [node name="DirectionalLight" parent="." instance=ExtResource("12_tnajp")]
+visible = false
 position = Vector2(10601, -1879)
 
 [node name="CashStand" parent="." instance=ExtResource("14_24gst")]

@@ -71,7 +71,7 @@ texture_region_size = Vector2i(100, 100)
 0:0/0/y_sort_origin = -16
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-60, -12, -60, 0, 52, 0, 52, -12)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-60, -16, -60, 0, 52, 0, 52, -16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3qj0i"]
 texture = ExtResource("15_egtj5")
@@ -138,7 +138,7 @@ position = Vector2(100.5, -1417)
 shape = SubResource("RectangleShape2D_g1cu7")
 
 [node name="HouseBottom" parent="YSort" instance=ExtResource("3_tuwrl")]
-position = Vector2(102, -1412)
+position = Vector2(99.5151, -1494.45)
 
 [node name="Character" parent="YSort" instance=ExtResource("5_cfu7d")]
 y_sort_enabled = true
@@ -153,3 +153,6 @@ tile_set = SubResource("TileSet_r00by")
 format = 2
 layer_0/y_sort_enabled = true
 layer_0/tile_data = PackedInt32Array(1966095, 4, 0, 1966101, 4, 0, 1966107, 4, 0, 1966089, 3, 0, 2228233, 6, 0, 2424847, 4, 0, 2424853, 2, 0, 2686997, 0, 0, 2687003, 4, 0, 2687009, 1, 0, 2359329, 6, 0, 1966113, 2, 0)
+
+[node name="Lamp" parent="." instance=ExtResource("5_4s8eq")]
+position = Vector2(-751.311, -1167.11)
