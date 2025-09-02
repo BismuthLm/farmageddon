@@ -825,6 +825,7 @@ position = Vector2(-5500, 5100)
 scale = Vector2(2, 2)
 
 [node name="DirectionalLight" parent="." instance=ExtResource("12_tnajp")]
+visible = false
 position = Vector2(10601, -1879)
 
 [node name="Lamps" type="Node2D" parent="."]
