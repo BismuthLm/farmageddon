@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bwwydwxoeaev6"]
+[gd_scene load_steps=28 format=3 uid="uid://bwwydwxoeaev6"]
 
 [ext_resource type="PackedScene" uid="uid://5ngwkqk858lp" path="res://Scenes/Main/main_scene.tscn" id="1_a1rn5"]
 [ext_resource type="Script" path="res://Scenes/Main/Level/level.gd" id="1_wv0m1"]
@@ -17,13 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://dwagd2kjmrm8" path="res://Assets/ground/fencepost-horizontal.png" id="14_mp5sb"]
 [ext_resource type="Texture2D" uid="uid://dv3but7famikp" path="res://Assets/ground/fencepost-singular.png" id="15_egtj5"]
 [ext_resource type="Texture2D" uid="uid://i65f4klqqxgy" path="res://Assets/ground/fencepost-vertical.png" id="16_0nd7p"]
-[ext_resource type="PackedScene" uid="uid://t3kmrcsfdrqj" path="res://Scenes/Objects/Fountain/fountain.tscn" id="17_g8i3c"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbdtc"]
-size = Vector2(121, 19)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g1cu7"]
-size = Vector2(119, 24)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n3f3o"]
 texture = ExtResource("10_8f3kj")
@@ -134,14 +127,12 @@ position = Vector2(-589, -306)
 position = Vector2(-1009, -415)
 
 [node name="CashStandGUI" parent="YSort" instance=ExtResource("8_5gs5k")]
+position = Vector2(11043, -1038)
 
 [node name="Inside" parent="YSort" instance=ExtResource("2_s8pkg")]
 visible = false
 position = Vector2(134, -1679)
 scale = Vector2(0.7, 0.7)
-
-[node name="Character" parent="YSort" instance=ExtResource("5_cfu7d")]
-y_sort_enabled = true
 
 [node name="TileMap" type="TileMap" parent="YSort"]
 y_sort_enabled = true

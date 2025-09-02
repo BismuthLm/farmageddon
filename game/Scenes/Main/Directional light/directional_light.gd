@@ -2,8 +2,7 @@ extends Node2D
 
 func _ready():
 	$".".visible = true
-	$AnimationPlayer.play("Time")
-	await $AnimationPlayer.animation_finished
+	$DirectionalLight2D.color = Color("1a1a1a")
 	Globals.day = true
 	
 func _process(_delta):

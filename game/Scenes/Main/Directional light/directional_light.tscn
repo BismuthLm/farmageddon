@@ -28,7 +28,7 @@ script = ExtResource("1_xqpi8")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 position = Vector2(10601, -1879)
-color = Color(0.843137, 0.843137, 0.843137, 1)
+color = Color(0.152941, 0.152941, 0.152941, 1)
 energy = 1.33
 blend_mode = 1
 shadow_enabled = true
