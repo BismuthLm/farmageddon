@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bwwydwxoeaev6"]
+[gd_scene load_steps=29 format=3 uid="uid://bwwydwxoeaev6"]
 
 [ext_resource type="PackedScene" uid="uid://5ngwkqk858lp" path="res://Scenes/Main/main_scene.tscn" id="1_a1rn5"]
 [ext_resource type="Script" path="res://Scenes/Main/Level/level.gd" id="1_wv0m1"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://n70cua6eu7us" path="res://Scenes/Objects/House Bottom/house_bottom.tscn" id="3_tuwrl"]
 [ext_resource type="PackedScene" uid="uid://bx3rptr7ucdlp" path="res://Scenes/Objects/Lamp/lamp.tscn" id="5_4s8eq"]
 [ext_resource type="PackedScene" uid="uid://ca1mh2m0on8ud" path="res://Scenes/Entities/Character/character.tscn" id="5_cfu7d"]
+[ext_resource type="PackedScene" uid="uid://fvsr61vjocgo" path="res://Scenes/Objects/Cash stand/cash_stand.tscn" id="6_b6g20"]
 [ext_resource type="PackedScene" uid="uid://xuvtkrbgb477" path="res://Scenes/Objects/House Top/house_top.tscn" id="6_y6mj4"]
 [ext_resource type="PackedScene" uid="uid://br8rktro6ekil" path="res://Scenes/UI/ui.tscn" id="7_1ok3l"]
 [ext_resource type="PackedScene" uid="uid://dlwp3c7alhci6" path="res://Scenes/UI/Cash Stand GUI/cash_stand_gui.tscn" id="8_5gs5k"]
@@ -16,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://dwagd2kjmrm8" path="res://Assets/ground/fencepost-horizontal.png" id="14_mp5sb"]
 [ext_resource type="Texture2D" uid="uid://dv3but7famikp" path="res://Assets/ground/fencepost-singular.png" id="15_egtj5"]
 [ext_resource type="Texture2D" uid="uid://i65f4klqqxgy" path="res://Assets/ground/fencepost-vertical.png" id="16_0nd7p"]
+[ext_resource type="PackedScene" uid="uid://t3kmrcsfdrqj" path="res://Scenes/Objects/Fountain/fountain.tscn" id="17_g8i3c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xbdtc"]
 size = Vector2(121, 19)
@@ -117,13 +119,24 @@ scale = Vector2(0.7, 0.7)
 [node name="YSort" type="Node2D" parent="."]
 y_sort_enabled = true
 
+[node name="Character" parent="YSort" instance=ExtResource("5_cfu7d")]
+y_sort_enabled = true
+position = Vector2(204, -505)
+
+[node name="HouseBottom" parent="YSort" instance=ExtResource("3_tuwrl")]
+position = Vector2(102, -1412)
+
 [node name="Lamp2" parent="YSort" instance=ExtResource("5_4s8eq")]
-position = Vector2(160, 1184)
+position = Vector2(163, 1187)
 
 [node name="Lamp" parent="YSort" instance=ExtResource("5_4s8eq")]
 position = Vector2(-589, -306)
 
+[node name="CashStand" parent="YSort" instance=ExtResource("6_b6g20")]
+position = Vector2(-1009, -415)
+
 [node name="CashStandGUI" parent="YSort" instance=ExtResource("8_5gs5k")]
+position = Vector2(949, -810)
 
 [node name="DoorAreaEntry" type="Area2D" parent="YSort"]
 
@@ -137,12 +150,6 @@ shape = SubResource("RectangleShape2D_xbdtc")
 position = Vector2(100.5, -1417)
 shape = SubResource("RectangleShape2D_g1cu7")
 
-[node name="HouseBottom" parent="YSort" instance=ExtResource("3_tuwrl")]
-position = Vector2(102, -1412)
-
-[node name="Character" parent="YSort" instance=ExtResource("5_cfu7d")]
-y_sort_enabled = true
-
 [node name="HouseTop" parent="YSort" instance=ExtResource("6_y6mj4")]
 position = Vector2(100, -1562)
 
@@ -153,3 +160,7 @@ tile_set = SubResource("TileSet_r00by")
 format = 2
 layer_0/y_sort_enabled = true
 layer_0/tile_data = PackedInt32Array(1966095, 4, 0, 1966101, 4, 0, 1966107, 4, 0, 1966089, 3, 0, 2228233, 6, 0, 2424847, 4, 0, 2424853, 2, 0, 2686997, 0, 0, 2687003, 4, 0, 2687009, 1, 0, 2359329, 6, 0, 1966113, 2, 0)
+
+[node name="Fountain" parent="YSort" instance=ExtResource("17_g8i3c")]
+position = Vector2(92, 4468)
+scale = Vector2(2, 2)

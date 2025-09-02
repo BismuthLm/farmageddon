@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://5ngwkqk858lp"]
+[gd_scene load_steps=20 format=3 uid="uid://5ngwkqk858lp"]
 
 [ext_resource type="Script" path="res://Scenes/Main/main_scene.gd" id="1_1rti3"]
 [ext_resource type="Texture2D" uid="uid://2q3lmphfherl" path="res://Assets/ground/ground-v2.png" id="2_24ww3"]
@@ -7,10 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://i65f4klqqxgy" path="res://Assets/ground/fencepost-vertical.png" id="5_02uo7"]
 [ext_resource type="Texture2D" uid="uid://dwagd2kjmrm8" path="res://Assets/ground/fencepost-horizontal.png" id="6_01qre"]
 [ext_resource type="PackedScene" uid="uid://byneuhr600vtr" path="res://Scenes/Objects/Plant/plant.tscn" id="7_fi151"]
-[ext_resource type="PackedScene" uid="uid://t3kmrcsfdrqj" path="res://Scenes/Objects/Fountain/fountain.tscn" id="8_xetvi"]
 [ext_resource type="PackedScene" uid="uid://b4p5au60klmna" path="res://Scenes/Main/Directional light/directional_light.tscn" id="12_tnajp"]
 [ext_resource type="PackedScene" uid="uid://dvfq88ahceoxp" path="res://Scenes/UI/highlight.tscn" id="13_ccr7g"]
-[ext_resource type="PackedScene" uid="uid://fvsr61vjocgo" path="res://Scenes/Objects/Cash stand/cash_stand.tscn" id="14_24gst"]
 
 [sub_resource type="TileSet" id="TileSet_i05l3"]
 tile_size = Vector2i(100, 100)
@@ -826,15 +824,8 @@ scale = Vector2(2, 2)
 position = Vector2(-5500, 5100)
 scale = Vector2(2, 2)
 
-[node name="Fountain" parent="." instance=ExtResource("8_xetvi")]
-position = Vector2(142, 4071)
-scale = Vector2(3, 3)
-
 [node name="DirectionalLight" parent="." instance=ExtResource("12_tnajp")]
 position = Vector2(10601, -1879)
-
-[node name="CashStand" parent="." instance=ExtResource("14_24gst")]
-position = Vector2(-2299, -609)
 
 [node name="Lamps" type="Node2D" parent="."]
 y_sort_enabled = true
