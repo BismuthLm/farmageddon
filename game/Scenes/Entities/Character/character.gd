@@ -4,12 +4,10 @@ var max_speed: int = 375
 var speed: int = max_speed
 #Player iliumination
 func _process(_delta):
-	if Globals.time_of_day >= 15 or Globals.time_of_day < 12:
-		if $PointLight2D.energy < 1:
-			$PointLight2D.energy += 0.005
-	else:
-		if $PointLight2D.energy > 0:
-			$PointLight2D.energy -= 0.01
+	if $PointLight2D.energy < 1 and Globals.day == false:
+		$PointLight2D.energy += 0.005
+	if $PointLight2D.energy > 0 and Globals.day == true:
+		$PointLight2D.energy -= 0.01
 
 	#Input for movement
 	var direction = Input.get_vector("left", "right", "up", "down")

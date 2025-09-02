@@ -31,7 +31,7 @@ sources/2 = SubResource("TileSetAtlasSource_1pfdx")
 sources/3 = SubResource("TileSetAtlasSource_rhyhu")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_47ksd"]
-size = Vector2(2998, 606)
+size = Vector2(2998, 90)
 
 [node name="Inside" type="Node2D"]
 script = ExtResource("1_qrfk1")
@@ -61,7 +61,7 @@ collision_layer = 8
 collision_mask = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(-299, -303.5)
+position = Vector2(-299, -174.5)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_47ksd")
 
@@ -76,5 +76,5 @@ polygon = PackedVector2Array(56, 598, 62, 762, 178, 764, 176, 616, 914, 614, 916
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(-302.5, -71)
 scale = Vector2(1497, 748)
-energy = 0.57
+energy = 0.3
 texture = ExtResource("8_hc15i")
