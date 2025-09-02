@@ -15,7 +15,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 12.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(0.843137, 0.843137, 0.843137, 1), Color(0.172549, 0.172549, 0.172549, 1)]
+"values": [Color(0.843137, 0.843137, 0.843137, 1), Color(0.101961, 0.101961, 0.101961, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_elnm3"]
@@ -28,7 +28,7 @@ script = ExtResource("1_xqpi8")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 position = Vector2(10601, -1879)
-color = Color(0, 0, 0, 1)
+color = Color(0.843137, 0.843137, 0.843137, 1)
 energy = 1.33
 blend_mode = 1
 shadow_enabled = true
