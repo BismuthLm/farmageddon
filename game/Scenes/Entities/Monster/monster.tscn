@@ -76,6 +76,8 @@ _data = {
 "Monster walking right": SubResource("Animation_8rok1")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_hj8qj"]
+
 [node name="Monster" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 8
