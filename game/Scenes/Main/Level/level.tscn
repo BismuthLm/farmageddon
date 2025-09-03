@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bwwydwxoeaev6"]
+[gd_scene load_steps=29 format=3 uid="uid://bwwydwxoeaev6"]
 
 [ext_resource type="PackedScene" uid="uid://5ngwkqk858lp" path="res://Scenes/Main/main_scene.tscn" id="1_a1rn5"]
 [ext_resource type="Script" path="res://Scenes/Main/Level/level.gd" id="1_wv0m1"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://dwagd2kjmrm8" path="res://Assets/ground/fencepost-horizontal.png" id="14_mp5sb"]
 [ext_resource type="Texture2D" uid="uid://dv3but7famikp" path="res://Assets/ground/fencepost-singular.png" id="15_egtj5"]
 [ext_resource type="Texture2D" uid="uid://i65f4klqqxgy" path="res://Assets/ground/fencepost-vertical.png" id="16_0nd7p"]
+[ext_resource type="PackedScene" uid="uid://t3kmrcsfdrqj" path="res://Scenes/Objects/Fountain/fountain.tscn" id="18_wkths"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n3f3o"]
 texture = ExtResource("10_8f3kj")
@@ -109,6 +110,9 @@ position = Vector2(102, -1412)
 
 [node name="YSort" type="Node2D" parent="."]
 y_sort_enabled = true
+
+[node name="Fountain" parent="YSort" instance=ExtResource("18_wkths")]
+position = Vector2(99, 4362)
 
 [node name="Character" parent="YSort" instance=ExtResource("5_cfu7d")]
 y_sort_enabled = true
