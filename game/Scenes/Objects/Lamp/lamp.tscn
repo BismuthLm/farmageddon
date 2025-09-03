@@ -7,17 +7,18 @@
 position = Vector2(-1, -10)
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(44, -59)
+position = Vector2(256, -310.25)
 scale = Vector2(1.00844, 1)
-energy = 2.5
+energy = 0.5
 shadow_enabled = true
 texture = ExtResource("2_jsvdt")
 texture_scale = 3.5
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(4, 1)
+position = Vector2(216, -250.25)
 texture = ExtResource("1_v1tlp")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(212, -251.25)
 build_mode = 1
 polygon = PackedVector2Array(-236, 313, -188, 310, -188, 259, -237, 257)
