@@ -93,10 +93,10 @@ sources/5 = SubResource("TileSetAtlasSource_3qj0i")
 sources/6 = SubResource("TileSetAtlasSource_r32ww")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xbdtc"]
-size = Vector2(121, 19)
+size = Vector2(121, 4.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1cu7"]
-size = Vector2(119, 24)
+size = Vector2(119, 6)
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_wv0m1")
@@ -105,11 +105,11 @@ script = ExtResource("1_wv0m1")
 
 [node name="UI" parent="." instance=ExtResource("7_1ok3l")]
 
-[node name="HouseBottom" parent="." instance=ExtResource("3_tuwrl")]
-position = Vector2(102, -1412)
-
 [node name="YSort" type="Node2D" parent="."]
 y_sort_enabled = true
+
+[node name="HouseBottom" parent="YSort" instance=ExtResource("3_tuwrl")]
+position = Vector2(86, -1787)
 
 [node name="Fountain" parent="YSort" instance=ExtResource("18_wkths")]
 position = Vector2(99, 4362)
@@ -131,7 +131,8 @@ position = Vector2(-1009, -415)
 position = Vector2(11043, -1038)
 
 [node name="Inside" parent="YSort" instance=ExtResource("2_s8pkg")]
-position = Vector2(130, -1798)
+visible = false
+position = Vector2(119, -1927)
 scale = Vector2(0.68, 0.68)
 
 [node name="TileMap" type="TileMap" parent="YSort"]
@@ -144,19 +145,18 @@ layer_0/tile_data = PackedInt32Array(6094701, 4, 0, 6094707, 4, 0, 6094713, 4, 0
 layer_1/tile_data = PackedInt32Array(1310751, 0, 0, 1310761, 2, 0, 1376229, 1, 0, 1376219, 3, 0)
 
 [node name="HouseTop" parent="." instance=ExtResource("6_y6mj4")]
-visible = false
-position = Vector2(100, -1562)
+position = Vector2(87, -1699)
 
 [node name="DoorAreaEntry" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorAreaEntry"]
-position = Vector2(101, -1459.5)
+position = Vector2(86, -1543)
 shape = SubResource("RectangleShape2D_xbdtc")
 
 [node name="DoorAreaExit" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorAreaExit"]
-position = Vector2(100.5, -1417)
+position = Vector2(86, -1536)
 shape = SubResource("RectangleShape2D_g1cu7")
 
 [connection signal="area_entered" from="DoorAreaEntry" to="." method="_on_door_area_entry_area_entered"]
