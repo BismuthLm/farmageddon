@@ -4,26 +4,27 @@
 [ext_resource type="Texture2D" uid="uid://inlan4rkmphy" path="res://Assets/Garden items/Cash Cash man.png" id="1_yxjwc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4py0j"]
-size = Vector2(144, 143.25)
+size = Vector2(144, 47.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i4d1u"]
-size = Vector2(144.5, 17)
+size = Vector2(144.5, 20.75)
 
 [node name="CashStand" type="StaticBody2D"]
 scale = Vector2(4, 4)
 script = ExtResource("1_a8dyb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -45.75)
 texture = ExtResource("1_yxjwc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 39.625)
+position = Vector2(0, 24.125)
 shape = SubResource("RectangleShape2D_4py0j")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 120)
+position = Vector2(0, 58.875)
 shape = SubResource("RectangleShape2D_i4d1u")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

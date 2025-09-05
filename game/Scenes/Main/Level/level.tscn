@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://bwwydwxoeaev6"]
+[gd_scene load_steps=29 format=3 uid="uid://bwwydwxoeaev6"]
 
 [ext_resource type="PackedScene" uid="uid://5ngwkqk858lp" path="res://Scenes/Main/main_scene.tscn" id="1_a1rn5"]
 [ext_resource type="Script" path="res://Scenes/Main/Level/level.gd" id="1_wv0m1"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://n70cua6eu7us" path="res://Scenes/Objects/House Bottom/house_bottom.tscn" id="3_tuwrl"]
 [ext_resource type="PackedScene" uid="uid://bx3rptr7ucdlp" path="res://Scenes/Objects/Lamp/lamp.tscn" id="5_4s8eq"]
 [ext_resource type="PackedScene" uid="uid://ca1mh2m0on8ud" path="res://Scenes/Entities/Character/character.tscn" id="5_cfu7d"]
-[ext_resource type="Texture2D" uid="uid://bostilb1yhds1" path="res://Assets/light texture.jpg" id="5_fbl8q"]
 [ext_resource type="PackedScene" uid="uid://fvsr61vjocgo" path="res://Scenes/Objects/Cash stand/cash_stand.tscn" id="6_b6g20"]
 [ext_resource type="PackedScene" uid="uid://xuvtkrbgb477" path="res://Scenes/Objects/House Top/house_top.tscn" id="6_y6mj4"]
 [ext_resource type="PackedScene" uid="uid://br8rktro6ekil" path="res://Scenes/UI/ui.tscn" id="7_1ok3l"]
@@ -109,15 +108,15 @@ script = ExtResource("1_wv0m1")
 [node name="YSort" type="Node2D" parent="."]
 y_sort_enabled = true
 
+[node name="Character" parent="YSort" instance=ExtResource("5_cfu7d")]
+y_sort_enabled = true
+position = Vector2(204, -505)
+
 [node name="HouseBottom" parent="YSort" instance=ExtResource("3_tuwrl")]
 position = Vector2(86, -1787)
 
 [node name="Fountain" parent="YSort" instance=ExtResource("18_wkths")]
 position = Vector2(99, 4362)
-
-[node name="Character" parent="YSort" instance=ExtResource("5_cfu7d")]
-y_sort_enabled = true
-position = Vector2(204, -505)
 
 [node name="Lamp2" parent="YSort" instance=ExtResource("5_4s8eq")]
 position = Vector2(163, 1187)
