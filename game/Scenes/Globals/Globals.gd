@@ -30,3 +30,5 @@ var player_health: int = 5
 
 #True means it is day false means it is night
 var day: bool = false
+
+var dead: bool = false

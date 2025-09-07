@@ -6,19 +6,13 @@ var alive_heart: Color = Color("ffffffff")
 var dead_heart: Color = Color("ffffff00")
 
 func _process(_delta):
-	if Input.is_action_just_released("scroll down"):
-		if Globals.plant_selected == 0:
-			Globals.plant_selected = 1
-			print("Plant selected is Carrot")
-			$Control/Beetroot.modulate = not_selected
-			$Control/Carrot.modulate = selected
+	if Globals.plant_selected == 1:
+		$Control/Beetroot.modulate = not_selected
+		$Control/Carrot.modulate = selected
 
-	if Input.is_action_just_released("scroll up"):
-		if Globals.plant_selected == 1:
-			Globals.plant_selected = 0
-			print("Plant selected is Beetroot")
-			$Control/Beetroot.modulate = selected
-			$Control/Carrot.modulate = not_selected
+	if Globals.plant_selected == 0:
+		$Control/Beetroot.modulate = selected
+		$Control/Carrot.modulate = not_selected
 		
 	if Globals.player_health == 5:
 		$Control4/Sprite2D.modulate = alive_heart
@@ -56,7 +50,7 @@ func _process(_delta):
 		$Control4/Sprite2D5.modulate = alive_heart
 		
 	if Globals.player_health <= 0:
-		$Control5/Sprite2D.visible = true
+		Globals.dead = true
 		
 	
 	$"Control/BeetrootAmount".text = str(Globals.beetroot_amount)
