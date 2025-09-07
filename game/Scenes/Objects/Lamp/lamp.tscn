@@ -9,7 +9,6 @@ position = Vector2(-1, -10)
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(243, -30)
 scale = Vector2(1.00844, 1)
-energy = 2.5
 shadow_enabled = true
 texture = ExtResource("2_jsvdt")
 texture_scale = 3.5
