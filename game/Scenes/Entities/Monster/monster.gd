@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var max_speed: int = 400
 var speed: int = max_speed
-
+@onready var asp = $"monster sound"
 var hit: bool = true
 
 var move: bool = true
@@ -11,6 +11,7 @@ var move: bool = true
 func _process(_delta):
 	if Globals.time_of_day > 19 or Globals.time_of_day < 5:
 		$".".visible = true
+		asp.play()
 		if move == true:
 			$AnimationPlayer.play("Monster walking right")
 			var direction: Vector2 = (Globals.player_pos - position).normalized()
@@ -24,6 +25,7 @@ func _process(_delta):
 				$HitTimer.start()
 	elif Globals.time_of_day < 20 or Globals.time_of_day > 4:
 		$".".visible = false
+		asp.stop()
 
 #Monster stops moving when touching player
 func _on_area_2d_area_entered(area):
