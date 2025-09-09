@@ -199,7 +199,7 @@ shape = SubResource("CapsuleShape2D_llip6")
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(-0.5, 2)
 scale = Vector2(1.02889, 0.864444)
-energy = 0.7
+energy = 0.5
 texture = ExtResource("18_edkap")
 texture_scale = 2.0
 

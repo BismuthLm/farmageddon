@@ -9,8 +9,9 @@ position = Vector2(-1, -10)
 script = ExtResource("1_rdj7a")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(243, -30)
+position = Vector2(256, -131)
 scale = Vector2(1.00844, 1)
+color = Color(0.933333, 0.580392, 0.286275, 1)
 shadow_enabled = true
 texture = ExtResource("2_jsvdt")
 texture_scale = 3.5
@@ -22,4 +23,4 @@ texture = ExtResource("1_v1tlp")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(212, -251.25)
 build_mode = 1
-polygon = PackedVector2Array(-236, 313, -188, 310, -188, 259, -237, 257)
+polygon = PackedVector2Array(-236, 313, -188, 313.25, -188, 257.25, -236, 257.25)

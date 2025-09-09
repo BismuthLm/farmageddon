@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://mv3uxe8yib7q"]
+
+[ext_resource type="Texture2D" uid="uid://b073y2j6fc6mb" path="res://Assets/Garden items/tree.png" id="1_58662"]
+
+[node name="Tree" type="StaticBody2D"]
+
+[node name="Tree" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("1_58662")
