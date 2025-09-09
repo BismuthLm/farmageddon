@@ -160,7 +160,7 @@ shape = SubResource("RectangleShape2D_xbdtc")
 position = Vector2(86, -1536)
 shape = SubResource("RectangleShape2D_g1cu7")
 
-[node name="Monster" parent="." instance=ExtResource("19_ag18g")]
+[node name="Monster" parent="." instance=ExtResource("19_wfrma")]
 position = Vector2(5124, 15323)
 
 [connection signal="area_entered" from="DoorAreaEntry" to="." method="_on_door_area_entry_area_entered"]
