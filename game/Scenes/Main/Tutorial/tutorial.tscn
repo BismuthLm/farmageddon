@@ -214,47 +214,47 @@ scale = Vector2(2, 2)
 position = Vector2(903, 509)
 scale = Vector2(2, 2)
 
-[node name="Plant2" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
+[node name="Plant26" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
 position = Vector2(900, -300)
 scale = Vector2(2, 2)
 
-[node name="Plant3" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
+[node name="Plant27" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
 position = Vector2(1100, -300)
 scale = Vector2(2, 2)
 
-[node name="Plant4" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
+[node name="Plant28" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
 position = Vector2(700, -100)
 scale = Vector2(2, 2)
 
-[node name="Plant5" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
+[node name="Plant29" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
 position = Vector2(900, -100)
 scale = Vector2(2, 2)
 
-[node name="Plant6" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
+[node name="Plant30" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
 position = Vector2(1100, -100)
 scale = Vector2(2, 2)
 
-[node name="Plant7" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
+[node name="Plant31" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
 position = Vector2(700, 100)
 scale = Vector2(2, 2)
 
-[node name="Plant8" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
+[node name="Plant32" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
 position = Vector2(900, 100)
 scale = Vector2(2, 2)
 
-[node name="Plant9" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
+[node name="Plant33" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
 position = Vector2(1100, 100)
 scale = Vector2(2, 2)
 
-[node name="Plant10" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
+[node name="Plant34" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
 position = Vector2(700, 300)
 scale = Vector2(2, 2)
 
-[node name="Plant11" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
+[node name="Plant35" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
 position = Vector2(900, 300)
 scale = Vector2(2, 2)
 
-[node name="Plant12" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
+[node name="Plant36" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
 position = Vector2(1100, 300)
 scale = Vector2(2, 2)
 
