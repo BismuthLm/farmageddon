@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://br8rktro6ekil"]
+[gd_scene load_steps=7 format=3 uid="uid://br8rktro6ekil"]
 
 [ext_resource type="Script" path="res://Scenes/UI/ui.gd" id="1_5plb2"]
 [ext_resource type="Texture2D" uid="uid://gitot22t8u3q" path="res://Assets/Carrot/Carrot grown.png" id="1_440hj"]
 [ext_resource type="Texture2D" uid="uid://bcgk76fq3rl52" path="res://Assets/Beetroot/Beetroot.png" id="2_2mxtg"]
 [ext_resource type="Texture2D" uid="uid://cuf80l3ne4nqr" path="res://Assets/Money/CoinImage.png" id="4_cj7f3"]
 [ext_resource type="Texture2D" uid="uid://dllvn6ag3ryyy" path="res://Assets/character/Heart.png" id="5_gws00"]
+[ext_resource type="Texture2D" uid="uid://dxptl4qeblk7m" path="res://Assets/Game over ui/Game over screen.png" id="6_g6qor"]
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_5plb2")
@@ -123,3 +124,17 @@ texture = ExtResource("5_gws00")
 [node name="Sprite2D5" type="Sprite2D" parent="Control4"]
 position = Vector2(463, 604)
 texture = ExtResource("5_gws00")
+
+[node name="Control5" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Control5"]
+visible = false
+position = Vector2(578, 326.5)
+scale = Vector2(11.56, 6.47)
+texture = ExtResource("6_g6qor")

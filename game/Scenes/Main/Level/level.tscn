@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://dv3but7famikp" path="res://Assets/ground/fencepost-singular.png" id="15_egtj5"]
 [ext_resource type="Texture2D" uid="uid://i65f4klqqxgy" path="res://Assets/ground/fencepost-vertical.png" id="16_0nd7p"]
 [ext_resource type="PackedScene" uid="uid://t3kmrcsfdrqj" path="res://Scenes/Objects/Fountain/fountain.tscn" id="18_wkths"]
-[ext_resource type="PackedScene" uid="uid://budlqw02xjssu" path="res://Scenes/Entities/Monster/monster.tscn" id="19_ag18g"]
+[ext_resource type="PackedScene" uid="uid://budlqw02xjssu" path="res://Scenes/Entities/Monster/monster.tscn" id="19_wfrma"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n3f3o"]
 texture = ExtResource("10_8f3kj")
@@ -120,28 +120,16 @@ position = Vector2(86, -1787)
 position = Vector2(99, 4362)
 
 [node name="Lamp2" parent="YSort" instance=ExtResource("5_4s8eq")]
-position = Vector2(-2247, 1848)
+position = Vector2(163, 1187)
 
 [node name="Lamp" parent="YSort" instance=ExtResource("5_4s8eq")]
-position = Vector2(5911, 1330)
-
-[node name="Lamp3" parent="YSort" instance=ExtResource("5_4s8eq")]
-position = Vector2(-3296, 2708)
-
-[node name="Lamp4" parent="YSort" instance=ExtResource("5_4s8eq")]
-position = Vector2(8310, -3990)
-
-[node name="Lamp5" parent="YSort" instance=ExtResource("5_4s8eq")]
-position = Vector2(5946, -4008)
-
-[node name="Lamp6" parent="YSort" instance=ExtResource("5_4s8eq")]
-position = Vector2(-5315, 200)
+position = Vector2(-589, -306)
 
 [node name="CashStand" parent="YSort" instance=ExtResource("6_b6g20")]
 position = Vector2(-1059, -484)
 
 [node name="CashStandGUI" parent="YSort" instance=ExtResource("8_5gs5k")]
-position = Vector2(1169, -1006)
+position = Vector2(11043, -1038)
 
 [node name="Inside" parent="YSort" instance=ExtResource("2_s8pkg")]
 visible = false

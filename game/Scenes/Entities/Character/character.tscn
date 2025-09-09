@@ -201,7 +201,6 @@ position = Vector2(-0.5, 2)
 scale = Vector2(1.02889, 0.864444)
 energy = 0.5
 texture = ExtResource("18_edkap")
-texture_scale = 2.0
 
 [node name="HitboxArea" type="Area2D" parent="." groups=["Character"]]
 position = Vector2(0.5, 0)
