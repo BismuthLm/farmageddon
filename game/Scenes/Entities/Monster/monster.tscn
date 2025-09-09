@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://budlqw02xjssu"]
+[gd_scene load_steps=25 format=3 uid="uid://budlqw02xjssu"]
 
 [ext_resource type="Script" path="res://Scenes/Entities/Monster/monster.gd" id="1_gcdd3"]
 [ext_resource type="Texture2D" uid="uid://55cleeyh0nd" path="res://Assets/Monster/Monster right 3.png" id="1_y3eyr"]
@@ -19,7 +19,6 @@
 [ext_resource type="Texture2D" uid="uid://de4x4x65m6cdb" path="res://Assets/Monster/Monster bite/Monster bite 9.png" id="16_hsjtq"]
 [ext_resource type="Texture2D" uid="uid://n33gipjcb7ye" path="res://Assets/Monster/Monster bite/Monster bite 10.png" id="17_5l7xj"]
 [ext_resource type="AudioStream" uid="uid://lqn1sq3u5ymv" path="res://Assets/audio/soundEffects/angry-monster-146625.mp3" id="19_avs4p"]
-[ext_resource type="Script" path="res://Scenes/Entities/Character/character.gd" id="19_g0dfc"]
 
 [sub_resource type="Animation" id="Animation_ch66p"]
 resource_name = "Monster bite"
@@ -117,7 +116,6 @@ polygon = PackedVector2Array(88, 417, 148, 396, 152, 359, 132, 260, 109, 262, 74
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(245, 425, 278, 411, 293, 388, 284, 327, 279, 295, 265, 270, 257, 262, 239, 257, 209, 268, 208, 287, 213, 301, 203, 311, 204, 327, 196, 347, 188, 383, 214, 413)
-script = ExtResource("19_g0dfc")
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-168, 410, -125, 422, -102, 400, -92, 370, -103, 348, -110, 336, -107, 303, -107, 283, -163, 254, -162, 315, -156, 325, -175, 355)
@@ -147,7 +145,7 @@ shape = SubResource("CircleShape2D_hj8qj")
 wait_time = 5.0
 one_shot = true
 
-[node name="monster sound" type="AudioStreamPlayer2D" parent="."]
+[node name="MonsterSound" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(89, -227)
 stream = ExtResource("19_avs4p")
 volume_db = 15.0
