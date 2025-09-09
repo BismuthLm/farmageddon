@@ -12,10 +12,13 @@ func _process(_delta):
 		$".".visible = true
 		$MonsterSound.play(0.0)
 		if move == true:
-			$AnimationPlayer.play("Monster walking right")
 			var direction: Vector2 = (Globals.player_pos - position).normalized()
 			velocity = direction * speed
 			move_and_slide()
+			if direction > Vector2(0,0):
+				$AnimationPlayer.play("Monster walking right")
+			if direction < Vector2(0,0):
+				$AnimationPlayer.play("Monster walking left")
 		elif move == false:
 			$AnimationPlayer.play("Monster bite")
 			if hit == true:
