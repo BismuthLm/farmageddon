@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+signal player_dead
+
 var selected: Color = Color("ffffff")
 var not_selected: Color = Color("434343")
 var alive_heart: Color = Color("ffffffff")
@@ -50,7 +52,14 @@ func _process(_delta):
 		$Control4/Sprite2D5.modulate = alive_heart
 		
 	if Globals.player_health <= 0:
+		$Control4/Sprite2D.modulate = dead_heart
+		$Control4/Sprite2D2.modulate = dead_heart
+		$Control4/Sprite2D3.modulate = dead_heart
+		$Control4/Sprite2D4.modulate = dead_heart
+		$Control4/Sprite2D5.modulate = dead_heart
 		Globals.dead = true
+		player_dead.emit()
+		TransitionLayer.change_scene("res://Scenes/Main/Death Screen/death_screen.tscn")
 		
 	
 	$"Control/BeetrootAmount".text = str(Globals.beetroot_amount)
