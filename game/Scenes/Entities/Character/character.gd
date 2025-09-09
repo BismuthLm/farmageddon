@@ -8,9 +8,9 @@ func _ready():
 
 #Player iliumination
 func _process(_delta):
-	if $PointLight2D.energy < 1.5 and Globals.day == false:
+	if $PointLight2D.energy < 1 and Globals.day == false:
 		#$PointLight2D.energy += 0.005
-		$PointLight2D.energy = 1.5
+		$PointLight2D.energy = 1
 	if $PointLight2D.energy > 0 and Globals.day == true:
 		#$PointLight2D.energy -= 0.01
 		$PointLight2D.energy = 0

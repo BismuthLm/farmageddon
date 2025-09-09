@@ -13,5 +13,5 @@ func _process(_delta):
 	
 	if Globals.time_of_day == 19:
 		$AnimationPlayer.play_backwards("Time")
+		await $AnimationPlayer.animation_finished
 		Globals.day = false
-		

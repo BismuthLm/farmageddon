@@ -23,13 +23,3 @@ func _process(_delta):
 		else:
 			print("You Cannot Sleep Yet")
 			
-			
-	if Input.is_action_just_released("scroll down"):
-		if Globals.plant_selected == 0:
-			Globals.plant_selected = 1
-			print("Plant selected is Carrot")
-
-	if Input.is_action_just_released("scroll up"):
-		if Globals.plant_selected == 1:
-			Globals.plant_selected = 0
-			print("Plant selected is Beetroot")
