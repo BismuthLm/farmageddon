@@ -184,6 +184,50 @@ layer_0/tile_data = PackedInt32Array(-458759, 1, 0, -393223, 1, 0, -327687, 1, 0
 position = Vector2(700, -300)
 scale = Vector2(2, 2)
 
+[node name="Plant2" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
+position = Vector2(900, -300)
+scale = Vector2(2, 2)
+
+[node name="Plant3" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
+position = Vector2(1100, -300)
+scale = Vector2(2, 2)
+
+[node name="Plant4" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
+position = Vector2(700, -100)
+scale = Vector2(2, 2)
+
+[node name="Plant5" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
+position = Vector2(900, -100)
+scale = Vector2(2, 2)
+
+[node name="Plant6" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
+position = Vector2(1100, -100)
+scale = Vector2(2, 2)
+
+[node name="Plant7" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
+position = Vector2(700, 100)
+scale = Vector2(2, 2)
+
+[node name="Plant8" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
+position = Vector2(900, 100)
+scale = Vector2(2, 2)
+
+[node name="Plant9" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
+position = Vector2(1100, 100)
+scale = Vector2(2, 2)
+
+[node name="Plant10" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
+position = Vector2(700, 300)
+scale = Vector2(2, 2)
+
+[node name="Plant11" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
+position = Vector2(900, 300)
+scale = Vector2(2, 2)
+
+[node name="Plant12" parent="Plants" groups=["Plants"] instance=ExtResource("10_ihl05")]
+position = Vector2(1100, 300)
+scale = Vector2(2, 2)
+
 [node name="Label" type="Label" parent="."]
 offset_left = 248.0
 offset_top = -583.0
@@ -221,7 +265,7 @@ label_settings = SubResource("LabelSettings_q2477")
 [node name="UI" parent="." instance=ExtResource("7_475aj")]
 
 [node name="Highlight" parent="." instance=ExtResource("13_8cgga")]
-position = Vector2(565, 7)
+position = Vector2(481, -287)
 scale = Vector2(0.666, 0.666)
 
 [node name="CashStandGUI" parent="." instance=ExtResource("14_k0rls")]
