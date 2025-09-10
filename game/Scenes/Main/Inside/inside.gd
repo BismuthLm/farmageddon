@@ -6,7 +6,3 @@ func _on_sleep_sleep():
 		Globals.sleeping = true
 		Globals.time_of_day = 6
 		$HourTimer.start()
-		print("Sleeping")
-		print(Globals.time_of_day)
-	else:
-		print("You Cannot Sleep Yet")

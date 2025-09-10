@@ -8,7 +8,6 @@ func _on_hour_timer_timeout():
 		#Otherwise it changes it to 1
 		Globals.time_of_day = 1
 	$HourTimer.start()
-	print(Globals.time_of_day)
 
 #When sleeping
 func _process(_delta):
@@ -18,8 +17,4 @@ func _process(_delta):
 			Globals.sleeping = false
 			Globals.time_of_day = 6
 			$HourTimer.start()
-			print("Sleeping")
-			print(Globals.time_of_day)
-		else:
-			print("You Cannot Sleep Yet")
 			
