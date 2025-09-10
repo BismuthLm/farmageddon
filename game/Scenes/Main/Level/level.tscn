@@ -161,7 +161,7 @@ position = Vector2(85, -1534)
 shape = SubResource("RectangleShape2D_g1cu7")
 
 [node name="Monster" parent="." instance=ExtResource("19_wfrma")]
-position = Vector2(-8690, -3400)
+position = Vector2(-5582, -884)
 
 [connection signal="area_entered" from="DoorAreaEntry" to="." method="_on_door_area_entry_area_entered"]
 [connection signal="area_entered" from="DoorAreaExit" to="." method="_on_door_area_exit_area_entered"]
