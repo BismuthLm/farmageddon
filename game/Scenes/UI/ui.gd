@@ -56,7 +56,7 @@ func _process(_delta):
 		$Control4/Sprite2D5.modulate = alive_heart
 		
 	if Globals.player_health <= 0:
-		$Control5/Sprite2D.visible = true
+		TransitionLayer.change_scene("res://Scenes/Main/Death Screen/death_screen.tscn")
 		
 	
 	$"Control/BeetrootAmount".text = str(Globals.beetroot_amount)
