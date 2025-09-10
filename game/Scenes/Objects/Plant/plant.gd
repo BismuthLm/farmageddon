@@ -56,10 +56,10 @@ func _process(_delta):
 		$AnimationPlayer.play("Carrot Sprout")
 		
 	#If the time of day is equal to 5 and there is a plant planted then it grows into a sprout
-	if plant_planted == 0 and grown == false and Globals.time_of_day == 5 and planted == true:
+	if plant_planted == 0 and grown == false and Globals.time_of_day == 6 and planted == true:
 		$AnimationPlayer.play("Beetroot Sprout")
 		
-	if plant_planted == 1 and grown == false and Globals.time_of_day == 5 and planted == true:
+	if plant_planted == 1 and grown == false and Globals.time_of_day == 6 and planted == true:
 		$AnimationPlayer.play("Carrot Sprout")
 		
 	
