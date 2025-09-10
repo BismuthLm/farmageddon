@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://55117h8pdmfg"]
+[gd_scene load_steps=5 format=3 uid="uid://55117h8pdmfg"]
 
 [ext_resource type="Script" path="res://Scenes/Main/Death Screen/death_screen.gd" id="1_tckhx"]
 [ext_resource type="Texture2D" uid="uid://dxptl4qeblk7m" path="res://Assets/Game over ui/Game over screen.png" id="2_djbib"]
 [ext_resource type="Texture2D" uid="uid://dnxldheln1r6t" path="res://Assets/Game over ui/Restart button.png" id="3_mdekj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1tujv"]
+size = Vector2(400, 90)
 
 [node name="DeathScreen" type="Node2D"]
 script = ExtResource("1_tckhx")
@@ -17,11 +20,19 @@ position = Vector2(577, 397)
 scale = Vector2(11.53, 7.96)
 texture = ExtResource("2_djbib")
 
-[node name="Sprite2D3" type="Sprite2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575, 322)
+
+[node name="RestartButton" type="Area2D" parent="."]
+
+[node name="Sprite2D3" type="Sprite2D" parent="RestartButton"]
 position = Vector2(533, 605)
 scale = Vector2(5, 3.457)
 texture = ExtResource("3_mdekj")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-visible = false
-position = Vector2(575, 322)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RestartButton"]
+position = Vector2(543, 574)
+shape = SubResource("RectangleShape2D_1tujv")
+
+[connection signal="mouse_entered" from="RestartButton" to="." method="_on_restart_button_mouse_entered"]
+[connection signal="mouse_exited" from="RestartButton" to="." method="_on_restart_button_mouse_exited"]

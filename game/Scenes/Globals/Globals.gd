@@ -14,7 +14,7 @@ var plant_selected: int = 1
 var sleeping = false
 
 #How many beetroots and carrots you have in your inventory
-var beetroot_amount: int = 2
+var beetroot_amount: int = 0
 var carrot_amount: int = 2
 
 #Amount of Gold you have
@@ -29,4 +29,4 @@ var cash_stand: bool = false
 var player_health: int = 5
 
 #True means it is day false means it is night
-var day: bool = false
+var day: bool = true

@@ -22,11 +22,9 @@ func _process(_delta):
 			$DelayTimer.start()
 			plant_planted = 0
 			Globals.beetroot_amount -= 1
-			print("Plant Planted is Beetroot")
 			
 		#If you don't have any beetroots to plant then it doesn't plant any plant
 		elif Globals.plant_selected == 0 and Globals.beetroot_amount == 0:
-			print("No beetroots left to plant")
 			time_planted = 0
 			planted = false
 			
@@ -36,17 +34,12 @@ func _process(_delta):
 			$DelayTimer.start()
 			plant_planted = 1
 			Globals.carrot_amount -= 1
-			print("Plant planted is Carrot")
 			
 		#If you don't have any carrots to plant then it doesn't plant any plant
 		elif Globals.plant_selected == 1 and Globals.carrot_amount == 0:
-			print("No carrots left to plant")
 			time_planted = 0
 			planted = false
 		
-	#If a plant is already planted in the space you clicked on
-	if Input.is_action_just_pressed("left click") and mouse_entered == true and Globals.interactable == true and planted == true:
-		print("Cannot plant here, plant is already here")
 		
 	#If sleeping is equal to true and there is a plant planted then it grows into a sprout
 	if plant_planted == 0 and grown == false and Globals.sleeping == true and planted == true:
@@ -56,10 +49,10 @@ func _process(_delta):
 		$AnimationPlayer.play("Carrot Sprout")
 		
 	#If the time of day is equal to 5 and there is a plant planted then it grows into a sprout
-	if plant_planted == 0 and grown == false and Globals.time_of_day == 5 and planted == true:
+	if plant_planted == 0 and grown == false and Globals.time_of_day == 6 and planted == true:
 		$AnimationPlayer.play("Beetroot Sprout")
 		
-	if plant_planted == 1 and grown == false and Globals.time_of_day == 5 and planted == true:
+	if plant_planted == 1 and grown == false and Globals.time_of_day == 6 and planted == true:
 		$AnimationPlayer.play("Carrot Sprout")
 		
 	
@@ -67,23 +60,19 @@ func _process(_delta):
 	if plant_planted == 0 and Globals.time_of_day == time_planted and grown == false:
 		$AnimationPlayer.play("Beetroot Grown")
 		grown = true
-		print("Beetroot Grown")
 	
 	if plant_planted == 1 and Globals.time_of_day == time_planted and grown == false:
 		$AnimationPlayer.play("Carrot Grown")
 		grown = true
-		print("Carrot Grown")
 		
 	#If the plant is grown and you right click on it then it harvests the plants and adds it to your inventory
 	if Input.is_action_just_pressed("right click") and mouse_entered == true and Globals.interactable == true and grown == true:
 		
 		if plant_planted == 0:
 			Globals.beetroot_amount += 5
-			print("Beetroot Harvested")
 			
 		if plant_planted == 1:
 			Globals.carrot_amount += 3
-			print("Carrot Harvested")
 		
 		
 		#Resets the plant so plants can be planted on it again

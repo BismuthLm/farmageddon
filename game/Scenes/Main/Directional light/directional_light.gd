@@ -6,7 +6,7 @@ func _ready():
 	Globals.day = true
 	
 func _process(_delta):
-	if Globals.time_of_day == 5:
+	if Globals.time_of_day == 6:
 		$AnimationPlayer.play("Time")
 		await $AnimationPlayer.animation_finished
 		Globals.day = true

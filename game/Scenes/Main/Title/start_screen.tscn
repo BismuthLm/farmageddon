@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=3 uid="uid://dpaq3ilbik1et"]
+
+[ext_resource type="Script" path="res://Scenes/Main/Title/start_screen.gd" id="1_bik0a"]
+[ext_resource type="Texture2D" uid="uid://metn8r3f0ob2" path="res://Assets/pointlightsquare.png" id="1_nqf1x"]
+[ext_resource type="Texture2D" uid="uid://dqmwau0yagxei" path="res://Assets/Title UI/title.png" id="2_i3c4h"]
+[ext_resource type="Texture2D" uid="uid://c5ilbe7l84a81" path="res://Assets/Title UI/start button.png" id="4_vx4m7"]
+[ext_resource type="Texture2D" uid="uid://cl710mop4mv8w" path="res://Assets/Title UI/tutorial button.png" id="5_eigb1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wdvju"]
+size = Vector2(549, 170)
+
+[node name="StartScreen" type="Node2D"]
+script = ExtResource("1_bik0a")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+modulate = Color(0.0431373, 0.278431, 0.109804, 1)
+position = Vector2(629, 1051.94)
+scale = Vector2(4822, 1158.13)
+texture = ExtResource("1_nqf1x")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(0.0666667, 0.0901961, 0.419608, 1)
+position = Vector2(629, -130)
+scale = Vector2(4811, 1599.02)
+texture = ExtResource("1_nqf1x")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(565, 360)
+scale = Vector2(5, 5)
+texture = ExtResource("2_i3c4h")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(585, 506)
+zoom = Vector2(0.5, 0.5)
+
+[node name="StartButton" type="Area2D" parent="."]
+position = Vector2(215, 11)
+
+[node name="Sprite2D" type="Sprite2D" parent="StartButton"]
+position = Vector2(66.0001, 998)
+scale = Vector2(10, 10)
+texture = ExtResource("4_vx4m7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StartButton"]
+position = Vector2(66, 983)
+shape = SubResource("RectangleShape2D_wdvju")
+
+[node name="TutorialButton" type="Area2D" parent="."]
+position = Vector2(215, 11)
+
+[node name="Sprite2D" type="Sprite2D" parent="TutorialButton"]
+position = Vector2(649, 983)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("5_eigb1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TutorialButton"]
+position = Vector2(649.5, 985)
+shape = SubResource("RectangleShape2D_wdvju")
+
+[connection signal="mouse_entered" from="StartButton" to="." method="_on_start_button_mouse_entered"]
+[connection signal="mouse_exited" from="StartButton" to="." method="_on_start_button_mouse_exited"]
+[connection signal="mouse_entered" from="TutorialButton" to="." method="_on_tutorial_button_mouse_entered"]
+[connection signal="mouse_exited" from="TutorialButton" to="." method="_on_tutorial_button_mouse_exited"]

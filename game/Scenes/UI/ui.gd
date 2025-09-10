@@ -9,14 +9,12 @@ func _process(_delta):
 	if Input.is_action_just_released("scroll down"):
 		if Globals.plant_selected == 0:
 			Globals.plant_selected = 1
-			print("Plant selected is Carrot")
 			$Control/Beetroot.modulate = not_selected
 			$Control/Carrot.modulate = selected
 
 	if Input.is_action_just_released("scroll up"):
 		if Globals.plant_selected == 1:
 			Globals.plant_selected = 0
-			print("Plant selected is Beetroot")
 			$Control/Beetroot.modulate = selected
 			$Control/Carrot.modulate = not_selected
 		
@@ -56,7 +54,7 @@ func _process(_delta):
 		$Control4/Sprite2D5.modulate = alive_heart
 		
 	if Globals.player_health <= 0:
-		$Control5/Sprite2D.visible = true
+		TransitionLayer.change_scene("res://Scenes/Main/Death Screen/death_screen.tscn")
 		
 	
 	$"Control/BeetrootAmount".text = str(Globals.beetroot_amount)
